@@ -1,18 +1,14 @@
-# Fredy Munevar Portfolio
-
-My UX/UI Design and Development Portfolio - Showcasing my work in design and development, including projects like Hola Car Rentals, built with Next.js, Strapi, and more. This portfolio demonstrates my skills in creating seamless user experiences, modern interfaces, and scalable web applications.
-
 # My UX/UI Design Portfolio 🎨💻
 
-Welcome to my **UX/UI Design and Development Portfolio**! This repository contains the source code for my personal portfolio, showcasing my work in **UX design**, **UI development**, and **front-end engineering**. The portfolio is designed to highlight my experience through a collection of projects that span various industries and challenges.
+Welcome to my **UX/UI Design and Development Portfolio**! This repository showcases my work in **UX design**, **UI development**, and **front-end engineering**, featuring a variety of projects that highlight my skills and experience.
 
 ## 🌟 Portfolio Overview
 
-This portfolio showcases:
+This portfolio demonstrates:
 
 - My design and development process.
 - Key projects I've worked on, including **Hola Car Rentals**, **Monte Frío**, and more.
-- My skills in **Next.js**, **Strapi**, **React Native**, and **modern web technologies**.
+- My skills in **Next.js**, **Strapi**, **React Native**, and modern web technologies.
 
 ## 🛠️ Tech Stack
 
@@ -33,21 +29,21 @@ This portfolio showcases:
 
 ## 🏗️ Architecture Overview
 
-This portfolio follows **Clean Architecture principles**:
+Following **Clean Architecture principles**:
 
-- **Frontend**: Handles presentation, user interaction, and data fetching from the backend.
-- **Backend**: Manages business logic and content through Strapi, exposing REST/GraphQL APIs.
-- **Database**: PostgreSQL for managing data efficiently.
+- **Frontend**: Manages presentation, user interaction, and data fetching.
+- **Backend**: Handles business logic and data through Strapi APIs.
+- **Database**: PostgreSQL for efficient data storage.
 
 ## 🚀 Deployment
 
 ### Frontend
 
-- Hosted on Vercel with support for custom domains and automatic SSL.
+- Hosted on Vercel with custom domain and automatic SSL.
 
 ### Backend
 
-- Hosted on Railway, with PostgreSQL for data persistence.
+- Hosted on Railway with PostgreSQL for data management.
 
 ## 📂 Featured Projects
 
@@ -75,15 +71,41 @@ This portfolio follows **Clean Architecture principles**:
 
 - [Read the Full Case Study](#) (Link to the Precision SAS section in the portfolio)
 
-...more projects to be added.
+### 4. **Branch App** 🛠️
 
-## 🧩 Features
+**Description**: A mobile and CRM solution to streamline vehicle maintenance communication between repair shops and customers.
+**Tech Stack**: React Native, Vue, SASS, TypeScript.
+**Role**: Co-founder, UX Designer, Front-End Developer
 
-- **Dynamic Project Showcase**: Displays case studies of various projects with detailed descriptions and visuals.
-- **Responsive Design**: Optimized for mobile and desktop users.
-- **Seamless Integration**: Connects to a headless CMS (Strapi) for easy content management.
+- [Read the Full Case Study](#) (Link to the Branch App section in the portfolio)
+
+### 5. **Weelo** 🏢
+
+**Description**: Real estate app for streamlining rental processes, tenant screening, and contract management.
+**Tech Stack**: React Native, TypeScript, SASS, Git Flow.
+**Role**: UX Developer
+
+- [Read the Full Case Study](#) (Link to the Weelo section in the portfolio)
+
+### 6. **Million And Up** 💎
+
+**Description**: Digital platform for real estate agents to connect with high-potential clients for luxury properties.
+**Tech Stack**: React Native, Next.js, TypeScript.
+**Role**: UX Developer
+
+- [Read the Full Case Study](#) (Link to the Million And Up section in the portfolio)
+
+### 7. **LivenUp** 🌸
+
+**Description**: A mental health app designed to support women with psychological challenges.
+**Tech Stack**: Adobe Illustrator, Adobe Photoshop, Figma, Marvel.
+**Role**: UX/UI Designer
+
+- [Read the Full Case Study](#) (Link to the LivenUp section in the portfolio)
 
 ## 🔧 Installation and Setup
+
+> **Note**: This project is private and not intended for public installation or use.
 
 ### Prerequisites
 
@@ -93,5 +115,5 @@ This portfolio follows **Clean Architecture principles**:
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/portfolio.git
+# This repository is private. You need access permissions to clone.
 ```
