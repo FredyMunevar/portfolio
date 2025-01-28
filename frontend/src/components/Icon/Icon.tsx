@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import IcomoonReact from "icomoon-react";
 import iconSet from "@/public/fonts/mune-icons.json";
 import { IIconProps } from "./interface/iIconProps";
@@ -22,7 +23,7 @@ const getIconSize = (size: number): string => (size / 14).toString() + "rem";
 
 export const Icon: React.FC<IIconProps> = ({ name, size = 21, className, color = "black", onClick }) => {
   /**
-   * Handles click event on the logo to navigate to the specified href.
+   * Handles click event on the icon.
    */
   const handleClick = () => {
     if (onClick) {
