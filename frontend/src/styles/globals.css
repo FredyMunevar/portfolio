@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* colors */
+  --primary: #e11c5b;
+  --secondary: #232021;
+  --tertiary: #f9f9f9;
+  --gray: #5e5558;
+  --border-light: #d8d2d5;
+
+  /* spacing */
+  --spacing-xxs: 0.125rem;
+  --spacing-xs: 0.25rem;
+  --spacing-s: 0.5rem;
+  --spacing-m: 1rem;
+  --spacing-l: 2rem;
+  --spacing-xl: 4rem;
+  --spacing-xxl: 8rem;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #e11c5b;
+    --secondary: #232021;
+    --tertiary: #f9f9f9;
+    --border-light: #d8d2d5;
+  }
+} */
+@layer base {
+  html {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    /* @media screen and (min-width: 1200px) {
+      font-size: 18px;
+    } */
+  }
+  body {
+    background-color: var(--primary);
+    overflow-x: hidden;
+  }
+}
+
+/* html.dark {
+  .backgroundLight {
+    display: none;
+  }
+  .backgroundDark {
+    display: block;
+  }
+} */

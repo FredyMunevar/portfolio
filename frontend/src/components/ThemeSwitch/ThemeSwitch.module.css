@@ -1,0 +1,11 @@
+.switchSize {
+  width: calc(var(--spacing-s) + var(--spacing-m));
+  height: calc(var(--spacing-s) + var(--spacing-m));
+}
+.leftDark {
+  left: var(--spacing-xxs);
+}
+.leftLight {
+  /* left: var(--spacing-l); */
+  left: calc(var(--spacing-l) + var(--spacing-xxs));
+}
