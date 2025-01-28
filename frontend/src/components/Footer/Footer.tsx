@@ -16,7 +16,7 @@ const Footer = () => {
         <CldImage
           width="194"
           height="35"
-          src={`${servicesUrls.cloudynary}common/ovsl7qr5zmbs1eos81gq.svg`}
+          src={`${servicesUrls.cloudynary}common/fredy-munevar-full.svg`}
           alt="Description of my image"
           format="svg"
         />

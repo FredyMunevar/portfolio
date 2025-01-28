@@ -8,8 +8,8 @@ import { servicesUrls } from "@/constants/servicesUrls";
 import Icon from "@/components/Icon/Icon";
 import ThemeTransition from "@/components/ThemeTransition/ThemeTransition";
 
-const darkLogo = `${servicesUrls.cloudynary}common/wibatu1corpalrwl2wpz.svg`;
-const lightLogo = `${servicesUrls.cloudynary}common/fqtaf1wpwkzetymsudvl.svg`;
+const darkLogo = `${servicesUrls.cloudynary}common/mune-logo-white.svg`;
+const lightLogo = `${servicesUrls.cloudynary}common/mune-logo-black.svg`;
 
 /**
  * Header component that displays the header section of the website.
@@ -49,7 +49,7 @@ const Header = () => {
       <header className="absolute w-full flex justify-between items-start ">
         <div
           ref={headerRef}
-          className={`relative lg:flex lg:flex-row lg:gap-m xl:w-[208px] xl:h-screen xl:flex-col xl:gap-xxl xl:justify-center xl:align-middle xl:fixed xl:transition-all xl:duration-1000 xl:ease-in-out`}
+          className={`relative lg:flex lg:flex-row lg:gap-m xl:w-[208px] xl:z-20 xl:h-screen xl:flex-col xl:gap-xxl xl:justify-center xl:align-middle xl:fixed xl:transition-all xl:duration-1000 xl:ease-in-out`}
           style={{ bottom: bottomOffset }}
         >
           <h1 className="m-m lg:m-l xl:m-0">
