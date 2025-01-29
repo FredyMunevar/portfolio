@@ -107,17 +107,17 @@ const Header = () => {
             </ul>
             <ul className="flex flex-row gap-m lg:hidden">
               <li>
-                <Link href={""}>
+                <Link href={servicesUrls.linkedin} target="_blank">
                   <Icon name={"icon-linkedin"} size={28} />
                 </Link>
               </li>
               <li>
-                <Link href={""}>
+                <Link href={servicesUrls.instagram} target="_blank">
                   <Icon name={"icon-intagram"} size={28} />
                 </Link>
               </li>
               <li>
-                <Link href={""}>
+                <Link href={servicesUrls.github} target="_blank">
                   <Icon name={"icon-github"} size={28} />
                 </Link>
               </li>

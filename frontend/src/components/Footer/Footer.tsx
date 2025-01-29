@@ -48,17 +48,17 @@ const Footer = () => {
       <div className="w-full flex flex-col items-center gap-l md:flex-row md:justify-between">
         <ul className="flex flex-row justify-center gap-m">
           <li>
-            <Link href={""}>
+            <Link href={servicesUrls.linkedin} target="_blank">
               <Icon name={"icon-linkedin"} size={28} color="var(--primary)" />
             </Link>
           </li>
           <li>
-            <Link href={""}>
+            <Link href={servicesUrls.instagram} target="_blank">
               <Icon name={"icon-intagram"} size={28} color="var(--primary)" />
             </Link>
           </li>
           <li>
-            <Link href={""}>
+            <Link href={servicesUrls.github} target="_blank">
               <Icon name={"icon-github"} size={28} color="var(--primary)" />
             </Link>
           </li>
