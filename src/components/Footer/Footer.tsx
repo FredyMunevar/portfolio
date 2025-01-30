@@ -1,8 +1,9 @@
+"use client";
 import React from "react";
 import { CldImage } from "next-cloudinary";
 import Link from "next/link";
 import { servicesUrls } from "@/constants/servicesUrls";
-import Icon from "../Icon/Icon";
+import MuneIcon from "../MuneIcon/MuneIcon";
 
 const currentYear = new Date().getFullYear();
 
@@ -17,7 +18,7 @@ const Footer = () => {
           width="194"
           height="35"
           src={`${servicesUrls.cloudynary}common/fredy-munevar-full.svg`}
-          alt="Description of my image"
+          alt="Fredy Munevar UX/UI Engineer and Designer"
           format="svg"
         />
         <nav className="w-full flex flex-col gap-l md:w-auto">
@@ -49,17 +50,17 @@ const Footer = () => {
         <ul className="flex flex-row justify-center gap-m">
           <li>
             <Link href={servicesUrls.linkedin} target="_blank">
-              <Icon name={"icon-linkedin"} size={28} color="var(--primary)" />
+              <MuneIcon name={"icon-linkedin"} size={28} color="var(--primary)" />
             </Link>
           </li>
           <li>
             <Link href={servicesUrls.instagram} target="_blank">
-              <Icon name={"icon-intagram"} size={28} color="var(--primary)" />
+              <MuneIcon name={"icon-intagram"} size={28} color="var(--primary)" />
             </Link>
           </li>
           <li>
             <Link href={servicesUrls.github} target="_blank">
-              <Icon name={"icon-github"} size={28} color="var(--primary)" />
+              <MuneIcon name={"icon-github"} size={28} color="var(--primary)" />
             </Link>
           </li>
         </ul>

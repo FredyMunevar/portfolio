@@ -1,9 +1,9 @@
-import { IconName } from './icon';
+import { IconName } from "./icon";
 
 /**
  * Interface representing the properties for the Icon component.
  */
-export interface IIconProps {
+export interface IMuneIconProps {
   /**
    * The name of the icon.
    */

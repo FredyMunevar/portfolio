@@ -2,7 +2,7 @@
 import React from "react";
 import IcomoonReact from "icomoon-react";
 import iconSet from "@/public/fonts/mune-icons.json";
-import { IIconProps } from "./interface/iIconProps";
+import { IMuneIconProps } from "./interface/iMuneIconProps";
 
 const getIconSize = (size: number): string => (size / 14).toString() + "rem";
 /**
@@ -21,7 +21,7 @@ const getIconSize = (size: number): string => (size / 14).toString() + "rem";
  ** @function `handleClick` ** Handles the click event and triggers the onClick callback if provided.
  */
 
-export const Icon: React.FC<IIconProps> = ({ name, size = 21, className, color = "black", onClick }) => {
+export const MuneIcon: React.FC<IMuneIconProps> = ({ name, size = 21, className, color = "black", onClick }) => {
   /**
    * Handles click event on the icon.
    */
@@ -49,4 +49,4 @@ export const Icon: React.FC<IIconProps> = ({ name, size = 21, className, color =
   );
 };
 
-export default Icon;
+export default MuneIcon;

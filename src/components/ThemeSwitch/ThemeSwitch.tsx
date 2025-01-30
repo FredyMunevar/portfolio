@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./ThemeSwitch.module.css";
-import Icon from "../Icon/Icon";
+import MuneIcon from "../MuneIcon/MuneIcon";
 import { useTheme } from "@/context/ThemeContext";
 
 /**
@@ -15,10 +15,10 @@ const ThemeSwitch = () => {
       <div className="border-2 border-tertiary bg-secondary relative p-xxs">
         <div className="flex justify-between items-center gap-s relative z-10">
           <div className={`${styles.switchSize}`}>
-            <Icon color={`${!isDark ? "var(--gray)" : "var(--primary)"}`} name={"icon-light"} size={14} />
+            <MuneIcon color={`${!isDark ? "var(--gray)" : "var(--primary)"}`} name={"icon-light"} size={14} />
           </div>
           <div className={`${styles.switchSize}`}>
-            <Icon color={`${isDark ? "var(--gray)" : "var(--primary)"}`} name={"icon-dark"} size={12} />
+            <MuneIcon color={`${isDark ? "var(--gray)" : "var(--primary)"}`} name={"icon-dark"} size={12} />
           </div>
         </div>
         <div

@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useRef, useState } from "react";
 import { CldImage } from "next-cloudinary";
 import Link from "next/link";
@@ -5,7 +6,7 @@ import Button from "@/components/Button/Button";
 import ThemeSwitch from "@/components/ThemeSwitch/ThemeSwitch";
 import { useTheme } from "@/context/ThemeContext";
 import { servicesUrls } from "@/constants/servicesUrls";
-import Icon from "@/components/Icon/Icon";
+import MuneIcon from "@/components/MuneIcon/MuneIcon";
 import ThemeTransition from "@/components/ThemeTransition/ThemeTransition";
 
 const darkLogo = `${servicesUrls.cloudynary}common/mune-logo-white.svg`;
@@ -71,54 +72,56 @@ const Header = () => {
             lg:bg-transparent lg:static lg:w-auto lg:h-auto lg:p-0 lg:align-middle lg:self-center lg:justify-self-start
             ${openMenu ? "right-0" : "-right-full"}`}
           >
-            <ul className="flex flex-col gap-l lg:flex-row xl:flex-col">
-              <li className="xl:text-center">
-                <Link
-                  className={`font-light text-menu lg:text-secondary ${theme == "dark" && "xl:text-primary"}`}
-                  href="/"
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="xl:text-center">
-                <Link
-                  className={`font-light text-menu lg:text-secondary ${theme == "dark" && "xl:text-primary"}`}
-                  href="/about"
-                >
-                  About
-                </Link>
-              </li>
-              <li className="xl:text-center">
-                <Link
-                  className={`font-light text-menu lg:text-secondary ${theme == "dark" && "xl:text-primary"}`}
-                  href="/projects"
-                >
-                  Projects
-                </Link>
-              </li>
-              <li className="xl:text-center">
-                <Link
-                  className={`font-light text-menu lg:text-secondary ${theme == "dark" && "xl:text-primary"}`}
-                  href="/contact"
-                >
-                  Contact
-                </Link>
-              </li>
+            <ul>
+              <ThemeTransition wait className="flex flex-col gap-l lg:flex-row xl:flex-col">
+                <li className="xl:text-center">
+                  <Link
+                    className={`font-light text-menu lg:text-secondary ${theme == "dark" && "lg:text-tertiary"}`}
+                    href="/"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li className="xl:text-center">
+                  <Link
+                    className={`font-light text-menu lg:text-secondary ${theme == "dark" && "lg:text-tertiary"}`}
+                    href="/about"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li className="xl:text-center">
+                  <Link
+                    className={`font-light text-menu lg:text-secondary ${theme == "dark" && "lg:text-tertiary"}`}
+                    href="/projects"
+                  >
+                    Projects
+                  </Link>
+                </li>
+                <li className="xl:text-center">
+                  <Link
+                    className={`font-light text-menu lg:text-secondary ${theme == "dark" && "lg:text-tertiary"}`}
+                    href="/contact"
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ThemeTransition>
             </ul>
             <ul className="flex flex-row gap-m lg:hidden">
               <li>
                 <Link href={servicesUrls.linkedin} target="_blank">
-                  <Icon name={"icon-linkedin"} size={28} />
+                  <MuneIcon name={"icon-linkedin"} size={28} />
                 </Link>
               </li>
               <li>
                 <Link href={servicesUrls.instagram} target="_blank">
-                  <Icon name={"icon-intagram"} size={28} />
+                  <MuneIcon name={"icon-intagram"} size={28} />
                 </Link>
               </li>
               <li>
                 <Link href={servicesUrls.github} target="_blank">
-                  <Icon name={"icon-github"} size={28} />
+                  <MuneIcon name={"icon-github"} size={28} />
                 </Link>
               </li>
             </ul>
@@ -138,7 +141,7 @@ const Header = () => {
         buttonType={openMenu ? "secondary" : "primary"}
         onClick={() => setOpenMenu(!openMenu)}
       >
-        <Icon name={openMenu ? "icon-less" : "icon-add"} color={openMenu ? "var(--primary)" : "var(--secondary)"} />
+        <MuneIcon name={openMenu ? "icon-less" : "icon-add"} color={openMenu ? "var(--primary)" : "var(--secondary)"} />
       </Button>
     </>
   );

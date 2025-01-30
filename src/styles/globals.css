@@ -38,16 +38,13 @@
     } */
   }
   body {
-    background-color: var(--primary);
+    background-color: var(--tertiary);
     overflow-x: hidden;
   }
 }
 
-/* html.dark {
-  .backgroundLight {
-    display: none;
+html.dark {
+  body {
+    background-color: var(--secondary);
   }
-  .backgroundDark {
-    display: block;
-  }
-} */
+}

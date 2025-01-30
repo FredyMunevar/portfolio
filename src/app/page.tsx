@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import Button from "@/components/Button/Button";
-import Footer from "@/components/Footer/Footer";
-import Header from "@/components/Header/Header";
 import ThemeTransition from "@/components/ThemeTransition/ThemeTransition";
 import { servicesUrls } from "@/constants/servicesUrls";
 import { useTheme } from "@/context/ThemeContext";
@@ -60,7 +58,6 @@ const Home = () => {
 
   return (
     <main>
-      <Header />
       <div className="relative z-10 w-screen h-screen p-m flex flex-col items-start justify-center gap-l lg:p-l xl:pl-[208px]">
         <ThemeTransition wait className="flex flex-col items-center gap-l box-border">
           <h1 className={`w-full text-h1 font-semibold leading-snug ${themeTextColor}`}>I Create User Experiences</h1>
@@ -98,7 +95,9 @@ const Home = () => {
           <Button buttonType="secondary" largeButton>
             Download resume
           </Button>
-          <Button largeButton>Projects</Button>
+          <Button link={"/projects"} largeButton>
+            Projects
+          </Button>
         </div>
       </div>
       <div className="absolute top-0 w-screen h-screen overflow-hidden">
@@ -106,8 +105,6 @@ const Home = () => {
           <Spline scene={isDarkTheme ? darkBackground : lightBackground} />
         </ThemeTransition>
       </div>
-
-      <Footer />
     </main>
   );
 };
