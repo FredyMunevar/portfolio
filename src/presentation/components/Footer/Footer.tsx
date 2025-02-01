@@ -2,7 +2,7 @@
 import React from "react";
 import { CldImage } from "next-cloudinary";
 import Link from "next/link";
-import { servicesUrls } from "@/constants/servicesUrls";
+import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import MuneIcon from "../MuneIcon/MuneIcon";
 
 const currentYear = new Date().getFullYear();
@@ -39,6 +39,11 @@ const Footer = () => {
               </Link>
             </li>
             <li>
+              <Link className="font-light text-footer text-primary" href="/toolbox">
+                Toolbox
+              </Link>
+            </li>
+            <li>
               <Link className="font-light text-footer text-primary" href="/contact">
                 Contact
               </Link>
@@ -64,7 +69,7 @@ const Footer = () => {
             </Link>
           </li>
         </ul>
-        <Link className="text-primary text-footer" href={""}>
+        <Link className="text-primary text-footer" href={servicesUrls.cvDownload} target="_blank">
           Download Resume
         </Link>
         <p className="text-primary text-footer">© {currentYear} Fredy Munevar. All rights reserved.</p>

@@ -1,9 +1,9 @@
 import React from "react";
 import type { Metadata } from "next";
-import "@/styles/globals.css";
+import "@/presentation/styles/globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import Header from "@/presentation/components/Header/Header";
+import Footer from "@/presentation/components/Footer/Footer";
 
 /**
  * Metadata for the application.

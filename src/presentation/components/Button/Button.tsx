@@ -13,9 +13,9 @@ import Link from "next/link";
  * @param {React.ReactNode} props.children - The content to be displayed inside the button.
  * @param {string} [props.className] - Additional CSS classes to apply to the button.
  * @param {boolean} [props.largeButton] - Flag to determine if the button should be rendered in a larger size.
- *
+ * @param {Object} [props.props] - Additional properties to be passed to the button or link element.
  */
-const Button = ({ onClick, link, buttonType = "primary", children, className, largeButton }: IButton) => {
+const Button = ({ onClick, link, buttonType = "primary", children, className, largeButton, ...props }: IButton) => {
   const isPrimary = buttonType === "primary";
   const isSecondary = buttonType === "secondary";
 
@@ -29,6 +29,7 @@ const Button = ({ onClick, link, buttonType = "primary", children, className, la
         isSecondary && secondaryStyles
       } ${defaultStyles} ${className}`}
       href={link}
+      {...props}
     >
       {children}
     </Link>
@@ -38,6 +39,7 @@ const Button = ({ onClick, link, buttonType = "primary", children, className, la
         isSecondary && secondaryStyles
       } ${defaultStyles} ${className}`}
       onClick={onClick}
+      {...props}
     >
       {children}
     </button>

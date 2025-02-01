@@ -20,7 +20,7 @@ export interface IButton {
   /**
    * The content to be displayed inside the button.
    */
-  children: ReactNode;
+  children: React.ReactNode;
 
   /**
    * Additional CSS classes to apply to the button.
@@ -31,4 +31,9 @@ export interface IButton {
    * Flag to determine if the button should be rendered in a larger size.
    */
   largeButton?: boolean;
+
+  /**
+   * Additional properties to be passed to the button or link element.
+   */
+  props?: Record<string, unknown>;
 }

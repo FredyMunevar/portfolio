@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import IcomoonReact from "icomoon-react";
-import iconSet from "@/public/fonts/mune-icons.json";
+import iconSet from "@/presentation/public/fonts/mune-icons.json";
 import { IMuneIconProps } from "./interface/iMuneIconProps";
 
 const getIconSize = (size: number): string => (size / 14).toString() + "rem";

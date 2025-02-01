@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import Button from "@/components/Button/Button";
-import ThemeTransition from "@/components/ThemeTransition/ThemeTransition";
-import { servicesUrls } from "@/constants/servicesUrls";
+import Button from "@/presentation/components/Button/Button";
+import ThemeTransition from "@/presentation/components/ThemeTransition/ThemeTransition";
+import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import { useTheme } from "@/context/ThemeContext";
-import "@/styles/globals.css";
+import "@/presentation/styles/globals.css";
 import Spline from "@splinetool/react-spline";
 import Link from "next/link";
 import { CldImage } from "next-cloudinary";
@@ -12,11 +12,19 @@ import { CldImage } from "next-cloudinary";
 const darkBackground = `${servicesUrls.spline}KtWHnM7y4nQFU3sL/scene.splinecode`;
 const lightBackground = `${servicesUrls.spline}DqlTPzji7ZwnT9OV/scene.splinecode`;
 
+/**
+ * Home component that displays the main page of the website.
+ *
+ * @returns {JSX.Element} The rendered home component.
+ */
 const Home = () => {
   const { theme } = useTheme();
   const isDarkTheme = theme === "dark";
   const themeTextColor = isDarkTheme ? "text-tertiary" : "text-secondary";
 
+  /**
+   * Props for the ProjectButton component.
+   */
   interface ProjectButtonProps {
     href: string;
     colorImage: string;
@@ -24,6 +32,12 @@ const Home = () => {
     alt: string;
   }
 
+  /**
+   * ProjectButton component that renders a button linking to a project.
+   *
+   * @param {ProjectButtonProps} props - The properties object.
+   * @returns {JSX.Element} The rendered project button component.
+   */
   const ProjectButton = ({ href, colorImage, whiteImage, alt }: ProjectButtonProps) => {
     const projectButtonStyles = `h-xl border flex-grow flex items-center justify-center transition-all duration-1000 ease-in-out
       ${isDarkTheme ? "border-tertiary" : "border-secondary"}
@@ -71,19 +85,19 @@ const Home = () => {
             </h3>
             <div className="w-full flex gap-l justify-between">
               <ProjectButton
-                href={""}
+                href={"/projects/million"}
                 colorImage={"million/million-color"}
                 whiteImage={"million/million-white"}
                 alt={"Million luxury"}
               />
               <ProjectButton
-                href={""}
+                href={"/projects/branch"}
                 colorImage={"branch/branch-text-color"}
                 whiteImage={"branch/branch-text-white"}
                 alt={"Branch app"}
               />
               <ProjectButton
-                href={""}
+                href={"/projects/weelo"}
                 colorImage={"weelo/weelo-color"}
                 whiteImage={"weelo/weelo-white"}
                 alt={"Weelo"}
@@ -92,7 +106,7 @@ const Home = () => {
           </div>
         </ThemeTransition>
         <div className="w-full flex gap-l justify-start lg:justify-end">
-          <Button buttonType="secondary" largeButton>
+          <Button link={servicesUrls.cvDownload} props={{ target: "_blank" }} buttonType="secondary" largeButton>
             Download resume
           </Button>
           <Button link={"/projects"} largeButton>

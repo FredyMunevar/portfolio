@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import ThemeTransition from "@/components/ThemeTransition/ThemeTransition";
+import ThemeTransition from "@/presentation/components/ThemeTransition/ThemeTransition";
 // import { useTheme } from "@/context/ThemeContext";
-import "@/styles/globals.css";
+import "@/presentation/styles/globals.css";
 
 const Weelo = () => {
   // const { theme } = useTheme();
