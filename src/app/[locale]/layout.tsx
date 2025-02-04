@@ -4,6 +4,10 @@ import "@/presentation/styles/globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import Header from "@/presentation/components/Header/Header";
 import Footer from "@/presentation/components/Footer/Footer";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
 
 /**
  * Metadata for the application.
@@ -28,21 +32,31 @@ export const metadata: Metadata = {
 };
 
 /**
- * RootLayout component that provides the root layout for the application.
+ * LocaleLayout component that provides the root layout for the application with translations.
  */
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
-}: Readonly<{
+  params: { locale },
+}: {
   children: React.ReactNode;
-}>) {
+  params: { locale: string };
+}) {
+  // Ensure the locale is valid
+  if (!routing.locales.includes(locale as "en" | "es")) {
+    notFound();
+  }
+  // Load translations for the client
+  const messages = await getMessages();
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={"antialiased"}>
-        <ThemeProvider>
-          <Header />
-          {children}
-          <Footer />
-        </ThemeProvider>
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider>
+            <Header />
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mi",
+    "projects": "Proyectos",
+    "toolbox": "Toolbox",
+    "contact": "Contacto"
+  },
+  "home": {
+    "title": "Creo experiencias digitales que conectan.",
+    "description": "Con más de 17 años de experiencia, diseño experiencias digitales desde la planificación hasta el desarrollo, combinando branding, UI/UX y desarrollo front-end.",
+    "subtitle": "Proyectos destacados",
+    "downloadButton": "Descargar CV",
+    "projectsButton": "Proyectos"
+  }
+}

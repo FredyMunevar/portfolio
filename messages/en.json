@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "toolbox": "Toolbox",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "I Create User Experiences",
+    "description": "I’m a UX Developer and Designer with 17+ years of experience, driving projects from planning to development, with expertise in branding, illustration, and seamless digital experiences.",
+    "subtitle": "Featured projects",
+    "downloadButton": "Download resume",
+    "projectsButton": "Projects"
+  }
+}

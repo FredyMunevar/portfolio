@@ -6,8 +6,9 @@ import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import { useTheme } from "@/context/ThemeContext";
 import "@/presentation/styles/globals.css";
 import Spline from "@splinetool/react-spline";
-import Link from "next/link";
 import { CldImage } from "next-cloudinary";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 const darkBackground = `${servicesUrls.spline}KtWHnM7y4nQFU3sL/scene.splinecode`;
 const lightBackground = `${servicesUrls.spline}DqlTPzji7ZwnT9OV/scene.splinecode`;
@@ -21,6 +22,7 @@ const Home = () => {
   const { theme } = useTheme();
   const isDarkTheme = theme === "dark";
   const themeTextColor = isDarkTheme ? "text-tertiary" : "text-secondary";
+  const t = useTranslations("home");
 
   /**
    * Props for the ProjectButton component.
@@ -74,14 +76,11 @@ const Home = () => {
     <main>
       <div className="relative z-10 w-screen h-screen p-m flex flex-col items-start justify-center gap-l lg:p-l xl:pl-[208px]">
         <ThemeTransition wait className="flex flex-col items-center gap-l box-border">
-          <h1 className={`w-full text-h1 font-semibold leading-snug ${themeTextColor}`}>I Create User Experiences</h1>
-          <p className={`text-p font-light leading-relaxed  ${themeTextColor}`}>
-            I’m a UX Developer and Designer with 17+ years of experience, driving projects from planning to development,
-            with expertise in branding, illustration, and seamless digital experiences.
-          </p>
+          <h1 className={`w-full text-h1 font-semibold leading-snug ${themeTextColor}`}>{t("title")} </h1>
+          <p className={`text-p font-light leading-relaxed  ${themeTextColor}`}>{t("description")}</p>
           <div className="hidden lg:flex w-full flex-col justify-start gap-m">
             <h3 className={`text-h3 font-semibold ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>
-              Featured projects
+              {t("subtitle")}
             </h3>
             <div className="w-full flex gap-l justify-between">
               <ProjectButton
@@ -107,10 +106,10 @@ const Home = () => {
         </ThemeTransition>
         <div className="w-full flex gap-l justify-start lg:justify-end">
           <Button link={servicesUrls.cvDownload} props={{ target: "_blank" }} buttonType="secondary" largeButton>
-            Download resume
+            {t("downloadButton")}
           </Button>
           <Button link={"/projects"} largeButton>
-            Projects
+            {t("projectsButton")}
           </Button>
         </div>
       </div>

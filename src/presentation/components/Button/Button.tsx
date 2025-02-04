@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Button.module.css";
 import { IButton } from "./interface/iButton";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 
 /**
  * Button component that renders either a link or a button element based on the presence of the `link` prop.

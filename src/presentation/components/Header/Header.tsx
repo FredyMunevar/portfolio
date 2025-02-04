@@ -2,13 +2,15 @@
 import React, { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { CldImage } from "next-cloudinary";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import Button from "@/presentation/components/Button/Button";
 import ThemeSwitch from "@/presentation/components/ThemeSwitch/ThemeSwitch";
 import { useTheme } from "@/context/ThemeContext";
 import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import MuneIcon from "@/presentation/components/MuneIcon/MuneIcon";
 import ThemeTransition from "@/presentation/components/ThemeTransition/ThemeTransition";
+import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
+import { useLocale, useTranslations } from "next-intl";
 
 const darkLogo = `${servicesUrls.cloudynary}common/mune-logo-white.svg`;
 const lightLogo = `${servicesUrls.cloudynary}common/mune-logo-black.svg`;
@@ -22,6 +24,8 @@ const Header = () => {
   const [bottomOffset, setBottomOffset] = useState(0);
   const headerRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
+  const locale = useLocale();
+  const t = useTranslations("nav");
 
   const buttonStyles = `
     font-light text-menu lg:text-secondary lg:relative lg:after:w-0 lg:after:h-[1px] lg:after:bg-secondary
@@ -90,7 +94,7 @@ const Header = () => {
                     }`}
                     href="/"
                   >
-                    Home
+                    {t("home")}
                   </Link>
                 </li>
                 <li className="xl:text-center">
@@ -100,7 +104,7 @@ const Header = () => {
                     }`}
                     href="/about"
                   >
-                    About
+                    {t("about")}
                   </Link>
                 </li>
                 <li className="xl:text-center">
@@ -110,7 +114,7 @@ const Header = () => {
                     }`}
                     href="/projects"
                   >
-                    Projects
+                    {t("projects")}
                   </Link>
                 </li>
                 <li className="xl:text-center">
@@ -120,7 +124,7 @@ const Header = () => {
                     }`}
                     href="/toolbox"
                   >
-                    Toolbox
+                    {t("toolbox")}
                   </Link>
                 </li>
                 <li className="xl:text-center">
@@ -130,7 +134,7 @@ const Header = () => {
                     }`}
                     href="/contact"
                   >
-                    Contact
+                    {t("contact")}
                   </Link>
                 </li>
               </ThemeTransition>
@@ -156,9 +160,7 @@ const Header = () => {
         </div>
         <div className="absolute right-0 top-0 z-30 flex justify-center gap-m pr-m lg:gap-l lg:pr-l">
           <ThemeSwitch />
-          <Button onClick={() => console.log("en")}>
-            <span className="font-extralight">En</span>
-          </Button>
+          <LanguageSwitch locale={locale} />
         </div>
       </header>
       <Button

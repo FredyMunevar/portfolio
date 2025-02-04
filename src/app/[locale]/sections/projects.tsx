@@ -3,7 +3,7 @@ import React from "react";
 import ThemeTransition from "@/presentation/components/ThemeTransition/ThemeTransition";
 // import { useTheme } from "@/context/ThemeContext";
 import "@/presentation/styles/globals.css";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 
 const Projects = () => {
   // const { theme } = useTheme();
