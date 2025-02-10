@@ -4,6 +4,7 @@ import { CldImage } from "next-cloudinary";
 import { Link } from "@/i18n/routing";
 import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import MuneIcon from "../MuneIcon/MuneIcon";
+import { useTranslations } from "next-intl";
 
 const currentYear = new Date().getFullYear();
 
@@ -11,6 +12,7 @@ const currentYear = new Date().getFullYear();
  * Footer component that displays the footer section of the website.
  */
 const Footer = () => {
+  const t = useTranslations("nav");
   return (
     <footer className="px-m py-xl bg-secondary flex flex-col items-center gap-l lg:px-xl">
       <div className="w-full flex flex-col items-center gap-l md:flex-row md:justify-between md:gap-[unset]">
@@ -25,27 +27,27 @@ const Footer = () => {
           <ul className="flex flex-row justify-between md:gap-l">
             <li>
               <Link className="font-light text-footer text-primary" href="/">
-                Home
+                {t("home")}
               </Link>
             </li>
             <li>
               <Link className="font-light text-footer text-primary" href="/about">
-                About
+                {t("about")}
               </Link>
             </li>
             <li>
               <Link className="font-light text-footer text-primary" href="/projects">
-                Projects
+                {t("projects")}
               </Link>
             </li>
             <li>
               <Link className="font-light text-footer text-primary" href="/toolbox">
-                Toolbox
+                {t("toolbox")}
               </Link>
             </li>
             <li>
               <Link className="font-light text-footer text-primary" href="/contact">
-                Contact
+                {t("contact")}
               </Link>
             </li>
           </ul>
@@ -69,10 +71,12 @@ const Footer = () => {
             </Link>
           </li>
         </ul>
-        <Link className="text-primary text-footer" href={servicesUrls.cvDownload} target="_blank">
-          Download Resume
+        <Link className="text-primary text-footer text-center" href={servicesUrls.cvDownload} target="_blank">
+          {t("download")}
         </Link>
-        <p className="text-primary text-footer">© {currentYear} Fredy Munevar. All rights reserved.</p>
+        <p className="text-primary text-footer text-center">
+          © {currentYear} Fredy Munevar. {t("rights")}
+        </p>
       </div>
     </footer>
   );

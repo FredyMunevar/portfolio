@@ -30,9 +30,7 @@ const Header = () => {
   const buttonStyles = `
     font-light text-menu lg:text-secondary lg:relative lg:after:w-0 lg:after:h-[1px] lg:after:bg-secondary
     lg:after:transition-all lg:after:duration-500 lg:after:ease-in-out lg:after:absolute lg:after:-bottom-s
-    lg:after:left-[50%] lg:hover:after:w-full lg:hover:after:left-0 ${
-      theme == "dark" && "lg:text-tertiary lg:after:bg-tertiary"
-    }`;
+    lg:after:left-[50%] lg:hover:after:w-full  ${theme == "dark" && "lg:text-tertiary lg:after:bg-tertiary"}`;
 
   /**
    * Effect to handle scroll events and update the bottom offset of the header.
@@ -66,7 +64,7 @@ const Header = () => {
           className={`relative lg:flex lg:flex-row lg:gap-m xl:w-[208px] xl:z-20 xl:h-screen xl:flex-col xl:gap-xl xl:justify-center xl:align-middle xl:fixed xl:transition-all xl:duration-1000 xl:ease-in-out`}
           style={{ bottom: bottomOffset }}
         >
-          <h1 className="m-m lg:m-l xl:m-0">
+          <h1 className="m-m lg:m-l xl:m-0 relative z-20">
             <Link href={"/"} className="flex justify-center">
               <ThemeTransition wait className="relative w-xl top-0 lg:w-[80px]">
                 <CldImage
@@ -90,9 +88,10 @@ const Header = () => {
                 <li className="xl:text-center">
                   <Link
                     className={`${buttonStyles} ${
-                      pathname === "/" ? "lg:after:w-full lg:after:left-0 lg:font-semibold" : ""
+                      pathname === "/en" || pathname === "/es" ? "lg:after:w-full lg:after:!left-0 font-semibold" : ""
                     }`}
                     href="/"
+                    onClick={() => setOpenMenu(false)}
                   >
                     {t("home")}
                   </Link>
@@ -100,9 +99,10 @@ const Header = () => {
                 <li className="xl:text-center">
                   <Link
                     className={`${buttonStyles} ${
-                      pathname.includes("/about") ? "lg:after:w-full lg:after:left-0 lg:font-semibold" : ""
+                      pathname.includes("/about") ? "lg:after:w-full lg:after:!left-0 font-semibold" : ""
                     }`}
                     href="/about"
+                    onClick={() => setOpenMenu(false)}
                   >
                     {t("about")}
                   </Link>
@@ -110,9 +110,10 @@ const Header = () => {
                 <li className="xl:text-center">
                   <Link
                     className={`${buttonStyles} ${
-                      pathname.includes("/projects") ? "lg:after:w-full lg:after:left-0 lg:font-semibold" : ""
+                      pathname.includes("/projects") ? "lg:after:w-full lg:after:!left-0 font-semibold" : ""
                     }`}
                     href="/projects"
+                    onClick={() => setOpenMenu(false)}
                   >
                     {t("projects")}
                   </Link>
@@ -120,9 +121,10 @@ const Header = () => {
                 <li className="xl:text-center">
                   <Link
                     className={`${buttonStyles} ${
-                      pathname.includes("/toolbox") ? "lg:after:w-full lg:after:left-0 lg:font-semibold" : ""
+                      pathname.includes("/toolbox") ? "lg:after:w-full lg:after:!left-0 font-semibold" : ""
                     }`}
                     href="/toolbox"
+                    onClick={() => setOpenMenu(false)}
                   >
                     {t("toolbox")}
                   </Link>
@@ -130,9 +132,10 @@ const Header = () => {
                 <li className="xl:text-center">
                   <Link
                     className={`${buttonStyles} ${
-                      pathname.includes("/contact") ? "lg:after:w-full lg:after:left-0 lg:font-semibold" : ""
+                      pathname.includes("/contact") ? "lg:after:w-full lg:after:!left-0 font-semibold" : ""
                     }`}
                     href="/contact"
+                    onClick={() => setOpenMenu(false)}
                   >
                     {t("contact")}
                   </Link>

@@ -75,10 +75,18 @@ const Home = () => {
   return (
     <main>
       <div className="relative z-10 w-screen h-screen p-m flex flex-col items-start justify-center gap-l lg:p-l xl:pl-[208px]">
-        <ThemeTransition wait className="flex flex-col items-center gap-l box-border">
-          <h1 className={`w-full text-h1 font-semibold leading-snug ${themeTextColor}`}>{t("title")} </h1>
-          <p className={`text-p font-light leading-relaxed  ${themeTextColor}`}>{t("description")}</p>
-          <div className="hidden lg:flex w-full flex-col justify-start gap-m">
+        <ThemeTransition wait className="flex flex-col items-center justify-between gap-xl box-border">
+          <h1
+            className={`w-full text-hero font-semibold leading-none tracking-tighter xl:text-center ${themeTextColor}`}
+          >
+            {t("title")}{" "}
+          </h1>
+          <p
+            className={`text-p font-light leading-relaxed landscape:hidden xl:landscape:block xl:text-center ${themeTextColor}`}
+          >
+            {t("description")}
+          </p>
+          <div className="hidden md:flex w-full flex-col justify-start gap-m landscape:hidden xl:landscape:!flex">
             <h3 className={`text-h3 font-semibold ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>
               {t("subtitle")}
             </h3>

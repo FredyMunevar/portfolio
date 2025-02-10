@@ -2,7 +2,7 @@
 import { usePathname, useRouter, locales } from "@/i18n/routing";
 import Button from "../Button/Button";
 
-export default function LanguageSwitch({ locale }: { locale: string }) {
+const LanguageSwitch = ({ locale }: { locale: string }) => {
   const pathname = usePathname();
   const router = useRouter();
 
@@ -10,17 +10,15 @@ export default function LanguageSwitch({ locale }: { locale: string }) {
     router.replace(pathname, { locale: newLocale });
   };
 
-  return (
-    <>
-      {locales.map(
-        (loc) =>
-          loc !== locale && (
-            <Button key={loc} onClick={() => changeLocale(loc)}>
-              <span className="font-extralight lg:hidden">{loc}</span>
-              <span className="font-extralight hidden lg:block">{loc === "en" ? "English" : "Español"}</span>
-            </Button>
-          )
-      )}
-    </>
+  return locales.map(
+    (loc) =>
+      loc !== locale && (
+        <Button key={loc} onClick={() => changeLocale(loc)}>
+          <span className="font-normal lg:hidden">{loc}</span>
+          <span className="font-normal hidden lg:block">{loc === "en" ? "English" : "Español"}</span>
+        </Button>
+      )
   );
-}
+};
+
+export default LanguageSwitch;

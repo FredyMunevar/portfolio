@@ -8,6 +8,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import SplashCursor from "@/presentation/components/SplashCursor/SplashCursor";
 
 /**
  * Metadata for the application.
@@ -50,13 +51,14 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className={"antialiased"}>
-        <NextIntlClientProvider messages={messages}>
-          <ThemeProvider>
+        <SplashCursor />
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
             <Header />
             {children}
             <Footer />
-          </ThemeProvider>
-        </NextIntlClientProvider>
+          </NextIntlClientProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -1,19 +1,47 @@
 "use client";
 import React from "react";
-import ThemeTransition from "@/presentation/components/ThemeTransition/ThemeTransition";
-// import { useTheme } from "@/context/ThemeContext";
+import { useTheme } from "@/context/ThemeContext";
 import "@/presentation/styles/globals.css";
+import SectionContainer from "@/presentation/components/SectionContainer/SectionContainer";
+import { useTranslations } from "next-intl";
+import { CldImage } from "next-cloudinary";
+import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
+import Experience from "@/presentation/components/Experience/Experience";
 
 const About = () => {
-  // const { theme } = useTheme();
-  // const isDarkTheme = theme === "dark";
+  const { theme } = useTheme();
+  const isDarkTheme = theme === "dark";
+  const t = useTranslations("about");
+  const tResult = t("experiences", { returnObjects: true }) as unknown as { title: string; text: string };
+
+  console.log("experiences", tResult);
 
   return (
-    <main className="relative z-10 w-screen h-screen p-m flex flex-col items-start justify-center gap-l lg:p-l xl:pl-[208px]">
-      <ThemeTransition wait className="flex flex-col items-center gap-l box-border">
-        <p className={`w-full text-h1 font-semibold leading-snug`}>About</p>
-      </ThemeTransition>
-    </main>
+    <SectionContainer>
+      <h2 className="text-h1 font-semibold leading-none text-primary text-center">{t("title")}</h2>
+      <CldImage
+        width="94"
+        height="50"
+        src={`${servicesUrls.cloudynary}common/profile-picture`}
+        className={"w-[16rem]"}
+        alt={t("title")}
+      />
+      <div
+        className={`flex flex-col gap-m text-body text-center leading-loose ${
+          isDarkTheme ? "text-tertiary" : "text-secondary"
+        } `}
+      >
+        {t.rich("description", {
+          part: (chunks) => <p>{chunks}</p>,
+          strong: (chunks) => <strong className="text-primary">{chunks}</strong>,
+        })}
+        {/* {experiences.map((exp, index) => (
+          <Experience key={index} title={exp.title} description={exp.description} />
+        ))} */}
+
+        {t("closure")}
+      </div>
+    </SectionContainer>
   );
 };
 

@@ -4,13 +4,30 @@
     "about": "About",
     "projects": "Projects",
     "toolbox": "Toolbox",
-    "contact": "Contact"
+    "contact": "Contact",
+    "download": "Download resume",
+    "rights": "All rights reserved."
   },
   "home": {
     "title": "I Create User Experiences",
-    "description": "I’m a UX Developer and Designer with 17+ years of experience, driving projects from planning to development, with expertise in branding, illustration, and seamless digital experiences.",
+    "description": "I'm a UX Developer and Designer with 17+ years of experience, driving projects from planning to development, with expertise in branding, illustration, and seamless digital experiences.",
     "subtitle": "Featured projects",
     "downloadButton": "Download resume",
     "projectsButton": "Projects"
+  },
+  "about": {
+    "title": "Hi, I'm Fredy Munevar.",
+    "description": "<part>I am a Designer and UX Developer with 17+ years of experience designing and developing intuitive digital interfaces. Starting in graphic design, I expanded into front-end development, working with tools like <strong>React, React Native, Next.js, typescript and SASS.</strong></part><part>Over a decade at Netbangers, I transitioned from Web Designer to Project Manager, leading the whole team from design to development. <strong>My diverse skill set enables me to deliver user-centered experiences across web and mobile platforms.</strong> I'm certified in Agile methodologies and passionate about creating efficient, user-friendly solutions while staying updated on the latest technologies.</part>",
+    "closure": "Through these experiences, I've developed a well-rounded skill set that spans UI/UX design, front-end development, and project management. My passion lies in creating user-centered digital solutions that not only look great but work effortlessly for end users.",
+    "experiences": {
+      "netbangers": {
+        "title": "Netbangers",
+        "description": "I worked at Netbangers for over a decade, starting as a Web Designer and transitioning to Project Manager. I led the team from design to development, ensuring projects were delivered on time and within budget."
+      },
+      "netbangers1": {
+        "title": "Netbangers1",
+        "description": "I worked at Netbangers for over a decade, starting as a Web Designer and transitioning to Project Manager. I led the team from design to development, ensuring projects were delivered on time and within budget."
+      }
+    }
   }
 }
