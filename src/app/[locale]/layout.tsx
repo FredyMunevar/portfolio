@@ -50,7 +50,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   return (
     <html lang={locale}>
-      <body className={"antialiased"}>
+      <body className={"antialiased p-[1px]"}>
         <SplashCursor />
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>

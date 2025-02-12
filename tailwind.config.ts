@@ -43,7 +43,7 @@ export default {
       hero: "clamp(3.75rem, 10.5vw, 6.875rem)",
       h1: "clamp(2.688rem, 7.5vw, 3.563rem)",
       h2: "clamp(2.250rem, 6vw, 2.438rem)",
-      h3: "clamp(1.187rem, 4vw, 2.063rem)",
+      h3: "clamp(1.875rem, 4vw, 2.063rem)",
       // menu: "1.250rem",
       // footer: "1rem",
       // desc: "0.750rem",

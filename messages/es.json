@@ -20,13 +20,35 @@
     "description": "<part>Soy un diseñador y desarrollador de UX con más de 17 años de experiencia en el diseño y desarrollo de interfaces digitales intuitivas. Comenzando en el diseño gráfico, me expandí al desarrollo front-end, trabajando con herramientas como <strong>React, React Native, Next.js, typescript y SASS.</strong></part><part>Durante más de una década en Netbangers, hice la transición de Diseñador Web a Gerente de Proyectos, liderando a todo el equipo desde el diseño hasta el desarrollo. <strong>Mi diverso conjunto de habilidades me permite ofrecer experiencias centradas en el usuario a través de plataformas web y móviles.</strong> Estoy certificado en metodologías ágiles y me apasiona crear soluciones eficientes y fáciles de usar mientras me mantengo actualizada en las últimas tecnologías.</part>",
     "closure": "A través de estas experiencias, he desarrollado un conjunto de habilidades bien redondeado que abarca el diseño UI/UX, el desarrollo front-end y la gestión de proyectos. Mi pasión es crear soluciones digitales centradas en el usuario que no solo sean atractivas, sino que funcionen sin esfuerzo para los usuarios finales.",
     "experiences": {
+      "million": {
+        "title": "Million Luxury",
+        "role": "Senior UX/UI Designer",
+        "date": "Presente",
+        "description": "Actualmente trabajo en aplicaciones móviles y web para el sector inmobiliario, centradas en la selección de inquilinos y el desarrollo de CRM."
+      },
+      "branch": {
+        "title": "Branch App",
+        "role": "Co-Founder, UX/UI Designer, Front-End Developer",
+        "date": "2021",
+        "description": "Co-fundé y desarrollé una aplicación web y móvil para agilizar la comunicación de mantenimiento de vehículos para talleres de reparación."
+      },
       "netbangers": {
         "title": "Netbangers",
-        "description": "I worked at Netbangers for over a decade, starting as a Web Designer and transitioning to Project Manager. I led the team from design to development, ensuring projects were delivered on time and within budget."
+        "role": "Web Designer, Front-End Developer, Project Manager",
+        "date": "2021",
+        "description": "Dirigí el diseño de la interfaz de usuario y el desarrollo front-end de campañas digitales y sitios de comercio electrónico para marcas mundiales."
       },
-      "netbangers1": {
-        "title": "Netbangers1",
-        "description": "I worked at Netbangers for over a decade, starting as a Web Designer and transitioning to Project Manager. I led the team from design to development, ensuring projects were delivered on time and within budget."
+      "zeta": {
+        "title": "Zeta IGC",
+        "role": "Graphic Designer",
+        "date": "2010",
+        "description": "Diseñé material publicitario para marcas nacionales y empecé a aprender desarrollo web por mi cuenta."
+      },
+      "navarra": {
+        "title": "Navarra Impresores",
+        "role": "Graphic Design Intern",
+        "date": "2006",
+        "description": "Diseño de material impreso para pequeñas empresas de Bogotá, participando en el proceso de impresión offset."
       }
     }
   }
