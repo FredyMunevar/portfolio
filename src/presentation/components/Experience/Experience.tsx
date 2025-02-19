@@ -1,17 +1,37 @@
 import React from "react";
 
+/**
+ * Props interface for Experience component
+ */
 interface ExperienceProps {
+  /** Job title or position */
   title: string;
+  /** Detailed description of the experience */
   description: string;
+  /** Role or company name */
   role: string;
+  /** Time period of the experience */
   date: string;
 }
 
+/**
+ * Styles for the date element's before pseudo-element
+ * Creates a horizontal line across the timeline
+ */
 const dateBeforeStyles =
   "before:w-full before:absolute before:-z-10 before:border-t-2 before:top-[50%] before:left-0 before:border-borderLight";
+
+/**
+ * Styles for the date element's after pseudo-element
+ * Creates a circular marker on the timeline
+ */
 const dateAfterStyles =
   "after:w-m after:h-m after:border-2 after:rounded-lg after:bg-tertiary after:border-borderLight after:absolute after:left-0 after:top-[50%] after:-translate-y-[50%] after:-translate-x-[50%]";
 
+/**
+ * Experience component that displays a single work experience entry
+ * in a timeline format with date, role, title, and description.
+ */
 const Experience: React.FC<ExperienceProps> = ({ role, date, title, description }) => {
   return (
     <div className="flex flex-col border-l-2 border-l-borderLight py-l">

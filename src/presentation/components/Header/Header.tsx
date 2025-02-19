@@ -10,27 +10,58 @@ import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import MuneIcon from "@/presentation/components/MuneIcon/MuneIcon";
 import ThemeTransition from "@/presentation/components/ThemeTransition/ThemeTransition";
 import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
+import MenuItem from "./MenuItem";
 
 const darkLogo = `${servicesUrls.cloudynary}common/mune-logo-white.svg`;
 const lightLogo = `${servicesUrls.cloudynary}common/mune-logo-black.svg`;
 
 /**
  * Header component that displays the header section of the website.
+ * Provides navigation, theme switching, and language selection functionality.
  */
 const Header = () => {
+  /**
+   * State to control mobile menu visibility
+   */
   const [openMenu, setOpenMenu] = React.useState(false);
-  const { theme } = useTheme();
-  const [bottomOffset, setBottomOffset] = useState(0);
-  const headerRef = useRef<HTMLDivElement>(null);
-  const pathname = usePathname();
-  const locale = useLocale();
-  const t = useTranslations("nav");
 
-  const buttonStyles = `
-    font-light text-menu lg:text-secondary lg:relative lg:after:w-0 lg:after:h-[1px] lg:after:bg-secondary
-    lg:after:transition-all lg:after:duration-500 lg:after:ease-in-out lg:after:absolute lg:after:-bottom-s
-    lg:after:left-[50%] lg:hover:after:w-full  ${theme == "dark" && "lg:text-tertiary lg:after:bg-tertiary"}`;
+  /**
+   * Get current theme from context
+   */
+  const { theme } = useTheme();
+
+  /**
+   * State to manage vertical offset when scrolling near footer
+   */
+  const [bottomOffset, setBottomOffset] = useState(0);
+
+  /**
+   * Reference to header element for scroll calculations
+   */
+  const headerRef = useRef<HTMLDivElement>(null);
+
+  /**
+   * Get current route path
+   */
+  const pathname = usePathname();
+
+  /**
+   * Get current locale for i18n
+   */
+  const locale = useLocale();
+
+  /**
+   * Menu items configuration
+   * @type {readonly {path: string, text: string}[]}
+   */
+  const menuItems: readonly { path: string; text: string }[] = [
+    { path: "/", text: "home" },
+    { path: "/about", text: "about" },
+    { path: "/projects", text: "projects" },
+    { path: "/toolbox", text: "toolbox" },
+    { path: "/contact", text: "contact" },
+  ] as const;
 
   /**
    * Effect to handle scroll events and update the bottom offset of the header.
@@ -58,13 +89,9 @@ const Header = () => {
 
   return (
     <>
-      <header className="absolute w-full flex justify-between items-start ">
-        <div
-          ref={headerRef}
-          className={`relative lg:flex lg:flex-row lg:gap-m xl:w-[208px] xl:z-20 xl:h-screen xl:flex-col xl:gap-xl xl:justify-center xl:align-middle xl:fixed xl:transition-all xl:duration-1000 xl:ease-in-out`}
-          style={{ bottom: bottomOffset }}
-        >
-          <h1 className="m-m lg:m-l xl:m-0 relative z-20">
+      <header className="absolute w-full flex justify-between lg:justify-start">
+        <div className="flex justify-between w-full lg:w-auto">
+          <h1 className="m-m lg:m-l relative z-[21] left-0">
             <Link href={"/"} className="flex justify-center">
               <ThemeTransition wait className="relative w-xl top-0 lg:w-[80px]">
                 <CldImage
@@ -77,93 +104,54 @@ const Header = () => {
               </ThemeTransition>
             </Link>
           </h1>
+          <div className="absolute right-0 top-0 z-30 flex justify-center gap-m pr-m lg:gap-l lg:pr-l">
+            <ThemeSwitch />
+            <LanguageSwitch locale={locale} />
+          </div>
+        </div>
+        <div
+          ref={headerRef}
+          className={`relative lg:flex lg:flex-row lg:gap-m xl:px-[3rem] xl:z-20 xl:h-screen xl:flex-col xl:gap-xl
+            xl:justify-center xl:align-middle xl:fixed xl:transition-all xl:duration-1000 xl:ease-in-out`}
+          style={{ bottom: bottomOffset }}
+        >
           <nav
-            className={`bg-primary fixed w-screen h-screen z-20 top-0 flex flex-col justify-end items-start gap-l px-l py-xl transition-[right] duration-1000 ease-in-out
-            md:w-2/5
-            lg:bg-transparent lg:static lg:w-auto lg:h-auto lg:p-0 lg:align-middle lg:self-center lg:justify-self-start
+            className={`bg-primary fixed w-screen h-screen z-30 top-0 flex flex-col justify-end items-start gap-xl px-l py-xl transition-[right] duration-1000 ease-in-out
+            md:w-2/5 lg:bg-transparent lg:static lg:w-auto lg:h-auto lg:p-0 lg:align-middle lg:self-center lg:justify-self-start
+            xl:[&_span]:opacity-0 xl:[&_span]:hover:opacity-100
             ${openMenu ? "right-0" : "-right-full"}`}
           >
-            <ul>
-              <ThemeTransition wait className="flex flex-col gap-l lg:flex-row xl:flex-col">
-                <li className="xl:text-center">
-                  <Link
-                    className={`${buttonStyles} ${
-                      pathname === "/en" || pathname === "/es" ? "lg:after:w-full lg:after:!left-0 font-semibold" : ""
-                    }`}
-                    href="/"
+            <ThemeTransition wait>
+              <ul className="flex flex-col gap-l lg:flex-row lg:gap-[2.5rem] xl:flex-col">
+                {menuItems.map((item) => (
+                  <MenuItem
+                    key={item.text}
+                    path={item.path}
+                    text={item.text}
+                    pathname={pathname}
                     onClick={() => setOpenMenu(false)}
-                  >
-                    {t("home")}
-                  </Link>
-                </li>
-                <li className="xl:text-center">
-                  <Link
-                    className={`${buttonStyles} ${
-                      pathname.includes("/about") ? "lg:after:w-full lg:after:!left-0 font-semibold" : ""
-                    }`}
-                    href="/about"
-                    onClick={() => setOpenMenu(false)}
-                  >
-                    {t("about")}
-                  </Link>
-                </li>
-                <li className="xl:text-center">
-                  <Link
-                    className={`${buttonStyles} ${
-                      pathname.includes("/projects") ? "lg:after:w-full lg:after:!left-0 font-semibold" : ""
-                    }`}
-                    href="/projects"
-                    onClick={() => setOpenMenu(false)}
-                  >
-                    {t("projects")}
-                  </Link>
-                </li>
-                <li className="xl:text-center">
-                  <Link
-                    className={`${buttonStyles} ${
-                      pathname.includes("/toolbox") ? "lg:after:w-full lg:after:!left-0 font-semibold" : ""
-                    }`}
-                    href="/toolbox"
-                    onClick={() => setOpenMenu(false)}
-                  >
-                    {t("toolbox")}
-                  </Link>
-                </li>
-                <li className="xl:text-center">
-                  <Link
-                    className={`${buttonStyles} ${
-                      pathname.includes("/contact") ? "lg:after:w-full lg:after:!left-0 font-semibold" : ""
-                    }`}
-                    href="/contact"
-                    onClick={() => setOpenMenu(false)}
-                  >
-                    {t("contact")}
-                  </Link>
-                </li>
-              </ThemeTransition>
-            </ul>
+                  />
+                ))}
+              </ul>
+            </ThemeTransition>
             <ul className="flex flex-row gap-m lg:hidden">
               <li>
                 <Link href={servicesUrls.linkedin} target="_blank">
-                  <MuneIcon name={"icon-linkedin"} size={28} />
+                  <MuneIcon name={"icon-linkedin-thin"} size={28} />
                 </Link>
               </li>
               <li>
                 <Link href={servicesUrls.instagram} target="_blank">
-                  <MuneIcon name={"icon-intagram"} size={28} />
+                  <MuneIcon name={"icon-instagram-thin"} size={28} />
                 </Link>
               </li>
               <li>
                 <Link href={servicesUrls.github} target="_blank">
-                  <MuneIcon name={"icon-github"} size={28} />
+                  <MuneIcon name={"icon-github-thin"} size={28} />
                 </Link>
               </li>
             </ul>
           </nav>
-        </div>
-        <div className="absolute right-0 top-0 z-30 flex justify-center gap-m pr-m lg:gap-l lg:pr-l">
-          <ThemeSwitch />
-          <LanguageSwitch locale={locale} />
         </div>
       </header>
       <Button
