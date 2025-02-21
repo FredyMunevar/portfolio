@@ -51,5 +51,28 @@
         "description": "Diseño de material impreso para pequeñas empresas de Bogotá, participando en el proceso de impresión offset."
       }
     }
+  },
+  "toolbox": {
+    "title": "Herramientas 😎",
+    "description": "<part>A lo largo de los años, he desarrollado un conjunto versátil de habilidades que me permiten crear experiencias de usuario desde el concepto hasta el código. He aquí un vistazo a las herramientas, tecnologías y métodos que utilizo para convertir ideas en productos digitales que marcan la diferencia.</part><part>Vamos a sumergirnos en las diferentes áreas en las que me especializo:</part>",
+    "tools": {
+      "design": {
+        "title": "Diseño UI/UX 🎨",
+        "toolDescription": "<subtitle>🧠 Wireframing:</subtitle><content>Convertir ideas en diseños estructurados que sirvan de columna vertebral para las interfaces de usuario.</content><subtitle>🧑🏾‍💻 Creación de prototipos:</subtitle><content>Creación de prototipos interactivos que permiten a los usuarios y partes interesadas experimentar el diseño antes de que esté completamente desarrollado.</content><subtitle>🖌️ Diseño visual:</subtitle><content>Garantizar que cada píxel sirva a un propósito, creando diseños visualmente atractivos y cohesivos utilizando herramientas como Figma, Sketch y Adobe XD.</content>"
+      },
+      "front": {
+        "title": "Front-End 💻",
+        "toolDescription": "<subtitle>⚛️ React, Next.js, y TypeScript:</subtitle><content>Dando vida a los diseños con código responsive y de alto rendimiento. Me especializo en el uso de React y NextJS para crear aplicaciones web escalables.</content><subtitle>🖥️️ HTML5 & CSS3 (SASS):</subtitle><content>Creación de diseños responsivos que garantizan una experiencia fluida a través de diferentes tamaños de pantalla y dispositivos.</content>"
+      },
+      "mobile": {
+        "title": "Desarrollo Móvil 📱",
+        "toolDescription": "<subtitle>⚛️ React Native:</subtitle><content>Creación de aplicaciones móviles multiplataforma que proporcionan una experiencia de usuario consistente tanto en iOS como en Android.</content><subtitle>📲 Responsive Design:</subtitle><content>Asegurando que los diseños funcionen maravillosamente tanto en móviles como en escritorio, adaptándose perfectamente a los diferentes dispositivos.</content>"
+      },
+      "collaboration": {
+        "title": "Collaboración 🤝",
+        "toolDescription": "<subtitle>📎 Control de versiones:</subtitle><content>Trabajo colaborativo utilizando Git, asegurando una coordinación fluida del proyecto y el versionado del código.</content><subtitle>💪🏽 Agile Methodologies:</subtitle><content>Scrum Master certificado, me siento cómodo liderando equipos y entregando proyectos de forma iterativa manteniendo la calidad y el enfoque en el usuario.</content>"
+      }
+    },
+    "closure": "Estas habilidades me permiten abordar los proyectos desde múltiples ángulos, asegurando que el diseño y el desarrollo trabajen mano a mano para crear experiencias de usuario intuitivas y eficientes. Si estás interesado en aprender más sobre cualquiera de estas áreas, no dudes en ponerte en contacto conmigo, <part>me encantaría charlar!</part>"
   }
 }

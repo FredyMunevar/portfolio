@@ -51,5 +51,28 @@
         "description": "Designed printed materials for small businesses in Bogotá, participating in the offset printing process."
       }
     }
+  },
+  "toolbox": {
+    "title": "My toolbox 😎",
+    "description": "<part>Over the years, I've built a versatile set of skills that allow me to craft user experiences from concept to code. Here's a look at the tools, technologies, and methods I use to turn ideas into digital products that make a difference.</part><part>Let's dive into the different areas I specialize in:</part>",
+    "tools": {
+      "design": {
+        "title": "UI/UX Design 🎨",
+        "toolDescription": "<subtitle>🧠 Wireframing:</subtitle><content>Turning ideas into structured layouts that serve as the backbone for user interfaces.</content><subtitle>🧑🏾‍💻 Prototyping:</subtitle><content>Creating interactive prototypes that allow users and stakeholders to experience the design before it's fully developed.</content><subtitle>🖌️ Visual Design:</subtitle><content>Ensuring every pixel serves a purpose, creating visually appealing and cohesive designs using tools like Figma, Sketch, and Adobe XD.</content>"
+      },
+      "front": {
+        "title": "Front-End 💻",
+        "toolDescription": "<subtitle>⚛️ React, Next.js, and TypeScript:</subtitle><content>Bringing designs to life with responsive, high-performance code. I specialize in using React and NextJS to create scalable web applications.</content><subtitle>🖥️️ HTML5 & CSS3 (SASS):</subtitle><content>Crafting responsive layouts that ensure a seamless experience across different screen sizes and devices.</content>"
+      },
+      "mobile": {
+        "title": "Mobile Dev 📱",
+        "toolDescription": "<subtitle>⚛️ React Native:</subtitle><content>Building cross-platform mobile applications that provide a consistent user experience on both iOS and Android.</content><subtitle>📲 Responsive Design:</subtitle><content>Ensuring designs work beautifully on both mobile and desktop, adapting seamlessly to different devices.</content>"
+      },
+      "collaboration": {
+        "title": "Collaboration 🤝",
+        "toolDescription": "<subtitle>📎 Version Control:</subtitle><content>Working collaboratively using Git, ensuring smooth project coordination and code versioning.</content><subtitle>💪🏽 Agile Methodologies:</subtitle><content>Scrum Master certified, I'm comfortable leading teams and delivering projects iteratively while maintaining quality and user focus.</content>"
+      }
+    },
+    "closure": "These skills allow me to approach projects from multiple angles, ensuring that the design and development work hand in hand to create intuitive, efficient user experiences. If you're interested in learning more about any of these areas, feel free to reach out, <part>I'd love to chat!</part>"
   }
 }

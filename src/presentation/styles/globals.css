@@ -41,6 +41,44 @@
     background-color: var(--tertiary);
     overflow-x: hidden;
   }
+  .scrollbar-light::-webkit-scrollbar {
+    width: var(--spacing-xs);
+  }
+
+  .scrollbar-light::-webkit-scrollbar-track {
+    background: var(--border-light);
+    border-radius: var(--spacing-xxs);
+  }
+
+  .scrollbar-light::-webkit-scrollbar-thumb {
+    background: var(--gray);
+    border-radius: var(--spacing-xxs);
+  }
+
+  .scrollbar-light::-webkit-scrollbar-thumb:hover {
+    width: var(--spacing-s);
+    background: var(--primary);
+  }
+
+  /* Dark theme scrollbar */
+  .scrollbar-dark::-webkit-scrollbar {
+    width: var(--spacing-xs);
+  }
+
+  .scrollbar-dark::-webkit-scrollbar-track {
+    background: var(--gray);
+    border-radius: var(--spacing-xxs);
+  }
+
+  .scrollbar-dark::-webkit-scrollbar-thumb {
+    background: var(--border-light);
+    border-radius: var(--spacing-xxs);
+  }
+
+  .scrollbar-dark::-webkit-scrollbar-thumb:hover {
+    width: var(--spacing-s);
+    background: var(--primary);
+  }
 }
 
 html.dark {

@@ -19,7 +19,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   /**
    * State to manage the current theme.
    */
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
 
   /**
    * Effect to load the saved theme from localStorage or set it based on the user's system preference.
@@ -60,7 +60,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
  *
  * @returns {ThemeContextProps} The theme context value.
  */
-export const useTheme = () => {
+export const useTheme = (): ThemeContextProps => {
   const context = useContext(ThemeContext);
   if (!context) {
     throw new Error("useTheme must be used within a ThemeProvider");

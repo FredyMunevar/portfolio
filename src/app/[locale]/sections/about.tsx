@@ -78,7 +78,7 @@ const About = () => {
         </section>
         <aside
           className={`flex flex-col gap-m text-body text-center leading-loose xl:h-auto xl:px-l xl:overflow-y-auto ${
-            isDarkTheme ? "text-tertiary" : "text-secondary"
+            isDarkTheme ? "text-tertiary scrollbar-dark" : "text-secondary scrollbar-light"
           } `}
           style={{ maxHeight: window.innerWidth >= 1280 ? `${height}px` : "none" }}
           ref={scrollRef}
