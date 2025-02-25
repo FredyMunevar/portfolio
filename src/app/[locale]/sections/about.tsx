@@ -58,8 +58,8 @@ const About = () => {
               {t("title")}
             </h2>
             <CldImage
-              width="94"
-              height="50"
+              width="512"
+              height="511"
               src={`${servicesUrls.cloudynary}common/profile-picture`}
               className={"w-[16rem]"}
               alt={t("title")}

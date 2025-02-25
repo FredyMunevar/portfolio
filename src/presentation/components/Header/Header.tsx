@@ -111,18 +111,18 @@ const Header = () => {
         </div>
         <div
           ref={headerRef}
-          className={`relative lg:flex lg:flex-row lg:gap-m xl:px-[3rem] xl:z-20 xl:h-screen xl:flex-col xl:gap-xl
+          className={`relative lg:flex lg:flex-row lg:gap-m xl:px-[2.5rem] xl:z-20 xl:h-screen xl:flex-col xl:gap-xl
             xl:justify-center xl:align-middle xl:fixed xl:transition-all xl:duration-1000 xl:ease-in-out`}
           style={{ bottom: bottomOffset }}
         >
           <nav
             className={`bg-primary fixed w-screen h-screen z-30 top-0 flex flex-col justify-end items-start gap-xl px-l py-xl transition-[right] duration-1000 ease-in-out
-            md:w-2/5 lg:bg-transparent lg:static lg:w-auto lg:h-auto lg:p-0 lg:align-middle lg:self-center lg:justify-self-start
+            md:w-2/5 xl:bg-transparent xl:static xl:w-auto xl:h-auto xl:p-0 xl:align-middle xl:self-center xl:justify-self-start
             xl:[&_span]:opacity-0 xl:[&_span]:hover:opacity-100
             ${openMenu ? "right-0" : "-right-full"}`}
           >
             <ThemeTransition wait>
-              <ul className="flex flex-col gap-l lg:flex-row lg:gap-[2.5rem] xl:flex-col">
+              <ul className="flex flex-col gap-l lg:gap-[2.5rem] xl:flex-col">
                 {menuItems.map((item) => (
                   <MenuItem
                     key={item.text}
@@ -155,7 +155,7 @@ const Header = () => {
         </div>
       </header>
       <Button
-        className={`fixed bottom-m end-m z-30 transition-all duration-300 ease-in-out lg:hidden ${
+        className={`fixed bottom-m end-m z-30 transition-all duration-300 ease-in-out xl:hidden ${
           openMenu ? "bg-secondary" : "bg-primary"
         }`}
         buttonType={openMenu ? "secondary" : "primary"}

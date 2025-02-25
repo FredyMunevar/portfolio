@@ -43,15 +43,15 @@ const MenuItem = ({
   /**
    * Base styles for the button element
    */
-  const buttonStyles = `font-light lg:text-secondary flex gap-m lg:relative lg:flex-col lg:items-center lg:gap-xs xl:gap-s
+  const buttonStyles = `font-light lg:text-secondary flex gap-m xl:relative xl:flex-col xl:items-center xl:gap-s
   lg:[&_span]:after:left-[50%] lg:[&_span]:hover:after:w-full ${isDarkTheme && "lg:text-tertiary"}`;
 
   /**
    * Styles for the button span element with underline animation
    */
-  const buttonSpanStyles = `text-menu lg:text-desc lg:after:w-0 lg:after:h-[1px] lg:after:bg-secondary lg:transition-all lg:duration-500 lg:ease-in-out
-  lg:after:transition-all lg:after:duration-500 lg:after:ease-in-out lg:after:absolute lg:after:-bottom-s ${
-    isDarkTheme && "lg:after:bg-tertiary"
+  const buttonSpanStyles = `text-menu xl:text-desc lg:after:w-0 xl:after:h-[1px] lgxlfter:bg-secondary lgxlransition-all lgxluration-500 lgxlase-in-out
+  lgxlfter:transition-all lgxlfter:duration-500 lgxlfter:ease-in-out lgxlfter:absolute lgxlfter:-bottom-s ${
+    isDarkTheme && "lgxlfter:bg-tertiary"
   }`;
 
   /**
@@ -75,7 +75,7 @@ const MenuItem = ({
     <li className="xl:text-center">
       <Link className={`${buttonStyles}`} href={path} onClick={onClick}>
         <MuneIcon
-          color={`${isDarkTheme ? "var(--tertiary)" : "var(--secondary)"}`}
+          color={"var(--secondary)"}
           name={`${addActive() !== undefined ? `icon-${text}-filled` : `icon-${text}`}`}
           size={24}
         />

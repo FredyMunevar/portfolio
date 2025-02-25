@@ -74,5 +74,31 @@
       }
     },
     "closure": "These skills allow me to approach projects from multiple angles, ensuring that the design and development work hand in hand to create intuitive, efficient user experiences. If you're interested in learning more about any of these areas, feel free to reach out, <part>I'd love to chat!</part>"
+  },
+  "contact": {
+    "title": "Let's create something amazing together. 🤝🏽",
+    "description": "Feel free to reach out if you're interested in working together, have any questions about my work, or just want to say hello.",
+    "media": {
+      "phone": {
+        "icon": "icon-phone",
+        "content": "(+57) 304 292 3745"
+      },
+      "email": {
+        "icon": "icon-email",
+        "content": "fredy.munevar@me.com"
+      },
+      "linkedin": {
+        "icon": "icon-linkedin",
+        "content": "linkedin.com/in/fredy-munevar"
+      },
+      "github": {
+        "icon": "icon-github",
+        "content": "github.com/FredyMunevar"
+      },
+      "instagram": {
+        "icon": "icon-instagram",
+        "content": "instagram.com/fredy_munevar"
+      }
+    }
   }
 }

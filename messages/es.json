@@ -70,9 +70,35 @@
       },
       "collaboration": {
         "title": "Collaboración 🤝",
-        "toolDescription": "<subtitle>📎 Control de versiones:</subtitle><content>Trabajo colaborativo utilizando Git, asegurando una coordinación fluida del proyecto y el versionado del código.</content><subtitle>💪🏽 Agile Methodologies:</subtitle><content>Scrum Master certificado, me siento cómodo liderando equipos y entregando proyectos de forma iterativa manteniendo la calidad y el enfoque en el usuario.</content>"
+        "toolDescription": "<subtitle>📎 Control de versiones:</subtitle><content>Trabajo colaborativo utilizando Git, asegurando una coordinación fluida del proyecto y el versionado del código.</content><subtitle>💪🏽 Metodologías ágiles:</subtitle><content>Scrum Master certificado, me siento cómodo liderando equipos y entregando proyectos de forma iterativa manteniendo la calidad y el enfoque en el usuario.</content>"
       }
     },
     "closure": "Estas habilidades me permiten abordar los proyectos desde múltiples ángulos, asegurando que el diseño y el desarrollo trabajen mano a mano para crear experiencias de usuario intuitivas y eficientes. Si estás interesado en aprender más sobre cualquiera de estas áreas, no dudes en ponerte en contacto conmigo, <part>me encantaría charlar!</part>"
+  },
+  "contact": {
+    "title": "Vamos a crear algo increíble juntos. 🤝🏽",
+    "description": "No dudes en ponerte en contacto si estás interesado en trabajar conmigo, tienes alguna pregunta sobre mi trabajo o simplemente quieres saludarme.",
+    "media": {
+      "phone": {
+        "icon": "icon-phone",
+        "content": "(+57) 304 292 3745"
+      },
+      "email": {
+        "icon": "icon-email",
+        "content": "fredy.munevar@me.com"
+      },
+      "linkedin": {
+        "icon": "icon-linkedin",
+        "content": "linkedin.com/in/fredy-munevar"
+      },
+      "github": {
+        "icon": "icon-github",
+        "content": "github.com/FredyMunevar"
+      },
+      "instagram": {
+        "icon": "icon-instagram",
+        "content": "instagram.com/fredy_munevar"
+      }
+    }
   }
 }
