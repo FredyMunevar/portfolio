@@ -16,7 +16,7 @@ import { useTheme } from "@/context/ThemeContext";
  * @param {boolean} [props.largeButton] - Flag to determine if the button should be rendered in a larger size.
  * @param {Object} [props.props] - Additional properties to be passed to the button or link element.
  */
-const Button = ({ onClick, link, buttonType = "primary", children, className, largeButton, ...props }: IButton) => {
+const Button = ({ onClick, link, buttonType = "primary", children, className, largeButton, target }: IButton) => {
   const { theme } = useTheme();
   const isDarkTheme = theme === "dark";
   const isPrimary = buttonType === "primary";
@@ -36,7 +36,7 @@ const Button = ({ onClick, link, buttonType = "primary", children, className, la
         isSecondary && secondaryStyles
       } ${defaultStyles} ${className}`}
       href={link}
-      {...props}
+      target={target}
     >
       {children}
     </Link>
@@ -46,7 +46,6 @@ const Button = ({ onClick, link, buttonType = "primary", children, className, la
         isSecondary && secondaryStyles
       } ${defaultStyles} ${className}`}
       onClick={onClick}
-      {...props}
     >
       {children}
     </button>

@@ -100,5 +100,31 @@
         "content": "instagram.com/fredy_munevar"
       }
     }
+  },
+  "projects": {
+    "title": "Welcome to my portfolio! 🎨",
+    "description": "<part>Explore my projects, each focused on creating intuitive and seamless user experiences.</part><part>From mobile apps to communication platforms, I blend creativity with functionality to make every interaction smoother and more enjoyable.</part><part>Feel free to dive into the details of each case study.</part>",
+    "button": "More on Behance"
+  },
+  "branch": {
+    "roleTitle": "Role",
+    "roleContent": "UX Designer, UI Designer, Branding, Front-End Developer, Project Lead, and Co-founder",
+    "typeTitle": "Type",
+    "typeContent": "Mobile app, Desktop CRM, and Website",
+    "title": "Revolutionizing vehicle maintenance.",
+    "intro": "<part><strong>Branch App</strong> was created to revolutionize vehicle documentation and workshop management with a digital solution.</part><part><strong>Branch</strong> offers a mobile app for vehicle owners and a CRM for workshops, making it easy to organize documents, schedule maintenance, and manage repair processes.</part>",
+    "purposeTitle": "Purpose",
+    "purposeContent": "<part>Listening to common challenges among motorcycle users, we identified the need for a centralized digital platform to solve two primary issues:</part>",
+    "purposeList": "<li>Managing vehicle documents was tedious and inefficient.</li><li>Communication between workshops and owners lacked structure, making it hard to manage and track maintenance processes.</li>",
+    "challengeTitle": "Challenge",
+    "challengeContent": "Our biggest hurdle was convincing potential users who relied on traditional methods to embrace a digital tool. Workshops were accustomed to spreadsheets or printed forms and were initially resistant to adopting a new technology-driven solution.",
+    "researchTitle": "Research",
+    "researchContent": "<part>Conducted extensive user research, which led to documents like the Problem Statement, User Persona, User Journey Map, and User Flow. These were foundational in aligning our team with the real issues users faced.</part><part>Created a brand identity for Branch, from logo design to defining a cohesive visual style that spoke to both individual vehicle owners and workshop managers.</part>",
+    "designTitle": "Design and Prototyping",
+    "designContent": "<part>Due to the absence of a reference app for this type of service, prototyping was crucial to showcase our solution's purpose and usability.</part><part>Early mockups were made using <strong>Affinity Designer,</strong> then brought to life with <strong>Marvel</strong> for interactivity, allowing us to gather feedback through various iterations.</part><part>Final UI Designs were developed in <strong>Adobe XD,</strong> incorporating insights from user testing to ensure an intuitive, accessible interface for both mobile and desktop users.</part>",
+    "devTitle": "Development",
+    "devContent": "<part>I led the front-end development for both the mobile app and CRM, using <strong>React Native</strong> for the mobile app and <strong>Vue</strong> for the CRM.</part><part>Employed <strong>SASS and TypeScript</strong> for clean, maintainable code, and used <strong>Git</strong> for version control.</part><part>Managed development workflows with <strong>scrum boards in Jira and Clickup</strong> to keep tasks organized and our team focused on delivering an MVP.</part>",
+    "outcomeTitle": "Final outcome",
+    "outcomeContent": "<part>Branch App's MVP was successfully delivered, providing motorcycle owners and workshop managers with a centralized, easy-to-use tool for vehicle documentation and maintenance management.</part><part>Feedback from early users was overwhelmingly positive — they noted that Branch simplified data access, reduced their dependency on paper documentation, and streamlined their communication and record-keeping processes.</part>"
   }
 }

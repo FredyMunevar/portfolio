@@ -1,5 +1,5 @@
 import React from "react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "@/presentation/styles/globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import Header from "@/presentation/components/Header/Header";
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   title: "Fredy Munevar - Portfolio",
   description: "Fredy Munevar - Portfolio",
   icons: {
-    icon: [{ url: "favicon/icon.png" }, new URL("favicon/icon.png", "https://fredymunevar.com")],
-    shortcut: ["favicon/shortcut-icon.png"],
+    // icon: [{ url: "favicon/icon.png" }, new URL("favicon/icon.png", "https://fredymunevar.com")],
+    // shortcut: ["favicon/shortcut-icon.png"],
     apple: [
       { url: "favicon/apple-icon.png" },
       { url: "favicon/apple-icon-x3.png", sizes: "180x180", type: "image/png" },
@@ -30,6 +30,16 @@ export const metadata: Metadata = {
       },
     ],
   },
+};
+
+/**
+ * Metadata viewport for the application.
+ */
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 /**

@@ -118,7 +118,7 @@ const Header = () => {
           <nav
             className={`bg-primary fixed w-screen h-screen z-30 top-0 flex flex-col justify-end items-start gap-xl px-l py-xl transition-[right] duration-1000 ease-in-out
             md:w-2/5 xl:bg-transparent xl:static xl:w-auto xl:h-auto xl:p-0 xl:align-middle xl:self-center xl:justify-self-start
-            xl:[&_span]:opacity-0 xl:[&_span]:hover:opacity-100
+            xl:[&_span]:opacity-0 xl:[&_span]:hover:opacity-100 [@media(pointer:coarse)]:[&_span]:opacity-100
             ${openMenu ? "right-0" : "-right-full"}`}
           >
             <ThemeTransition wait>
@@ -134,7 +134,7 @@ const Header = () => {
                 ))}
               </ul>
             </ThemeTransition>
-            <ul className="flex flex-row gap-m lg:hidden">
+            <ul className="flex flex-row gap-m xl:hidden">
               <li>
                 <Link href={servicesUrls.linkedin} target="_blank">
                   <MuneIcon name={"icon-linkedin-thin"} size={28} />

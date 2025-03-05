@@ -24,7 +24,7 @@ const Footer = () => {
           format="svg"
         />
         <nav className="w-full flex flex-col gap-l md:w-auto">
-          <ul className="flex flex-row justify-between md:gap-l">
+          <ul className="flex flex-row justify-center gap-l flex-wrap items-center">
             <li>
               <Link className="font-light text-footer text-primary" href="/">
                 {t("home")}
@@ -57,17 +57,17 @@ const Footer = () => {
         <ul className="flex flex-row justify-center gap-m">
           <li>
             <Link href={servicesUrls.linkedin} target="_blank">
-              <MuneIcon name={"icon-linkedin"} size={28} color="var(--primary)" />
+              <MuneIcon name={"icon-linkedin-thin"} size={28} color="var(--primary)" />
             </Link>
           </li>
           <li>
             <Link href={servicesUrls.instagram} target="_blank">
-              <MuneIcon name={"icon-intagram"} size={28} color="var(--primary)" />
+              <MuneIcon name={"icon-instagram-thin"} size={28} color="var(--primary)" />
             </Link>
           </li>
           <li>
             <Link href={servicesUrls.github} target="_blank">
-              <MuneIcon name={"icon-github"} size={28} color="var(--primary)" />
+              <MuneIcon name={"icon-github-thin"} size={28} color="var(--primary)" />
             </Link>
           </li>
         </ul>

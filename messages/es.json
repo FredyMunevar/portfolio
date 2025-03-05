@@ -100,5 +100,31 @@
         "content": "instagram.com/fredy_munevar"
       }
     }
+  },
+  "projects": {
+    "title": "Bienvenido a mi portafolio! 🎨",
+    "description": "<part>Explora mis proyectos, cada uno de ellos centrado en crear experiencias de usuario intuitivas y fluidas.</part><part>Desde aplicaciones móviles hasta plataformas de comunicación, combino creatividad y funcionalidad para que cada interacción sea más fluida y agradable.</part><part>No dudes en sumergirte en los detalles de cada caso práctico.</part>",
+    "button": "Más en Behance"
+  },
+  "branch": {
+    "roleTitle": "Rol",
+    "roleContent": "UX Designer, UI Designer, Branding, Front-End Developer, Project Lead, and Co-founder",
+    "typeTitle": "Tipo",
+    "typeContent": "Aplicación móvil, CRM y sitio Web",
+    "title": "Revolucionando el mantenimiento de vehículos.",
+    "intro": "<part><strong>Branch App</strong> se creó para revolucionar la documentación de vehículos y la gestión de talleres con una solución digital.</part><part><strong>Branch</strong> ofrece una app móvil para propietarios de vehículos y un CRM para talleres, que facilita la organización de documentos, la programación del mantenimiento y la gestión de los procesos de reparación.</part>",
+    "purposeTitle": "Propósito",
+    "purposeContent": "<part>Escuchando los retos comunes entre los usuarios de motocicletas, identificamos la necesidad de una plataforma digital centralizada para resolver dos problemas principales:</part>",
+    "purposeList": "<li>La gestión de la documentación de los vehículos era tediosa e ineficaz.</li><li>La comunicación entre talleres y propietarios carecía de estructura, lo que dificultaba la gestión y el seguimiento de los procesos de mantenimiento.</li>",
+    "challengeTitle": "El reto",
+    "challengeContent": "Nuestro mayor obstáculo fue convencer a los usuarios potenciales que confiaban en los métodos tradicionales para que adoptaran una herramienta digital. Los talleres estaban acostumbrados a las hojas de cálculo o los formularios impresos y al principio se resistían a adoptar una nueva solución basada en la tecnología.",
+    "researchTitle": "Investigación",
+    "researchContent": "<part>Llevamos a cabo una investigación exhaustiva de los usuarios, que dio lugar a documentos como el Problem Statement, User Persona, User Journey Map y el User Flow. Estos documentos fueron fundamentales para alinear a nuestro equipo con los problemas reales a los que se enfrentaban los usuarios.</part><part>Creamos una identidad de marca para Branch, desde el diseño del logotipo hasta la definición de un estilo visual cohesivo que se dirigiera tanto a los propietarios de vehículos como a los jefes de taller.</part>",
+    "designTitle": "Diseño y Prototipado",
+    "designContent": "<part>Debido a la ausencia de una aplicación de referencia para este tipo de servicio, la creación de prototipos fue crucial para mostrar el propósito y la usabilidad de nuestra solución.</part><part>Las primeras maquetas se crearon con <strong>Affinity Designer,</strong> y, a continuación, se les dio vida con <strong>Marvel</strong> para la interactividad, lo que nos permitió obtener opiniones a través de varias iteraciones.</part><part>Los diseños finales de la interfaz de usuario se desarrollaron en <strong>Adobe XD,</strong> incorporando los resultados de las pruebas de usuario para garantizar una interfaz intuitiva y accesible tanto para usuarios de móviles como de ordenadores de escritorio.</part>",
+    "devTitle": "Desarrollo",
+    "devContent": "<part>Dirigí el desarrollo front-end tanto para la aplicación móvil como para el CRM, utilizando <strong>React Native</strong> para la aplicación móvil y <strong>Vue</strong> para el CRM.</part><part>Empleé <strong>SASS y TypeScript</strong> para un código limpio y mantenible, y utilicé <strong>Git</strong> para el control de versiones.</part><part>Gestioné los flujos de trabajo de desarrollo con <strong>tableros de scrum en Jira y Clickup</strong> para mantener las tareas organizadas y a nuestro equipo centrado en la entrega de un MVP.</part>",
+    "outcomeTitle": "Resultado final",
+    "outcomeContent": "<part>El MVP de Branch App se entregó con éxito, proporcionando a los propietarios de motocicletas y a los jefes de taller una herramienta centralizada y fácil de usar para la gestión de la documentación y el mantenimiento de los vehículos.</part><part>Los comentarios de los primeros usuarios fueron abrumadoramente positivos: señalaron que Branch simplificaba el acceso a los datos, reducía su dependencia de la documentación en papel y agilizaba sus procesos de comunicación y mantenimiento de registros.</part>"
   }
 }

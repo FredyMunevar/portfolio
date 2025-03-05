@@ -10,6 +10,25 @@
   --tertiary: #f9f9f9;
   --gray: #5e5558;
   --border-light: #d8d2d5;
+  /* Projects colors */
+  /* Branch */
+  --branch-primary: #041c24;
+  --branch-secondary: #5be5e5;
+  /* million */
+  --million-primary: #000000;
+  --million-secondary: #ffffff;
+  /* weelo */
+  --weelo-primary: #140064;
+  --weelo-secondary: #00c83e;
+  /* precision */
+  --precision-primary: #07849d;
+  --precision-secondary: #802a81;
+  /* monte frio */
+  --montefrio-primary: #07849d;
+  --montefrio-secondary: #00394b;
+  /* hola */
+  --hola-primary: #2e15c2;
+  --hola-secondary: #ff760d;
 
   /* spacing */
   --spacing-xxs: 0.125rem;

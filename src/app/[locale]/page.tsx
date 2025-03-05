@@ -56,7 +56,7 @@ const Home = () => {
           </h2>
         </ThemeTransition>
         <div className="w-full flex gap-l justify-start landscape:justify-center landscape:lg:justify-center">
-          <Button link={servicesUrls.cvDownload} props={{ target: "_blank" }} buttonType="secondary" largeButton>
+          <Button link={servicesUrls.cvDownload} buttonType="secondary" largeButton>
             {t("downloadButton")}
           </Button>
           <Button link={"/projects"} largeButton>

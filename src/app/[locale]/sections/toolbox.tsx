@@ -10,6 +10,17 @@ import Accordion from "@/presentation/components/Accordion/Accordion";
 import { IAccordionItem } from "@/presentation/components/Accordion/interface/iAccordion";
 
 /**
+ * Renders a styled subtitle for tool sections
+ * @param {Object} props - Component props
+ * @param {ReactNode} props.children - Content to render
+ */
+const ToolSubtitle = ({ children, isDark }: { children: ReactNode; isDark: boolean }) => {
+  return (
+    <h4 className={`text-h4 font-semibold mt-l mb-m ${isDark ? "text-tertiary" : "text-secondary"}`}>{children}</h4>
+  );
+};
+
+/**
  * Toolbox section component that displays technical skills and tools.
  * Features an accordion layout with categorized tools and an illustration.
  */
@@ -22,19 +33,6 @@ const Toolbox = () => {
 
   /** Translation function for localized content */
   const t = useTranslations("toolbox");
-
-  /**
-   * Renders a styled subtitle for tool sections
-   * @param {Object} props - Component props
-   * @param {ReactNode} props.children - Content to render
-   */
-  const ToolSubtitle = ({ children }: { children: ReactNode }) => {
-    return (
-      <h4 className={`text-h4 font-semibold mt-l mb-m ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>
-        {children}
-      </h4>
-    );
-  };
 
   /**
    * Renders styled content for tool descriptions
@@ -50,28 +48,28 @@ const Toolbox = () => {
     {
       title: t("tools.design.title"),
       toolDescription: t.rich("tools.design.toolDescription", {
-        subtitle: (chunks) => <ToolSubtitle>{chunks}</ToolSubtitle>,
+        subtitle: (chunks) => <ToolSubtitle isDark={isDarkTheme}>{chunks}</ToolSubtitle>,
         content: (chunks) => <ToolContent>{chunks}</ToolContent>,
       }),
     },
     {
       title: t("tools.front.title"),
       toolDescription: t.rich("tools.front.toolDescription", {
-        subtitle: (chunks) => <ToolSubtitle>{chunks}</ToolSubtitle>,
+        subtitle: (chunks) => <ToolSubtitle isDark={isDarkTheme}>{chunks}</ToolSubtitle>,
         content: (chunks) => <ToolContent>{chunks}</ToolContent>,
       }),
     },
     {
       title: t("tools.mobile.title"),
       toolDescription: t.rich("tools.mobile.toolDescription", {
-        subtitle: (chunks) => <ToolSubtitle>{chunks}</ToolSubtitle>,
+        subtitle: (chunks) => <ToolSubtitle isDark={isDarkTheme}>{chunks}</ToolSubtitle>,
         content: (chunks) => <ToolContent>{chunks}</ToolContent>,
       }),
     },
     {
       title: t("tools.collaboration.title"),
       toolDescription: t.rich("tools.collaboration.toolDescription", {
-        subtitle: (chunks) => <ToolSubtitle>{chunks}</ToolSubtitle>,
+        subtitle: (chunks) => <ToolSubtitle isDark={isDarkTheme}>{chunks}</ToolSubtitle>,
         content: (chunks) => <ToolContent>{chunks}</ToolContent>,
       }),
     },

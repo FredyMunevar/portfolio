@@ -36,4 +36,9 @@ export interface IButton {
    * Additional properties to be passed to the button or link element.
    */
   props?: Record<string, unknown>;
+
+  /**
+   * The target attribute for the link element.
+   */
+  target?: string;
 }

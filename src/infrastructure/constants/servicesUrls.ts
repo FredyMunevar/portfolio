@@ -15,6 +15,12 @@ export const servicesUrls = {
   cloudynary: "https://res.cloudinary.com/disbunv6l/image/upload/v1737508491/",
 
   /**
+   * URL for the Cloudinary video service.
+   * @type {string}
+   */
+  cloudynaryVideo: "https://res.cloudinary.com/disbunv6l/video/upload/f_auto:video,q_auto/v1/",
+
+  /**
    * URL for the GitHub repository.
    * @type {string}
    */
@@ -33,8 +39,14 @@ export const servicesUrls = {
   instagram: "https://www.instagram.com/fredy_munevar/",
 
   /**
+   * URL for the Behance profile.
+   * @type {string}
+   */
+  behance: "https://www.behance.net/fredy_munevar",
+
+  /**
    * URL for downloading the CV.
    * @type {string}
    */
-  cvDownload: "https://drive.google.com/file/d/1AOc2E8sNYuHxtD45ntdG0RQHB3Kim_X2/view?usp=sharing",
+  cvDownload: "https://drive.google.com/uc?export=download&id=1AOc2E8sNYuHxtD45ntdG0RQHB3Kim_X2",
 };

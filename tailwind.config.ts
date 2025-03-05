@@ -1,3 +1,4 @@
+import { plugin } from "postcss";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -14,6 +15,18 @@ export default {
       tertiary: "var(--tertiary)",
       gray: "var(--gray)",
       borderLight: "var(--border-light)",
+      branchPrimary: "var(--branch-primary)",
+      branchSecondary: "var(--branch-secondary)",
+      millionPrimary: "var(--million-primary)",
+      millionSecondary: "var(--million-secondary)",
+      weeloPrimary: "var(--weelo-primary)",
+      weeloSecondary: "var(--weelo-secondary)",
+      precisionPrimary: "var(--precision-primary)",
+      precisionSecondary: "var(--precision-secondary)",
+      montefrioPrimary: "var(--montefrio-primary)",
+      montefrioSecondary: "var(--montefrio-secondary)",
+      holaPrimary: "var(--hola-primary)",
+      holaSecondary: "var(--hola-secondary)",
     },
     spacing: {
       0: "0",
@@ -56,5 +69,9 @@ export default {
       // h3: "clamp(1.250rem, 4vw, 1.438rem)",
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }: { addVariant: (name: string, css: string) => void }) {
+      addVariant("pointer-coarse", "@media (pointer: coarse)");
+    },
+  ],
 } satisfies Config;

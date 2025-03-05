@@ -49,9 +49,9 @@ const MenuItem = ({
   /**
    * Styles for the button span element with underline animation
    */
-  const buttonSpanStyles = `text-menu xl:text-desc lg:after:w-0 xl:after:h-[1px] lgxlfter:bg-secondary lgxlransition-all lgxluration-500 lgxlase-in-out
-  lgxlfter:transition-all lgxlfter:duration-500 lgxlfter:ease-in-out lgxlfter:absolute lgxlfter:-bottom-s ${
-    isDarkTheme && "lgxlfter:bg-tertiary"
+  const buttonSpanStyles = `text-menu xl:text-desc lg:after:w-0 xl:after:h-[1px] xl:after:bg-secondary xl:transition-all xl:duration-500 xl:ease-in-out
+  xl:after:transition-all xl:after:duration-500 xl:after:ease-in-out xl:after:absolute xl:after:-bottom-s ${
+    isDarkTheme && "xl:after:bg-tertiary"
   }`;
 
   /**
@@ -75,7 +75,9 @@ const MenuItem = ({
     <li className="xl:text-center">
       <Link className={`${buttonStyles}`} href={path} onClick={onClick}>
         <MuneIcon
-          color={"var(--secondary)"}
+          className={`[&_path]:!fill-secondary ${
+            isDarkTheme ? "xl:[&_path]:!fill-tertiary" : "xl:[&_path]:!fill-secondary"
+          }`}
           name={`${addActive() !== undefined ? `icon-${text}-filled` : `icon-${text}`}`}
           size={24}
         />
