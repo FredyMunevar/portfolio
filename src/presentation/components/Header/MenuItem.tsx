@@ -44,7 +44,7 @@ const MenuItem = ({
    * Base styles for the button element
    */
   const buttonStyles = `font-light lg:text-secondary flex gap-m xl:relative xl:flex-col xl:items-center xl:gap-s
-  lg:[&_span]:after:left-[50%] lg:[&_span]:hover:after:w-full ${isDarkTheme && "lg:text-tertiary"}`;
+  lg:[&_span]:after:left-[50%] lg:[&_span]:hover:after:w-full ${isDarkTheme && "xl:text-tertiary"}`;
 
   /**
    * Styles for the button span element with underline animation

@@ -27,7 +27,7 @@ const ProjectInfo = ({
   typeContent: string;
 }) => {
   return (
-    <div className="flex flex-col gap-l md:flex-row md:gap-[1.5rem] mb-l px-m">
+    <div className="flex flex-col gap-l md:flex-row md:gap-[1.5rem] mb-xl px-m">
       <div className="flex flex-col gap-xs md:text-center md:w-1/2 xl:text-left xl:w-1/3">
         <h4 className={`text-type font-semibold ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>{roleTitle}</h4>
         <h5 className={`text-desc font-light ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>{roleContent}</h5>

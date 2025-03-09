@@ -6,9 +6,14 @@ import SectionContainer from "@/presentation/components/SectionContainer/Section
 import { useTranslations } from "next-intl";
 import ProjectInfo from "@/presentation/components/ProjectInfo/ProjectInfo";
 import CharactersMobile from "@/presentation/components/Branch/CharactersMobile";
-import { CldImage, CldVideoPlayer } from "next-cloudinary";
+import { CldImage } from "next-cloudinary";
 import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import CharactersDesktop from "@/presentation/components/Branch/CharactersDesktop";
+import Logos from "@/presentation/components/Logos/Logos";
+import Video from "@/presentation/components/Video/Video";
+
+const designLogos = ["xd", "illustrator", "photoshop", "affinity", "marvel"];
+const devLogos = ["typescript", "html", "react", "wordpress", "vue", "sass"];
 
 /**
  * Toolbox section component that displays technical skills and tools.
@@ -34,7 +39,8 @@ const Branch = () => {
           typeTitle={t("typeTitle")}
           typeContent={t("typeContent")}
         />
-        <div className="relative overflow-hidden pb-l px-m">
+        {/* intro section */}
+        <div className="relative overflow-hidden pb-xl px-m">
           <div className="flex flex-col gap-l">
             <h2
               className={`text-h1 font-semibold leading-none text-center xl:text-left xl:w-2/3 ${
@@ -59,6 +65,7 @@ const Branch = () => {
           </div>
           <CharactersDesktop />
         </div>
+        {/* description section */}
         <div className="bg-branchPrimary py-xl px-m grid grid-cols-1 xl:grid-cols-2 gap-l xl:flex-row">
           <div className="flex flex-col gap-l">
             <h2 className="text-h2 font-semibold leading-none text-center text-branchSecondary">{t("purposeTitle")}</h2>
@@ -78,7 +85,8 @@ const Branch = () => {
             <p className="text-body leading-loose text-branchSecondary">{t("challengeContent")}</p>
           </div>
         </div>
-        <div className="flex flex-col gap-l py-l px-m">
+        {/* research section */}
+        <div className="flex flex-col gap-l py-xl px-m">
           <h2
             className={`text-h2 font-semibold leading-tight text-center text-branchSecondary ${
               isDarkTheme ? "text-tertiary" : "text-secondary"
@@ -114,7 +122,8 @@ const Branch = () => {
             />
           </div>
         </div>
-        <div className="mb-l">
+        {/* image section */}
+        <div className="mb-xl">
           <CldImage
             width="1199"
             height="799"
@@ -123,10 +132,11 @@ const Branch = () => {
             className="w-full"
           />
         </div>
-        <div className="flex flex-col gap-l">
-          <div className="flex flex-col gap-l">
+        {/* design section */}
+        <div className="flex flex-col gap-l px-m lg:flex-row lg:items-center">
+          <div className="flex flex-col gap-l lg:w-3/5 xl:w-4/6 ">
             <h2
-              className={`text-h2 font-semibold leading-tight text-center text-branchSecondary ${
+              className={`text-h2 font-semibold leading-tight text-center text-branchSecondary md:text-left ${
                 isDarkTheme ? "text-tertiary" : "text-secondary"
               }`}
             >
@@ -135,7 +145,7 @@ const Branch = () => {
             {t.rich("designContent", {
               part: (chunks) => (
                 <p
-                  className={`text-body leading-loose text-center xl:text-left ${
+                  className={`text-body leading-loose text-center md:text-left ${
                     isDarkTheme ? "text-tertiary" : "text-secondary"
                   }`}
                 >
@@ -144,80 +154,47 @@ const Branch = () => {
               ),
               strong: (chunks) => <strong>{chunks}</strong>,
             })}
-            <div>logos</div>
+            <Logos logos={designLogos} />
           </div>
-          <div className="relative w-full h-[500px]">
-            {/* <CldVideoPlayer
-              id="branch-uses"
-              className="w-full h-auto"
-              width="640"
-              height="1080"
-              src={`${servicesUrls.cloudynary}branch/branch-uses-dark`}
-              autoPlay
-              loop
-              transformation={{
-                width: 640,
-                height: 1080,
-                crop: "fill",
-                gravity: "auto",
-              }}
-            /> */}
-            {/* <iframe
-              src={`${servicesUrls.cloudynaryVideo}branch/branch-uses-dark`}
-              width="100%"
-              height="60%"
-              style={{ border: "0" }}
-              allowFullScreen
-            ></iframe> */}
-            <video
-              style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
-              controls
-              autoPlay
-              loop
-            >
-              <source src={`${servicesUrls.cloudynaryVideo}branch/branch-uses-dark`} type="video/mp4" />
-              <source src={`${servicesUrls.cloudynaryVideo}branch/branch-uses-dark`} type="video/webm" />
-              <source src={`${servicesUrls.cloudynaryVideo}branch/branch-uses-dark`} type="video/ogv" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+          <Video style={"w-full h-auto md:w-3/5 md:mx-auto lg:w-2/5 xl:w-2/6 "} video={"branch/branch-uses"} />
         </div>
-        {/* <div className="w-full h-[900px] overflow-hidden">
+        {/* wireframes section */}
+        <div className="w-full h-[900px] overflow-hidden px-m mb-xl">
           <iframe
-            src="https://marvelapp.com/j178ga9?emb=1&iosapp=false&frameless=false\"
+            src="https://marvelapp.com/j178ga9?emb=1&iosapp=true&frameless=false\"
             width="452"
             height="881"
             className="w-full h-full"
           ></iframe>
-        </div> */}
-        {/* <div className="flex flex-col gap-l">
+        </div>
+        {/* development section */}
+        <div className="flex flex-col gap-l w-full px-m pb-xl">
+          <h2
+            className={`text-h2 font-semibold leading-tight text-center text-branchSecondary ${
+              isDarkTheme ? "text-tertiary" : "text-secondary"
+            }`}
+          >
+            {t("devTitle")}
+          </h2>
+          {t.rich("devContent", {
+            part: (chunks) => (
+              <p
+                className={`text-body leading-loose text-center md:text-left ${
+                  isDarkTheme ? "text-tertiary" : "text-secondary"
+                }`}
+              >
+                {chunks}
+              </p>
+            ),
+            strong: (chunks) => <strong>{chunks}</strong>,
+          })}
+          <Logos logos={devLogos} />
+        </div>
+        {/* outcome section */}
+        <div className="flex flex-col gap-l relative overflow-x-clip px-m md:mb-xxl 2xl:overflow-visible">
           <div className="flex flex-col gap-l">
             <h2
-              className={`text-h2 font-semibold leading-tight text-center text-branchSecondary ${
-                isDarkTheme ? "text-tertiary" : "text-secondary"
-              }`}
-            >
-              {t("devTitle")}
-            </h2>
-            {t.rich("devContent", {
-              part: (chunks) => (
-                <p
-                  className={`text-body leading-loose text-center xl:text-left ${
-                    isDarkTheme ? "text-tertiary" : "text-secondary"
-                  }`}
-                >
-                  {chunks}
-                </p>
-              ),
-              strong: (chunks) => <strong>{chunks}</strong>,
-            })}
-            <div>logos</div>
-          </div>
-        </div> */}
-        {/* <div className="flex flex-col gap-l">
-          <div className="flex flex-col gap-l">
-            <h2
-              className={`text-h2 font-semibold leading-tight text-center text-branchSecondary ${
+              className={`text-h2 font-semibold leading-tight text-center text-branchSecondary md:text-left ${
                 isDarkTheme ? "text-tertiary" : "text-secondary"
               }`}
             >
@@ -226,7 +203,7 @@ const Branch = () => {
             {t.rich("outcomeContent", {
               part: (chunks) => (
                 <p
-                  className={`text-body leading-loose text-center xl:text-left ${
+                  className={`text-body leading-loose text-center md:text-left md:odd:w-3/5 lg:odd:w-2/5 lg:even:w-3/5 xl:odd:w-3/5 ${
                     isDarkTheme ? "text-tertiary" : "text-secondary"
                   }`}
                 >
@@ -235,9 +212,17 @@ const Branch = () => {
               ),
               strong: (chunks) => <strong>{chunks}</strong>,
             })}
+            <CldImage
+              width="855"
+              height="714"
+              src={`${servicesUrls.cloudynary}branch/crm`}
+              className={
+                "object-contain w-[534px] h-auto md:absolute top-[50%] -right-[5%] md:-right-[10%] lg:-right-[5%] lg:w-[734px] lg:top-0"
+              }
+              alt={"branch crm"}
+            />
           </div>
-          <div>imagen</div>
-        </div> */}
+        </div>
       </section>
     </SectionContainer>
   );
