@@ -16,8 +16,27 @@ const designLogos = ["xd", "illustrator", "photoshop", "affinity", "marvel"];
 const devLogos = ["typescript", "html", "react", "wordpress", "vue", "sass"];
 
 /**
- * Toolbox section component that displays technical skills and tools.
- * Features an accordion layout with categorized tools and an illustration.
+ * Branch project page component that displays detailed information about the Branch project.
+ * Features multiple sections including project info, design process, development stack, and outcomes.
+ *
+ * @description
+ * Layout sections:
+ * - Project information (role and type)
+ * - Introduction with animated characters
+ * - Project purpose and challenges
+ * - Research and design process
+ * - Design tools and wireframes
+ * - Development stack
+ * - Project outcomes
+ *
+ * Features:
+ * - Responsive layout
+ * - Theme-aware styling
+ * - Localized content
+ * - Interactive elements
+ * - Animated components
+ * - Image galleries
+ * - Tool showcases
  */
 const Branch = () => {
   /** Theme context for dark/light mode */
