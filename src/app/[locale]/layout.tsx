@@ -47,14 +47,15 @@ export const viewport: Viewport = {
  */
 export default async function LocaleLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  // Ensure the locale is valid
+  // Ensure the locale is valid - await the locale check
+  const locale = params.locale;
   if (!routing.locales.includes(locale as "en" | "es")) {
-    notFound();
+    return notFound();
   }
   // Load translations for the client
   const messages = await getMessages();

@@ -60,7 +60,7 @@ const About = () => {
             <CldImage
               width="512"
               height="511"
-              src={`${servicesUrls.cloudynary}common/profile-picture`}
+              src={`${servicesUrls.cloudinary}common/profile-picture`}
               className={"w-[16rem]"}
               alt={t("title")}
             />

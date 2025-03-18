@@ -9,11 +9,13 @@
   --secondary: #232021;
   --tertiary: #f9f9f9;
   --gray: #5e5558;
+  --gray-light: #ebebeb;
   --border-light: #d8d2d5;
+  --border-dark: #a89a9f;
   /* Projects colors */
   /* Branch */
   --branch-primary: #041c24;
-  --branch-secondary: #5be5e5;
+  --branch-secondary: #00c83e;
   /* million */
   --million-primary: #000000;
   --million-secondary: #ffffff;
@@ -49,6 +51,10 @@
   }
 } */
 @layer base {
+  /* * {
+    outline: 1px solid red;
+    margin: 1px;
+  } */
   html {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
@@ -58,7 +64,7 @@
   }
   body {
     background-color: var(--tertiary);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
   }
   .scrollbar-light::-webkit-scrollbar {
     width: var(--spacing-xs);
@@ -105,3 +111,9 @@ html.dark {
     background-color: var(--secondary);
   }
 }
+
+/* @layer components {
+  .weeloBackground {
+    background-size: 100% 100%;
+  }
+} */

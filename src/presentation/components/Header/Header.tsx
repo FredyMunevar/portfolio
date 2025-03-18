@@ -13,8 +13,8 @@ import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
 import { useLocale } from "next-intl";
 import MenuItem from "./MenuItem";
 
-const darkLogo = `${servicesUrls.cloudynary}common/mune-logo-white.svg`;
-const lightLogo = `${servicesUrls.cloudynary}common/mune-logo-black.svg`;
+const darkLogo = `${servicesUrls.cloudinary}common/mune-logo-white.svg`;
+const lightLogo = `${servicesUrls.cloudinary}common/mune-logo-black.svg`;
 
 /**
  * Header component that displays the header section of the website.
@@ -117,7 +117,7 @@ const Header = () => {
         >
           <nav
             className={`bg-primary fixed w-screen h-screen z-30 top-0 flex flex-col justify-end items-start gap-xl px-l py-xl transition-[right] duration-1000 ease-in-out
-            md:w-2/5 xl:bg-transparent xl:static xl:w-auto xl:h-auto xl:p-0 xl:align-middle xl:self-center xl:justify-self-start
+            landscape:md:py-l md:w-2/5 landscape:lg:py-xl xl:bg-transparent xl:static xl:w-auto xl:h-auto xl:p-0 xl:align-middle xl:self-center xl:justify-self-start
             xl:[&_span]:opacity-0 xl:[&_span]:hover:opacity-100 [@media(pointer:coarse)]:[&_span]:opacity-100
             ${openMenu ? "right-0" : "-right-full"}`}
           >

@@ -24,7 +24,7 @@ const Logos = ({ logos }: { logos: string[] }) => {
           key={logo}
           width="32"
           height="32"
-          src={`${servicesUrls.cloudynary}logos/logo-${logo}`}
+          src={`${servicesUrls.cloudinary}logos/logo-${logo}`}
           className={`object-contain ${logo === "marvel" && "w-[74px]"}`}
           alt={logo}
           format="svg"

@@ -1,4 +1,3 @@
-import { plugin } from "postcss";
 import type { Config } from "tailwindcss";
 
 export default {
@@ -14,7 +13,9 @@ export default {
       secondary: "var(--secondary)",
       tertiary: "var(--tertiary)",
       gray: "var(--gray)",
+      grayLight: "var(--gray-light)",
       borderLight: "var(--border-light)",
+      borderDark: "var(--border-dark)",
       branchPrimary: "var(--branch-primary)",
       branchSecondary: "var(--branch-secondary)",
       millionPrimary: "var(--million-primary)",

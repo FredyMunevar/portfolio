@@ -98,7 +98,7 @@ const Toolbox = () => {
           <CldImage
             width="2118"
             height="1736"
-            src={`${servicesUrls.cloudynary}common/bg-toolbox`}
+            src={`${servicesUrls.cloudinary}common/bg-toolbox`}
             className={"w-full h-fit object-contain"}
             alt={t("title")}
           />

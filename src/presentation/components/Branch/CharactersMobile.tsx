@@ -16,7 +16,7 @@ const CharactersMobile = () => {
         <CldImage
           width="137"
           height="225"
-          src={`${servicesUrls.cloudynary}branch/mechanic-female`}
+          src={`${servicesUrls.cloudinary}branch/mechanic-female`}
           alt={"mechanic-female"}
           format="svg"
           className="md:w-[227px] md:h-[371px]"
@@ -31,7 +31,7 @@ const CharactersMobile = () => {
         <CldImage
           width="127"
           height="231"
-          src={`${servicesUrls.cloudynary}branch/client-mobile`}
+          src={`${servicesUrls.cloudinary}branch/client-mobile`}
           alt={"client-mobile"}
           format="svg"
           className="md:w-[209px] md:h-[382px]"
@@ -46,7 +46,7 @@ const CharactersMobile = () => {
         <CldImage
           width="124"
           height="239"
-          src={`${servicesUrls.cloudynary}branch/mechanic-male`}
+          src={`${servicesUrls.cloudinary}branch/mechanic-male`}
           alt={"mechanic-male"}
           format="svg"
           className="md:w-[205px] md:h-[396px]"
@@ -61,7 +61,7 @@ const CharactersMobile = () => {
         <CldImage
           width="287"
           height="169"
-          src={`${servicesUrls.cloudynary}branch/motorcycle`}
+          src={`${servicesUrls.cloudinary}branch/motorcycle`}
           alt={"motorcycle"}
           format="svg"
           className="md:w-[477px] md:h-[281px]"

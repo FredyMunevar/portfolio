@@ -62,7 +62,7 @@ const Project = ({ title, link, img, bg }: { title: string; link: string; img: s
         <CldImage
           width="158"
           height="50"
-          src={`${servicesUrls.cloudynary}${img}`}
+          src={`${servicesUrls.cloudinary}${img}`}
           className={"max-h-xl object-contain"}
           style={{
             transform: "translateZ(200px)",

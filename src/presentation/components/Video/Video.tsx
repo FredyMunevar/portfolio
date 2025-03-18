@@ -36,15 +36,15 @@ const Video = ({ style, video }: { style: string; video: string }) => {
     <div className={`relative ${style}`}>
       <video className={`w-full h-full object-fit ${isDarkTheme && "contrast-[104%]"}`} autoPlay loop muted playsInline>
         <source
-          src={`${servicesUrls.cloudynaryVideo}${video}-${isDarkTheme ? "dark" : "light"}.mp4`}
+          src={`${servicesUrls.cloudinaryVideo}${video}-${isDarkTheme ? "dark" : "light"}.mp4`}
           type="video/mp4"
         />
         <source
-          src={`${servicesUrls.cloudynaryVideo}${video}-${isDarkTheme ? "dark" : "light"}.webm`}
+          src={`${servicesUrls.cloudinaryVideo}${video}-${isDarkTheme ? "dark" : "light"}.webm`}
           type="video/webm"
         />
         <source
-          src={`${servicesUrls.cloudynaryVideo}${video}-${isDarkTheme ? "dark" : "light"}.ogv`}
+          src={`${servicesUrls.cloudinaryVideo}${video}-${isDarkTheme ? "dark" : "light"}.ogv`}
           type="video/ogg"
         />
         Your browser does not support the video tag.

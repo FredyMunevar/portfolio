@@ -16,7 +16,7 @@ const CharactersDesktop = () => {
         <CldImage
           width="331"
           height="640"
-          src={`${servicesUrls.cloudynary}branch/client-desktop`}
+          src={`${servicesUrls.cloudinary}branch/client-desktop`}
           alt={"client-mobile"}
           format="svg"
         />
@@ -30,7 +30,7 @@ const CharactersDesktop = () => {
         <CldImage
           width="337"
           height="652"
-          src={`${servicesUrls.cloudynary}branch/mechanic-male`}
+          src={`${servicesUrls.cloudinary}branch/mechanic-male`}
           alt={"mechanic-male"}
           format="svg"
         />
@@ -44,7 +44,7 @@ const CharactersDesktop = () => {
         <CldImage
           width="347"
           height="570"
-          src={`${servicesUrls.cloudynary}branch/mechanic-female`}
+          src={`${servicesUrls.cloudinary}branch/mechanic-female`}
           alt={"mechanic-female"}
           format="svg"
           className="scale-x-[-1]"

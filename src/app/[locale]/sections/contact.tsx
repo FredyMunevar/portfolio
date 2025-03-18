@@ -72,7 +72,7 @@ const Contact = () => {
           <CldImage
             width="2199"
             height="3824"
-            src={`${servicesUrls.cloudynary}common/id-${isDarkTheme ? "dark" : "light"}`}
+            src={`${servicesUrls.cloudinary}common/id-${isDarkTheme ? "dark" : "light"}`}
             className={
               "max-w-none w-[596px] md:w-[645px] lg:w-[590px] xl:w-[700px] absolute bottom-0 right-[50%] translate-x-1/2"
             }

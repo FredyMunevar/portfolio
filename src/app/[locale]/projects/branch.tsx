@@ -4,7 +4,6 @@ import { useTheme } from "@/context/ThemeContext";
 import "@/presentation/styles/globals.css";
 import SectionContainer from "@/presentation/components/SectionContainer/SectionContainer";
 import { useTranslations } from "next-intl";
-import ProjectInfo from "@/presentation/components/ProjectInfo/ProjectInfo";
 import CharactersMobile from "@/presentation/components/Branch/CharactersMobile";
 import { CldImage } from "next-cloudinary";
 import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
@@ -51,15 +50,26 @@ const Branch = () => {
   return (
     <SectionContainer paddingLess>
       <section className="flex flex-col">
-        <ProjectInfo
-          isDarkTheme={isDarkTheme}
-          roleTitle={t("roleTitle")}
-          roleContent={t("roleContent")}
-          typeTitle={t("typeTitle")}
-          typeContent={t("typeContent")}
-        />
+        <div className="flex flex-col gap-l md:flex-row md:gap-[1.5rem] mb-xl px-m">
+          <div className="flex flex-col gap-xs md:text-center md:w-1/2 xl:text-left xl:w-1/3">
+            <h4 className={`text-type font-semibold ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>
+              {t("roleTitle")}
+            </h4>
+            <h5 className={`text-desc font-light ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>
+              {t("roleContent")}
+            </h5>
+          </div>
+          <div className="flex flex-col gap-xs md:text-center md:w-1/2 xl:text-left xl:w-1/3">
+            <h4 className={`text-type font-semibold ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>
+              {t("typeTitle")}
+            </h4>
+            <h5 className={`text-desc font-light ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>
+              {t("typeContent")}
+            </h5>
+          </div>
+        </div>
         {/* intro section */}
-        <div className="relative overflow-hidden pb-xl px-m">
+        <div className="relative overflow-hidden pb-xl px-m mt-l">
           <div className="flex flex-col gap-l">
             <h2
               className={`text-h1 font-semibold leading-none text-center xl:text-left xl:w-2/3 ${
@@ -128,14 +138,14 @@ const Branch = () => {
             <CldImage
               width="849"
               height="550"
-              src={`${servicesUrls.cloudynary}branch/canvas`}
+              src={`${servicesUrls.cloudinary}branch/canvas`}
               alt={"canvas"}
               className="w-full order-2"
             />
             <CldImage
               width="605"
               height="391"
-              src={`${servicesUrls.cloudynary}branch/logo-board`}
+              src={`${servicesUrls.cloudinary}branch/logo-board`}
               alt={"branch logo board"}
               className="w-full order-4 lg:order-3"
             />
@@ -146,7 +156,7 @@ const Branch = () => {
           <CldImage
             width="1199"
             height="799"
-            src={`${servicesUrls.cloudynary}branch/branch-brochure`}
+            src={`${servicesUrls.cloudinary}branch/branch-brochure`}
             alt={"branch brochure"}
             className="w-full"
           />
@@ -234,7 +244,7 @@ const Branch = () => {
             <CldImage
               width="855"
               height="714"
-              src={`${servicesUrls.cloudynary}branch/crm`}
+              src={`${servicesUrls.cloudinary}branch/crm`}
               className={
                 "object-contain w-[534px] h-auto md:absolute top-[50%] -right-[5%] md:-right-[10%] lg:-right-[5%] lg:w-[734px] lg:top-0"
               }

@@ -12,13 +12,13 @@ export const servicesUrls = {
    * URL for the Cloudinary image service.
    * @type {string}
    */
-  cloudynary: "https://res.cloudinary.com/disbunv6l/image/upload/v1737508491/",
+  cloudinary: "https://res.cloudinary.com/disbunv6l/image/upload/v1737508491/",
 
   /**
    * URL for the Cloudinary video service.
    * @type {string}
    */
-  cloudynaryVideo: "https://res.cloudinary.com/disbunv6l/video/upload/f_auto:video,q_auto/v1/",
+  cloudinaryVideo: "https://res.cloudinary.com/disbunv6l/video/upload/f_auto:video,q_auto/v1/",
 
   /**
    * URL for the GitHub repository.

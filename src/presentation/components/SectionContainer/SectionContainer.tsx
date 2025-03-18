@@ -14,7 +14,7 @@ const SectionContainer = ({ children, paddingLess }: { children: ReactNode; padd
     <main
       className={`relative z-10 w-screen max-w-[1600px] 2xl:mx-auto ${
         !paddingLess && "px-m lg:p-l"
-      } pb-xl pt-[8.5rem] flex flex-col items-start justify-center gap-l lg:pt-xl lg:mt-xxl xl:min-h-screen xl:pl-[208px] xl:pt-l xl:mt-l`}
+      } pb-xl pt-[8.5rem] flex flex-col items-start justify-center gap-l lg:pt-xl lg:mt-xxl xl:min-h-screen xl:pl-[11rem] xl:pt-l xl:mt-l`}
     >
       <ThemeTransition wait className="flex flex-col items-center gap-l box-border">
         {children}

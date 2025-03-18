@@ -126,5 +126,26 @@
     "devContent": "<part>I led the front-end development for both the mobile app and CRM, using <strong>React Native</strong> for the mobile app and <strong>Vue</strong> for the CRM.</part><part>Employed <strong>SASS and TypeScript</strong> for clean, maintainable code, and used <strong>Git</strong> for version control.</part><part>Managed development workflows with <strong>scrum boards in Jira and Clickup</strong> to keep tasks organized and our team focused on delivering an MVP.</part>",
     "outcomeTitle": "Final outcome",
     "outcomeContent": "<part>Branch App's MVP was successfully delivered, providing motorcycle owners and workshop managers with a centralized, easy-to-use tool for vehicle documentation and maintenance management.</part><part>Feedback from early users was overwhelmingly positive — they noted that Branch simplified data access, reduced their dependency on paper documentation, and streamlined their communication and record-keeping processes.</part>"
+  },
+  "weelo": {
+    "roleTitle": "Role",
+    "roleContent": "UX Developer",
+    "typeTitle": "Type",
+    "typeContent": "Mobile app",
+    "title": "Simplifying property rentals through intuitive design",
+    "intro": "<part><strong>Weelo</strong> is an innovative mobile application designed to streamline the property rental process for U.S. property owners, from legal background checks to contract signing and monthly payments.</part><part>By unifying these processes into a single platform, <strong>Weelo</strong> simplifies the rental experience for property owners, saving them time and ensuring legal compliance.</part>",
+    "purposeTitle": "Purpose",
+    "purposeContent": "<part><strong>Weelo</strong> was developed to address the specific needs of U.S. property owners who required an efficient, legally compliant method to rent out properties. It enables users to:</part>",
+    "purposeList": "<li>Conduct comprehensive legal analyses on potential tenants.</li><li>Handle lease agreements digitally, with support for contract duration and terms.</li><li>Manage monthly rent payments through a unified platform.</li>",
+    "targetTitle": "Target audience",
+    "targetContent": "Property owners in the U.S. seeking a seamless, efficient way to verify potential tenants, manage legal contracts, and handle monthly rental payments.",
+    "designTitle": "Design and Prototyping",
+    "designContent": "<li>As the UX Developer, I played a bridging role between design and development. My contributions focused on solving complex interaction challenges and refining information architecture to ensure smooth navigation.</li><li>I collaborated closely with the design team to guide critical decisions, ensuring that the user experience was optimized for ease and clarity.</li>",
+    "devTitle": "Development",
+    "devContent": "<li>During development, I was responsible for translating design into code, ensuring that the information architecture and user flows designed in the planning stages were executed seamlessly in the app.</li><li>My primary tools were React Native and TypeScript, which enabled cross-platform functionality and robust typing for scalable, maintainable code.</li><li>Within the company, we used a highly structured workflow, incorporating Git Flow for version control, Husky for pre-commit hooks, and Unit Testing to maintain clean, high-quality code. This allowed us to create a collaborative environment with efficient processes for daily tasks, organized under the scrum methodology.</li>",
+    "challengeTitle": "Challenges and solutions",
+    "challengeContent": "<li>Adopting New Tools and Best Practices: Learning tools like Git Flow and package managers like Yarn and Brew required me to adapt and expand my skill set. Although challenging, these tools significantly streamlined our workflow and ensured a more maintainable codebase.</li><li>Pixel-Perfect Design Execution: The company's high standards for design and code quality required a pixel-perfect approach. Meeting these expectations involved precise attention to detail and close collaboration with the design team to ensure that every visual element was accurately translated into the app.</li>",
+    "outcomeTitle": "Final outcome",
+    "outcomeContent": "<part><strong>Weelo</strong> successfully launched to positive feedback from users, who praised the app's ease of use, fluidity, and warm design.</part><part>The app introduced an innovative approach to property rental management in the U.S., a market where such tools are still emerging.</part><part>It quickly became known for its intuitive interface and the streamlined experience it provided for property owners.</part>"
   }
 }

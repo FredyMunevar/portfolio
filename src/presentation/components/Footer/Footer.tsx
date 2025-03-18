@@ -19,7 +19,7 @@ const Footer = () => {
         <CldImage
           width="194"
           height="35"
-          src={`${servicesUrls.cloudynary}common/fredy-munevar-full.svg`}
+          src={`${servicesUrls.cloudinary}common/fredy-munevar-full.svg`}
           alt="Fredy Munevar UX/UI Engineer and Designer"
           format="svg"
         />
