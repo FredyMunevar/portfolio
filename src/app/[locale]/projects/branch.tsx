@@ -10,9 +10,10 @@ import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import CharactersDesktop from "@/presentation/components/Branch/CharactersDesktop";
 import Logos from "@/presentation/components/Logos/Logos";
 import Video from "@/presentation/components/Video/Video";
+import { LogosType } from "@/presentation/components/Logos/interface/iLogos";
 
-const designLogos = ["xd", "illustrator", "photoshop", "affinity", "marvel"];
-const devLogos = ["typescript", "html", "react", "wordpress", "vue", "sass"];
+const designLogos: LogosType[] = ["xd", "illustrator", "photoshop", "affinity", "marvel"];
+const devLogos: LogosType[] = ["typescript", "html", "react", "wordpress", "vue", "sass"];
 
 /**
  * Branch project page component that displays detailed information about the Branch project.
@@ -72,8 +73,8 @@ const Branch = () => {
         <div className="relative overflow-hidden pb-xl px-m mt-l">
           <div className="flex flex-col gap-l">
             <h2
-              className={`text-h1 font-semibold leading-none text-center xl:text-left xl:w-2/3 ${
-                isDarkTheme ? "text-branchSecondary" : "text-branchPrimary"
+              className={`text-h1 font-semibold leading-none text-center xl:text-left xl:w-2/3  ${
+                isDarkTheme ? "text-branch-secondary" : "text-branch-primary"
               }`}
             >
               {t("title")}
@@ -95,29 +96,31 @@ const Branch = () => {
           <CharactersDesktop />
         </div>
         {/* description section */}
-        <div className="bg-branchPrimary py-xl px-m grid grid-cols-1 xl:grid-cols-2 gap-l xl:flex-row">
+        <div className="bg-branch-primary py-xl px-m grid grid-cols-1 xl:grid-cols-2 gap-l xl:flex-row">
           <div className="flex flex-col gap-l">
-            <h2 className="text-h2 font-semibold leading-none text-center text-branchSecondary">{t("purposeTitle")}</h2>
+            <h2 className="text-h2 font-semibold leading-none text-center text-branch-secondary">
+              {t("purposeTitle")}
+            </h2>
             {t.rich("purposeContent", {
-              part: (chunks) => <p className={`text-body leading-loose text-branchSecondary`}>{chunks}</p>,
+              part: (chunks) => <p className={`text-body leading-loose text-branch-secondary`}>{chunks}</p>,
             })}
             <ol className="list-decimal pl-l">
               {t.rich("purposeList", {
-                li: (chunks) => <li className={`text-body leading-loose text-branchSecondary`}>{chunks}</li>,
+                li: (chunks) => <li className={`text-body leading-loose text-branch-secondary`}>{chunks}</li>,
               })}
             </ol>
           </div>
           <div className="flex flex-col gap-l">
-            <h2 className="text-h2 font-semibold leading-none text-center text-branchSecondary">
+            <h2 className="text-h2 font-semibold leading-none text-center text-branch-secondary">
               {t("challengeTitle")}
             </h2>
-            <p className="text-body leading-loose text-branchSecondary">{t("challengeContent")}</p>
+            <p className="text-body leading-loose text-branch-secondary">{t("challengeContent")}</p>
           </div>
         </div>
         {/* research section */}
         <div className="flex flex-col gap-l py-xl px-m">
           <h2
-            className={`text-h2 font-semibold leading-tight text-center text-branchSecondary ${
+            className={`text-h2 font-semibold leading-tight text-center text-branch-secondary ${
               isDarkTheme ? "text-tertiary" : "text-secondary"
             }`}
           >
@@ -165,7 +168,7 @@ const Branch = () => {
         <div className="flex flex-col gap-l px-m lg:flex-row lg:items-center">
           <div className="flex flex-col gap-l lg:w-3/5 xl:w-4/6 ">
             <h2
-              className={`text-h2 font-semibold leading-tight text-center text-branchSecondary md:text-left ${
+              className={`text-h2 font-semibold leading-tight text-center text-branch-secondary md:text-left ${
                 isDarkTheme ? "text-tertiary" : "text-secondary"
               }`}
             >
@@ -199,7 +202,7 @@ const Branch = () => {
         {/* development section */}
         <div className="flex flex-col gap-l w-full px-m pb-xl">
           <h2
-            className={`text-h2 font-semibold leading-tight text-center text-branchSecondary ${
+            className={`text-h2 font-semibold leading-tight text-center text-branch-secondary ${
               isDarkTheme ? "text-tertiary" : "text-secondary"
             }`}
           >
@@ -223,7 +226,7 @@ const Branch = () => {
         <div className="flex flex-col gap-l relative overflow-x-clip px-m md:mb-xxl 2xl:overflow-visible">
           <div className="flex flex-col gap-l">
             <h2
-              className={`text-h2 font-semibold leading-tight text-center text-branchSecondary md:text-left ${
+              className={`text-h2 font-semibold leading-tight text-center text-branch-secondary md:text-left ${
                 isDarkTheme ? "text-tertiary" : "text-secondary"
               }`}
             >

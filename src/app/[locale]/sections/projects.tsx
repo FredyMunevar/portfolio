@@ -18,37 +18,37 @@ const projectList = [
     title: "Branch",
     link: "/projects/branch",
     img: "branch/branch-text-white",
-    bg: "bg-branchPrimary",
+    bg: "bg-branch-primary",
   },
   {
     title: "Weelo",
     link: "/projects/weelo",
     img: "weelo/weelo-white",
-    bg: "bg-weeloPrimary",
+    bg: "bg-weelo-primary",
   },
   {
     title: "Million",
     link: "/projects/million",
     img: "million/million-white",
-    bg: "bg-millionPrimary",
+    bg: "bg-million-primary",
   },
   {
     title: "Monte Frío",
     link: "/projects/monte-frio",
     img: "monte-frio/monte-frio-white",
-    bg: "bg-montefrioSecondary",
+    bg: "bg-montefrio-secondary",
   },
   {
     title: "Precision",
     link: "/projects/precision",
     img: "precision/precision-white",
-    bg: "bg-precisionSecondary",
+    bg: "bg-precision-secondary",
   },
   {
     title: "Hola rental car",
     link: "/projects/hola",
     img: "hola/hola-white",
-    bg: "bg-holaPrimary",
+    bg: "bg-hola-primary",
   },
 ];
 

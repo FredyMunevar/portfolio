@@ -147,5 +147,29 @@
     "challengeContent": "<li>Adopting New Tools and Best Practices: Learning tools like Git Flow and package managers like Yarn and Brew required me to adapt and expand my skill set. Although challenging, these tools significantly streamlined our workflow and ensured a more maintainable codebase.</li><li>Pixel-Perfect Design Execution: The company's high standards for design and code quality required a pixel-perfect approach. Meeting these expectations involved precise attention to detail and close collaboration with the design team to ensure that every visual element was accurately translated into the app.</li>",
     "outcomeTitle": "Final outcome",
     "outcomeContent": "<part><strong>Weelo</strong> successfully launched to positive feedback from users, who praised the app's ease of use, fluidity, and warm design.</part><part>The app introduced an innovative approach to property rental management in the U.S., a market where such tools are still emerging.</part><part>It quickly became known for its intuitive interface and the streamlined experience it provided for property owners.</part>"
+  },
+  "million": {
+    "roleTitle": "Role",
+    "roleContent": "UX Developer",
+    "typeTitle": "Type",
+    "typeContent": "Mobile app, CRM and Websites",
+    "title": "Empowering real estate agents with data-driven tools",
+    "intro": "<part><strong>Million And Up</strong> is a real estate company in Miami that empowers its agents to sell luxury properties with data-driven tools. The app, CRM, and websites developed for Million And Up enable agents to profile potential clients in real-time, giving them a competitive edge by prioritizing high-potential leads.</part><part>This platform has become essential for agents to focus their efforts effectively and close more deals.</part>",
+    "purposeTitle": "Purpose",
+    "purposeContent": "<part>The primary objective was to support real estate agents in identifying and profiling potential clients for luxury properties. By streamlining access to client data, the Million And Up platform provides:</part>",
+    "purposeList": "<li>Real-time delivery of client profiles to agents, helping them connect with interested buyers.</li><li>Tools to reduce engagement with unsuitable prospects, focusing resources on qualified leads.</li>",
+    "targetTitle": "Target audience",
+    "targetContent": "Real estate agents working in the luxury property market who require immediate access to client profiles and insights to make quick, informed decisions.",
+    "designTitle": "Design and Prototyping",
+    "designContent": "<li>As a UX Developer, I facilitated communication between the design and development teams, advising on interaction solutions and information architecture. My role was pivotal in optimizing user navigation and ensuring the app's information flow was clear and efficient for agents.</li><li>I worked closely with the design team to align the Design System for consistency across the mobile app, CRM, and websites, using Figma to manage design standards and collaborate in real-time.</li>",
+    "desSystem": "Design system",
+    "websites": "Websites",
+    "websitesButton": "Visit site",
+    "devTitle": "Development",
+    "devContent": "<li>I managed the transition from design to development, implementing user flows and information architecture as intended. My responsibilities included front-end development using React Native for the mobile app and Next.js for optimizing the website.</li><li>To ensure code consistency and quality, we relied on Git Flow for version control and Husky for pre-commit hooks. This process was reinforced with Unit Testing and an Agile approach using scrum boards to keep tasks on track and timelines clear.</li>",
+    "challengeTitle": "Challenges and solutions",
+    "challengeContent": "<li><strong>Design System Implementation:</strong> Creating a unified Design System was crucial to maintain a consistent look and feel across various digital touchpoints. Figma's collaborative features enabled us to streamline this process, making it easier to ensure graphical uniformity across mobile, web, and CRM platforms.</li><li><strong>New Framework Adaptation (Next.js):</strong> Optimizing web performance required exploring and integrating Next.js, a new framework for me. This challenge allowed me to enhance my skills while implementing faster, more efficient web solutions for Million And Up's real estate platform.</li>",
+    "outcomeTitle": "Final outcome",
+    "outcomeContent": "<part>By leveraging these new technologies and development processes, <strong>Million And Up</strong> has expanded its reach to new users, significantly increased customer engagement, and improved agent productivity. Positive feedback from agents highlighted the app's ease of use and the real-time profiling capabilities, which have contributed to an increase in luxury property sales.</part>"
   }
 }

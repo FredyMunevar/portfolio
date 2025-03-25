@@ -133,7 +133,7 @@
     "typeTitle": "Tipo",
     "typeContent": "Mobile app",
     "title": "Simplificando el alquiler de propiedades mediante un diseño intuitivo",
-    "intro": "<part><strong>Weelo</strong> es una innovadora aplicación móvil diseñada para agilizar el proceso de alquiler de propiedades para los propietarios estadounidenses, desde la comprobación de antecedentes legales hasta la firma del contrato y los pagos mensuales.</part><part>Al unificar estos procesos en una única plataforma, <strong>Weelo</strong> simplifica la experiencia de alquiler para los propietarios, ahorrándoles tiempo y garantizando el cumplimiento legal.</part><part>Traducción realizada con la versión gratuita del traductor DeepL.com</part>",
+    "intro": "<part><strong>Weelo</strong> es una innovadora aplicación móvil diseñada para agilizar el proceso de alquiler de propiedades para los propietarios estadounidenses, desde la comprobación de antecedentes legales hasta la firma del contrato y los pagos mensuales.</part><part>Al unificar estos procesos en una única plataforma, <strong>Weelo</strong> simplifica la experiencia de alquiler para los propietarios, ahorrándoles tiempo y garantizando el cumplimiento legal.</part>",
     "purposeTitle": "Propósito",
     "purposeContent": "<part><strong>Weelo</strong> se desarrolló para responder a las necesidades específicas de los propietarios estadounidenses que necesitaban un método eficaz y conforme a la ley para alquilar inmuebles. Esta aplicación permite a los usuarios:</part>",
     "purposeList": "<li>Realizar análisis jurídicos exhaustivos de los posibles inquilinos.</li><li>Gestionar digitalmente los contratos de arrendamiento, con soporte para la duración y los términos del contrato.</li><li>Gestionar los pagos mensuales del alquiler a través de una plataforma unificada.</li>",
@@ -147,5 +147,29 @@
     "challengeContent": "<li>Adoptar nuevas herramientas y buenas prácticas: Aprender herramientas como Git Flow y gestores de paquetes como Yarn y Brew me obligó a adaptarme y ampliar mis conocimientos. Aunque supusieron un reto, estas herramientas agilizaron considerablemente nuestro flujo de trabajo y garantizaron una base de código más fácil de mantener.</li><li>Pixel perfect design: Los altos estándares de calidad del diseño y el código de la empresa exigían un enfoque perfecto. Cumplir estas expectativas exigía una atención precisa a los detalles y una estrecha colaboración con el equipo de diseño para garantizar que cada elemento visual se tradujera con precisión en la aplicación.</li>",
     "outcomeTitle": "Resultado final",
     "outcomeContent": "<part><strong>Weelo</strong> se lanzó con éxito y recibió comentarios positivos de los usuarios, que elogiaron la facilidad de uso, la fluidez y el cálido diseño de la aplicación.</part><part>La aplicación introdujo un enfoque innovador en la gestión del alquiler de propiedades en EE.UU., un mercado en el que este tipo de herramientas aún están emergiendo.</part><part>Rápidamente se dio a conocer por su interfaz intuitiva y la experiencia optimizada para los propietarios de inmuebles.</part>"
+  },
+  "million": {
+    "roleTitle": "Role",
+    "roleContent": "UX Developer",
+    "typeTitle": "Type",
+    "typeContent": "Mobile app, CRM y Websites",
+    "title": "Empoderando a los agentes inmobiliarios con herramientas basadas en datos",
+    "intro": "<part><strong>Million And Up</strong> es una empresa inmobiliaria de Miami que ayuda a sus agentes a vender propiedades de lujo con herramientas basadas en datos. La aplicación, el CRM y los sitios web desarrollados para Million And Up permiten a los agentes crear perfiles de clientes potenciales en tiempo real, lo que les proporciona una ventaja competitiva al dar prioridad a dichos clientes.</part><part>Esta plataforma se ha convertido en esencial para que los agentes centren sus esfuerzos de forma eficaz y así poder cerrar más negocios.</part>",
+    "purposeTitle": "Propósito",
+    "purposeContent": "<part>El objetivo principal era ayudar a los agentes inmobiliarios a identificar y perfilar clientes potenciales para propiedades de lujo. Al agilizar el acceso a los datos de los clientes, la plataforma Million And Up ofrece:</part>",
+    "purposeList": "<li>Entrega en tiempo real de perfiles de clientes a los agentes, ayudándoles a conectar con compradores interesados.</li><li>Herramientas para reducir el compromiso con clientes potenciales inadecuados, centrando los recursos en clientes potenciales cualificados.</li>",
+    "targetTitle": "Público objetivo",
+    "targetContent": "Agentes inmobiliarios que trabajan en el mercado de propiedades de lujo y que necesitan un acceso inmediato a los perfiles y datos de los clientes para tomar decisiones rápidas y fundamentadas.",
+    "designTitle": "Diseño y Prototipado",
+    "designContent": "<li>Como desarrollador de UX, facilité la comunicación entre los equipos de diseño y desarrollo, asesorando sobre soluciones de interacción y arquitectura de la información. Mi papel fue fundamental para optimizar la navegación del usuario y garantizar que el flujo de información de la aplicación fuera claro y eficiente para los agentes.</li><li>Trabajé estrechamente con el equipo de diseño para alinear el Sistema de Diseño para la coherencia a través de la aplicación móvil, CRM, y sitios web, utilizando Figma para gestionar los estándares de diseño y colaborar en tiempo real.</li>",
+    "desSystem": "Sistema de diseño",
+    "websites": "Sitios web",
+    "websitesButton": "Visitar sitio",
+    "devTitle": "Desarrollo",
+    "devContent": "<li>Gestioné la transición del diseño al desarrollo, implementando los flujos de usuario y la arquitectura de la información según lo previsto. Mis responsabilidades incluían el desarrollo front-end utilizando React Native para la aplicación móvil y Next.js para optimizar el sitio web.</li><li>Para garantizar la coherencia y la calidad del código, nos basamos en Git Flow para el control de versiones y Husky para verificar la estabilidad del código en cada commit. Este proceso se reforzó con pruebas unitarias y un enfoque ágil utilizando tableros scrum para mantener las tareas en curso y los plazos claros.</li>",
+    "challengeTitle": "Retos y soluciones",
+    "challengeContent": "<li><strong>Implementación del sistema de diseño:</strong> La creación de un sistema de diseño unificado era crucial para mantener un aspecto coherente en los distintos puntos de contacto digitales. Las funciones de colaboración de Figma nos permitieron agilizar este proceso, haciendo más fácil garantizar la uniformidad gráfica en todas las plataformas móviles, web y CRM.</li><li><strong>Adaptación del nuevo framework (Next.js):</strong> Optimizar el rendimiento de la web requirió explorar e integrar Next.js, un nuevo framework para mí. Este reto me permitió mejorar mis habilidades mientras implementaba soluciones web más rápidas y eficientes para la plataforma inmobiliaria de Million And Up.</li>",
+    "outcomeTitle": "Resultado final",
+    "outcomeContent": "<part>Al aprovechar estas nuevas tecnologías y procesos de desarrollo, <strong>Million And Up</strong> ha ampliado su alcance a nuevos usuarios, ha aumentado significativamente la participación de los clientes y ha mejorado la productividad de los agentes. Los comentarios positivos de los agentes destacan la facilidad de uso de la aplicación y las funciones de creación de perfiles en tiempo real, que han contribuido a aumentar las ventas de propiedades de lujo.</part>"
   }
 }

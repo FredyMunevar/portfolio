@@ -1,16 +1,16 @@
 export const weeloSnippets = [
   {
-    name: "Payment Detail Presenter",
+    name: "Presenter",
     language: "typescript",
     filename: "PaymentAddDetailPresenter.tsx",
   },
   {
-    name: "Payment Add Detail",
+    name: "Detail",
     language: "typescript",
     filename: "PaymentAddDetail.tsx",
   },
   {
-    name: "Payment Add Detail Styles",
+    name: "Styles",
     language: "typescript",
     filename: "PaymentAddDetail.styles.ts",
   },

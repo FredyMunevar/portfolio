@@ -17,16 +17,48 @@ export const metadata: Metadata = {
   title: "Fredy Munevar - Portfolio",
   description: "Fredy Munevar - Portfolio",
   icons: {
-    // icon: [{ url: "favicon/icon.png" }, new URL("favicon/icon.png", "https://fredymunevar.com")],
-    // shortcut: ["favicon/shortcut-icon.png"],
+    icon: [
+      {
+        url: "/favicon/icon-light.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/favicon/icon-dark.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+    ],
     apple: [
-      { url: "favicon/apple-icon.png" },
-      { url: "favicon/apple-icon-x3.png", sizes: "180x180", type: "image/png" },
+      {
+        url: "/favicon/apple-icon-light.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/favicon/apple-icon-dark.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/favicon/apple-icon-x3-light.png",
+        sizes: "180x180",
+        type: "image/png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/favicon/apple-icon-x3-dark.png",
+        sizes: "180x180",
+        type: "image/png",
+        media: "(prefers-color-scheme: dark)",
+      },
     ],
     other: [
       {
         rel: "apple-touch-icon-precomposed",
-        url: "favicon/apple-touch-icon-precomposed.png",
+        url: "/favicon/apple-touch-icon-precomposed-light.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        rel: "apple-touch-icon-precomposed",
+        url: "/favicon/apple-touch-icon-precomposed-dark.png",
+        media: "(prefers-color-scheme: dark)",
       },
     ],
   },
@@ -39,6 +71,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
+  minimumScale: 1,
   userScalable: false,
 };
 
@@ -52,25 +85,33 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  // Ensure the locale is valid - await the locale check
-  const locale = params.locale;
-  if (!routing.locales.includes(locale as "en" | "es")) {
+  try {
+    // Await the locale parameter
+    const locale = await Promise.resolve(params).then((p) => p.locale);
+
+    // Get messages
+    const messages = await getMessages();
+
+    // Validate locale
+    if (!routing.locales.includes(locale as "en" | "es")) {
+      return notFound();
+    }
+
+    return (
+      <html lang={locale}>
+        <body className={"antialiased p-[1px]"}>
+          <SplashCursor />
+          <ThemeProvider>
+            <NextIntlClientProvider messages={messages}>
+              <Header />
+              {children}
+              <Footer />
+            </NextIntlClientProvider>
+          </ThemeProvider>
+        </body>
+      </html>
+    );
+  } catch {
     return notFound();
   }
-  // Load translations for the client
-  const messages = await getMessages();
-  return (
-    <html lang={locale}>
-      <body className={"antialiased p-[1px]"}>
-        <SplashCursor />
-        <ThemeProvider>
-          <NextIntlClientProvider messages={messages}>
-            <Header />
-            {children}
-            <Footer />
-          </NextIntlClientProvider>
-        </ThemeProvider>
-      </body>
-    </html>
-  );
 }

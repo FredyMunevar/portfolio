@@ -2,9 +2,11 @@ import About from "../sections/about";
 import Toolbox from "../sections/toolbox";
 import Contact from "../sections/contact";
 import Projects from "../sections/projects";
+import { notFound } from "next/navigation";
 
-const SectionPage = ({ params }: { params: { section: string } }) => {
-  const { section } = params;
+export default async function SectionPage({ params }: { params: { section: string } }) {
+  // Await the section parameter
+  const section = await Promise.resolve(params).then((p) => p.section);
 
   // Map routes to their corresponding components
   const sectionComponents: { [key: string]: React.ComponentType } = {
@@ -14,14 +16,11 @@ const SectionPage = ({ params }: { params: { section: string } }) => {
     projects: Projects,
   };
 
-  // Get the component for the current section
-  const SectionComponent = sectionComponents[section];
+  const ComponentToRender = sectionComponents[section];
 
-  if (!SectionComponent) {
-    return <div>Page not found!</div>;
+  if (!ComponentToRender) {
+    return notFound();
   }
 
-  return <SectionComponent />;
-};
-
-export default SectionPage;
+  return <ComponentToRender />;
+}

@@ -28,11 +28,11 @@ const ProjectInfo = ({
 }) => {
   return (
     <div className="flex flex-row gap-l md:gap-[1.5rem] mb-l px-m md:w-2/3">
-      <div className="flex flex-col gap-xs w-1/2 xl:w-1/3">
+      <div className="flex flex-col gap-xs">
         <h4 className={`text-type font-semibold ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>{roleTitle}</h4>
         <h5 className={`text-desc font-light ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>{roleContent}</h5>
       </div>
-      <div className="flex flex-col gap-xs w-1/2 xl:w-1/3">
+      <div className="flex flex-col gap-xs">
         <h4 className={`text-type font-semibold ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>{typeTitle}</h4>
         <h5 className={`text-desc font-light ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>{typeContent}</h5>
       </div>

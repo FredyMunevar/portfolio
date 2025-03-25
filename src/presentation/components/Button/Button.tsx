@@ -23,7 +23,9 @@ const Button = ({ onClick, link, buttonType = "primary", children, className, la
   const isSecondary = buttonType === "secondary";
 
   const defaultStyles = "xl:duration-300 xl:ease-in-out font-p";
-  const primaryStyles = "bg-primary border border-primary xl:hover:bg-tertiary xl:hover:text-primary";
+  const primaryStyles = `bg-primary border border-primary xl:hover:bg-tertiary xl:hover:text-primary ${
+    isDarkTheme ? "text-secondary" : "text-tertiary"
+  }`;
   const secondaryStyles = `border border-primary text-primary ${
     isDarkTheme
       ? "xl:hover:border-tertiary xl:hover:text-tertiary"

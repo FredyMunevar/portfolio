@@ -44,7 +44,7 @@ const MenuItem = ({
    * Base styles for the button element
    */
   const buttonStyles = `font-light lg:text-secondary flex gap-m xl:relative xl:flex-col xl:items-center xl:gap-s
-  lg:[&_span]:after:left-[50%] lg:[&_span]:hover:after:w-full ${isDarkTheme && "xl:text-tertiary"}`;
+  lg:[&_span]:after:left-[50%] lg:hover:[&_span]:after:w-full ${isDarkTheme && "xl:text-tertiary"}`;
 
   /**
    * Styles for the button span element with underline animation
@@ -57,7 +57,7 @@ const MenuItem = ({
   /**
    * Styles applied when menu item is active
    */
-  const activeStyles = "lg:after:w-full lg:after:!left-0 font-semibold";
+  const activeStyles = "lg:after:w-full lg:after:left-0! font-semibold";
 
   /**
    * Determines if the current menu item is active based on pathname
@@ -76,7 +76,7 @@ const MenuItem = ({
       <Link className={`${buttonStyles}`} href={path} onClick={onClick}>
         <MuneIcon
           className={`[&_path]:!fill-secondary ${
-            isDarkTheme ? "xl:[&_path]:!fill-tertiary" : "xl:[&_path]:!fill-secondary"
+            isDarkTheme ? "xl:[&_path]:fill-tertiary!" : "xl:[&_path]:fill-secondary!"
           }`}
           name={`${addActive() !== undefined ? `icon-${text}-filled` : `icon-${text}`}`}
           size={24}

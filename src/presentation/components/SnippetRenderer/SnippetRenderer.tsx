@@ -54,20 +54,20 @@ const SnippetRenderer = ({ snippets, project, style }: ISnippetRenderer) => {
   }, [activeTab, project, snippets]);
 
   return (
-    <div className={`outline outline-borderLight -outline-offset-1 w-full`}>
-      <div className="flex outline outline-borderLight -outline-offset-1 flex-wrap">
+    <div className={`outline outline-border-light -outline-offset-1 w-full`}>
+      <div className="flex outline outline-border-light -outline-offset-1 flex-wrap">
         {snippets.map((snippet, index) => (
           <button
             key={index}
-            className={`w-full px-4 py-2 py-s px-m md:w-max outline outline-borderLight -outline-offset-1
+            className={`w-full px-4 py-2 py-s px-m md:w-max outline outline-border-light -outline-offset-1
                 ${
                   isDarkTheme
                     ? activeTab === index
                       ? "bg-gray text-tertiary"
-                      : "bg-black text-grayLight"
+                      : "bg-black text-gray-light"
                     : activeTab === index
-                    ? "bg-borderLight"
-                    : "bg-grayLight"
+                    ? "bg-border-light"
+                    : "bg-gray-light"
                 }`}
             onClick={() => setActiveTab(index)}
           >

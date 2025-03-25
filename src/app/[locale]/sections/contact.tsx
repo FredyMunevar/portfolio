@@ -79,7 +79,7 @@ const Contact = () => {
             alt={t("title")}
           />
         </ThemeTransition>
-        <section className="flex flex-col gap-l relative z-[1] lg:pb-xxl">
+        <section className="flex flex-col gap-l relative z-1 lg:pb-xxl">
           <h2 className="text-h1 font-semibold leading-none text-primary">{t("title")}</h2>
 
           <p className={`text-body leading-loose ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>

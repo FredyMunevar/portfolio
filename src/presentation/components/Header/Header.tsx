@@ -91,7 +91,7 @@ const Header = () => {
     <>
       <header className="absolute w-full flex justify-between lg:justify-start">
         <div className="flex justify-between w-full lg:w-auto">
-          <h1 className="m-m lg:m-l relative z-[21] left-0">
+          <h1 className="m-m lg:m-l relative z-21 left-0">
             <Link href={"/"} className="flex justify-center">
               <ThemeTransition wait className="relative w-xl top-0 lg:w-[80px]">
                 <CldImage
@@ -118,7 +118,7 @@ const Header = () => {
           <nav
             className={`bg-primary fixed w-screen h-screen z-30 top-0 flex flex-col justify-end items-start gap-xl px-l py-xl transition-[right] duration-1000 ease-in-out
             landscape:md:py-l md:w-2/5 landscape:lg:py-xl xl:bg-transparent xl:static xl:w-auto xl:h-auto xl:p-0 xl:align-middle xl:self-center xl:justify-self-start
-            xl:[&_span]:opacity-0 xl:[&_span]:hover:opacity-100 [@media(pointer:coarse)]:[&_span]:opacity-100
+            xl:[&_span]:opacity-0 xl:hover:[&_span]:opacity-100 [@media(pointer:coarse)]:[&_span]:opacity-100
             ${openMenu ? "right-0" : "-right-full"}`}
           >
             <ThemeTransition wait>

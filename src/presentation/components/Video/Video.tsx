@@ -34,7 +34,15 @@ const Video = ({ style, video }: { style: string; video: string }) => {
 
   return (
     <div className={`relative ${style}`}>
-      <video className={`w-full h-full object-fit ${isDarkTheme && "contrast-[104%]"}`} autoPlay loop muted playsInline>
+      {/* <video className={"w-full h-full object-fit"} autoPlay loop muted playsInline> */}
+      <video
+        className={`w-full h-full object-fit ${isDarkTheme && "[@media(hover:hover)]:contrast-[104%]"}`}
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        {/* check if video background doesn't fit the web background */}
         <source
           src={`${servicesUrls.cloudinaryVideo}${video}-${isDarkTheme ? "dark" : "light"}.mp4`}
           type="video/mp4"
