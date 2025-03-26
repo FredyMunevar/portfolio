@@ -199,5 +199,23 @@
     "expandingContent": "Leaders were initially unsure about integrating the brand into digital channels, but research showed that engaging on social media would likely increase reach and appeal to a younger audience. This insight helped secure support for a brand refresh that included digital elements.",
     "outcomeTitle": "Final outcome",
     "outcomeContent": "The new Monte Frío branding was successfully implemented, providing a versatile and modern look that resonated with both loyal customers and new audiences. The refreshed identity increased cooler rentals near universities in Bogotá, opened doors for additional distribution channels in supermarkets and local stores, and enhanced brand perception. Long-time customers even noted that the new branding made their usual drink feel more refreshing, a testament to the power of a cohesive brand identity."
+  },
+  "precision": {
+    "roleTitle": "Role",
+    "roleContent": "Graphic Designer, Web Designer, Developer",
+    "typeTitle": "Type",
+    "typeContent": "Branding and Website",
+    "title": "Building a brand with purpose: connecting people to opportunities.",
+    "intro": "<part><strong>Precision SAS</strong> is a socially focused company in Colombia dedicated to connecting low-income individuals with stable employment opportunities through partnerships with government agencies.</part><part>The objective of this project was to create a corporate brand identity and website that communicated <strong>Precision's</strong> mission and values while providing a functional platform for employee resources.</part>",
+    "purposeTitle": "Purpose",
+    "purposeContent": "<part><strong>Precision SAS</strong> needed a brand identity that would reflect its mission of helping economically disadvantaged individuals find secure employment.</part><part>The corporate image and website had to convey this mission while being affordable and practical to develop.</part>",
+    "targetTitle": "Target audience",
+    "targetContent": "Adults 18+ who are eligible to work and in need of economic stability, especially individuals from lower-income backgrounds who would benefit from employment opportunities.",
+    "designTitle": "Design",
+    "designContent": "<li>I began the design process with sketches on paper to explore ideas that would visually represent Precision SAS's commitment to social impact and economic empowerment.</li><li>After finalizing the concepts, I transitioned to Adobe Illustrator and Photoshop to complete the corporate brand, including a logo and color palette that evoke trust, support, and community.</li><li>The branding was designed to resonate with both the target audience and government partners, maintaining a professional look while being approachable.</li>",
+    "devTitle": "Development",
+    "devContent": "<li>To keep development cost-effective and time-efficient, I chose WordPress as the CMS and hosted the site on an Apache server with a MySQL database.</li><li>The website provides essential information about the company and serves as a resource portal where hired employees can access documents for legal procedures.</li><li>I continue to manage server administration and site maintenance, ensuring smooth operation and security on UK-based servers.</li>",
+    "outcomeTitle": "Final outcome",
+    "outcomeContent": "<part>The <strong>Precision SAS</strong> website and branding have successfully conveyed the company's social mission, establishing a strong presence in Colombian entrepreneurship and employment events. The brand's visual identity and website functionality have received positive feedback, particularly for their alignment with the company's mission of supporting low-income individuals in finding stable employment.</part>"
   }
 }

@@ -199,5 +199,23 @@
     "expandingContent": "Al principio, los directivos no estaban seguros de integrar la marca en los canales digitales, pero la investigación demostró que la participación en las redes sociales probablemente aumentaría el alcance y atraería a un público más joven. Esta idea ayudó a garantizar el apoyo a una renovación de la marca que incluyera elementos digitales.",
     "outcomeTitle": "Resultado final",
     "outcomeContent": "La nueva imagen de marca de Monte Frío se implementó con éxito, proporcionando un aspecto versátil y moderno que resonó tanto entre los clientes fieles como entre las nuevas audiencias. La identidad renovada aumentó el alquiler de neveras cerca de las universidades de Bogotá, abrió las puertas a nuevos canales de distribución en supermercados y tiendas locales y mejoró la percepción de la marca. Los clientes de toda la vida incluso señalaron que la nueva marca hacía que su bebida habitual les pareciera más refrescante, lo que demuestra el poder de una identidad de marca cohesionada."
+  },
+  "precision": {
+    "roleTitle": "Rol",
+    "roleContent": "Diseñador gráfico, diseñador web, desarrollador",
+    "typeTitle": "Tipo",
+    "typeContent": "Marca y sitio web",
+    "title": "Construyendo una marca con propósito: conectando personas y oportunidades.",
+    "intro": "<part><strong>Precision SAS</strong> es una empresa colombiana con un enfoque social dedicada a poner en contacto a personas de bajos ingresos con oportunidades de empleo estable a través de asociaciones con organismos gubernamentales.</part><part>El objetivo de este proyecto era crear una identidad de marca corporativa y un sitio web que comunicaran la misión y los valores de Precision al tiempo que ofrecieran una plataforma funcional para los recursos de los empleados.</part>",
+    "purposeTitle": "Propósito",
+    "purposeContent": "<part><strong>Precision SAS</strong> necesitaba una identidad de marca que reflejara su misión de ayudar a personas económicamente desfavorecidas a encontrar un empleo seguro.</part><part>La imagen corporativa y el sitio web debían transmitir esta misión y, al mismo tiempo, ser asequibles y prácticos de desarrollar.</part>",
+    "targetTitle": "Público objetivo",
+    "targetContent": "Adultos mayores de 18 años que reúnan los requisitos para trabajar y necesiten estabilidad económica, especialmente personas de rentas bajas que se beneficiarían de las oportunidades de empleo.",
+    "designTitle": "Diseño",
+    "designContent": "<li>Comencé el proceso de diseño con bocetos en papel para explorar ideas que representaran visualmente el compromiso de Precision SAS con el impacto social y la capacitación económica.</li><li>Tras finalizar los conceptos, pasé a Adobe Illustrator y Photoshop para completar la marca corporativa, incluido un logotipo y una paleta de colores que evocaran confianza, apoyo y comunidad.</li><li>La marca se diseñó para que resonara tanto entre el público objetivo como entre los socios gubernamentales, manteniendo un aspecto profesional a la vez que accesible.</li>",
+    "devTitle": "Desarrollo",
+    "devContent": "<li>Para que el desarrollo fuera rentable y llevara poco tiempo, elegí WordPress como CMS y alojé el sitio en un servidor Apache con una base de datos MySQL.</li><li>El sitio web ofrece información esencial sobre la empresa y sirve como portal de recursos donde los empleados contratados pueden acceder a documentos para trámites legales.</li><li>Sigo encargándome de la administración del servidor y del mantenimiento del sitio, garantizando el buen funcionamiento y la seguridad en los servidores con sede en el Reino Unido.</li>",
+    "outcomeTitle": "Resultado final",
+    "outcomeContent": "<part>El sitio web y la marca de <strong>Precision SAS</strong> han transmitido con éxito la misión social de la empresa, estableciendo una fuerte presencia en los eventos de emprendimiento y empleo de Colombia. La identidad visual de la marca y la funcionalidad del sitio web han recibido comentarios positivos, en particular por su alineación con la misión de la empresa de ayudar a las personas de bajos ingresos a encontrar un empleo estable.</part>"
   }
 }

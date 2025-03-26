@@ -79,7 +79,6 @@ const MonteFrio = () => {
             typeTitle={t("typeTitle")}
             typeContent={t("typeContent")}
           />
-          {/* <div className="relative pt-[16rem] md:pt-0"> */}
           <motion.div
             initial={{ opacity: 0, transform: "translateY(20px)" }}
             transition={{ duration: 0.5, delay: 0.5 }}
@@ -107,7 +106,6 @@ const MonteFrio = () => {
               alt={"monte frío hero"}
             />
           </motion.div>
-          {/* </div> */}
           {t.rich("intro", {
             part: (chunks) => (
               <p
