@@ -149,9 +149,9 @@
     "outcomeContent": "<part><strong>Weelo</strong> se lanzó con éxito y recibió comentarios positivos de los usuarios, que elogiaron la facilidad de uso, la fluidez y el cálido diseño de la aplicación.</part><part>La aplicación introdujo un enfoque innovador en la gestión del alquiler de propiedades en EE.UU., un mercado en el que este tipo de herramientas aún están emergiendo.</part><part>Rápidamente se dio a conocer por su interfaz intuitiva y la experiencia optimizada para los propietarios de inmuebles.</part>"
   },
   "million": {
-    "roleTitle": "Role",
+    "roleTitle": "Rol",
     "roleContent": "UX Developer",
-    "typeTitle": "Type",
+    "typeTitle": "Tipo",
     "typeContent": "Mobile app, CRM y Websites",
     "title": "Empoderando a los agentes inmobiliarios con herramientas basadas en datos",
     "intro": "<part><strong>Million And Up</strong> es una empresa inmobiliaria de Miami que ayuda a sus agentes a vender propiedades de lujo con herramientas basadas en datos. La aplicación, el CRM y los sitios web desarrollados para Million And Up permiten a los agentes crear perfiles de clientes potenciales en tiempo real, lo que les proporciona una ventaja competitiva al dar prioridad a dichos clientes.</part><part>Esta plataforma se ha convertido en esencial para que los agentes centren sus esfuerzos de forma eficaz y así poder cerrar más negocios.</part>",
@@ -171,5 +171,33 @@
     "challengeContent": "<li><strong>Implementación del sistema de diseño:</strong> La creación de un sistema de diseño unificado era crucial para mantener un aspecto coherente en los distintos puntos de contacto digitales. Las funciones de colaboración de Figma nos permitieron agilizar este proceso, haciendo más fácil garantizar la uniformidad gráfica en todas las plataformas móviles, web y CRM.</li><li><strong>Adaptación del nuevo framework (Next.js):</strong> Optimizar el rendimiento de la web requirió explorar e integrar Next.js, un nuevo framework para mí. Este reto me permitió mejorar mis habilidades mientras implementaba soluciones web más rápidas y eficientes para la plataforma inmobiliaria de Million And Up.</li>",
     "outcomeTitle": "Resultado final",
     "outcomeContent": "<part>Al aprovechar estas nuevas tecnologías y procesos de desarrollo, <strong>Million And Up</strong> ha ampliado su alcance a nuevos usuarios, ha aumentado significativamente la participación de los clientes y ha mejorado la productividad de los agentes. Los comentarios positivos de los agentes destacan la facilidad de uso de la aplicación y las funciones de creación de perfiles en tiempo real, que han contribuido a aumentar las ventas de propiedades de lujo.</part>"
+  },
+  "monteFrio": {
+    "roleTitle": "Rol",
+    "roleContent": "Graphic Designer",
+    "typeTitle": "Tipo",
+    "typeContent": "Branding and Packaging",
+    "title": "Refrescando una marca para una nueva generación.",
+    "intro": "<part><strong>Monte Frío,</strong> una marca colombiana con una rica tradición de alquiler de neveras para servir bebidas de avena, quería modernizar su imagen para atraer a un público más joven.</part><part>Con este proyecto, el objetivo era dar a <strong>Monte Frío</strong> un aspecto fresco y cercano, manteniendo al mismo tiempo elementos como el oso polar y las montañas que los clientes fieles asocian con la marca.</part><part><strong>Monte Frío</strong> forma parte de una empresa más grande y, como parte de este proyecto de cambio de marca, también creé el logotipo de la organización matriz. Esto garantizó una identidad visual cohesiva en todas las marcas asociadas, manteniendo la coherencia al tiempo que se modernizaba la imagen.</part>",
+    "purposeTitle": "Propósito",
+    "purposeContent": "<part>El objetivo principal era rejuvenecer la identidad de marca de <strong>Monte Frío</strong> para atraer a nuevos clientes, en particular adultos jóvenes de entre 17 y 25 años, conservando al mismo tiempo los elementos clave de la marca.</part><part><strong>Monte Frío</strong> quería un aspecto versátil que pudiera aplicarse a diversos medios, desde materiales POP hasta redes sociales y futuras plataformas digitales como el comercio electrónico.</part>",
+    "targetTitle": "Público objetivo",
+    "targetContent": "Adultos jóvenes y estudiantes universitarios que buscan un producto refrescante y familiar con un toque moderno.",
+    "constraintsTitle": "Restricciones",
+    "constraintsContent": "El mayor reto fue encontrar el equilibrio adecuado entre la modernización de la marca y el mantenimiento de los elementos reconocibles (oso polar, montañas) con los que se identifican los usuarios actuales. Esta nueva identidad también tenía que adaptarse a múltiples canales, desde las neveras físicas hasta las redes sociales y los anuncios digitales.",
+    "designTitle": "Diseño y Prototipado",
+    "sketchingTitle": "Bocetos e ideas",
+    "sketchingContent": "Empecé con técnicas de dibujo tradicionales para explorar conceptos de diseño, incorporando elementos clásicos como el oso polar y motivos montañosos de formas frescas y modernas.",
+    "digitalTitle": "Diseño digital",
+    "digitalContent": "Tras perfeccionar los bocetos, pasé a Adobe Illustrator y Photoshop para finalizar el logotipo, la paleta de colores y los elementos de diseño. El resultado fue una identidad visual cohesionada que podía funcionar en varios formatos, desde envoltorios para neveras hasta publicaciones en redes sociales.",
+    "mariaTitle": "La María",
+    "mariaContent": "Para complementar el cambio de marca de Monte Frío, diseñé el logotipo de su empresa matriz, garantizando una identidad unificada en toda la organización.",
+    "challengeTitle": "Retos y soluciones",
+    "maintainingTitle": "Manteniendo la tradición de la marca",
+    "maintainingContent": "Como Monte Frío es una marca de larga tradición, los responsables de la toma de decisiones se mostraron cautelosos a la hora de cambiar su aspecto. Mediante la investigación de usuarios y el diseño estratégico, demostré que una marca modernizada podía atraer a un nuevo mercado sin perder su identidad.",
+    "expandingTitle": "Ampliando la presencia en los medios de comunicación",
+    "expandingContent": "Al principio, los directivos no estaban seguros de integrar la marca en los canales digitales, pero la investigación demostró que la participación en las redes sociales probablemente aumentaría el alcance y atraería a un público más joven. Esta idea ayudó a garantizar el apoyo a una renovación de la marca que incluyera elementos digitales.",
+    "outcomeTitle": "Resultado final",
+    "outcomeContent": "La nueva imagen de marca de Monte Frío se implementó con éxito, proporcionando un aspecto versátil y moderno que resonó tanto entre los clientes fieles como entre las nuevas audiencias. La identidad renovada aumentó el alquiler de neveras cerca de las universidades de Bogotá, abrió las puertas a nuevos canales de distribución en supermercados y tiendas locales y mejoró la percepción de la marca. Los clientes de toda la vida incluso señalaron que la nueva marca hacía que su bebida habitual les pareciera más refrescante, lo que demuestra el poder de una identidad de marca cohesionada."
   }
 }

@@ -1,8 +1,8 @@
 interface CarouselProps {
   id: number;
   src: string;
-  logo: string;
-  link: string;
+  logo?: string;
+  link?: string;
 }
 type CarouselType = {
   slides: CarouselProps[];

@@ -51,23 +51,30 @@ const Carousel = ({ slides, options }: CarouselType) => {
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex touch-pinch-zoom touch-pan-y gap-m">
           {slides.map((item) => (
-            <div className="min-w-0 flex grow-0 shrink-0 basis-full relative max-w-11/12" key={`${item.id}`}>
-              <CldImage
-                width="968"
-                height="610"
-                src={`${item.logo}`}
-                className={"absolute h-max object-contain max-w-none w-[140px] left-m top-m"}
-                alt={"million"}
-                format="svg"
-              />
+            <div
+              className="min-w-0 flex grow-0 shrink-0 basis-full relative max-w-11/12 md:max-w-7/12 xl:max-w-6/12"
+              key={`${item.id}`}
+            >
+              {item.logo && (
+                <CldImage
+                  width="968"
+                  height="610"
+                  src={`${item.logo}`}
+                  className={"absolute h-max object-contain max-w-none w-[140px] left-m top-m"}
+                  alt={"million"}
+                  format="svg"
+                />
+              )}
               <CldImage className="w-full h-auto" width="968" height="610" src={`${item.src}`} alt={"million"} />
-              <Link
-                className="absolute right-m bottom-m bg-secondary border-1 border-tertiary px-m py-s"
-                href={item.link}
-                target={"_blank"}
-              >
-                <p className="text-desc text-tertiary">{language === "en" ? "Visit website" : "Visitar sitio web"}</p>
-              </Link>
+              {item.link && (
+                <Link
+                  className="absolute right-m bottom-m bg-secondary border-1 border-tertiary px-m py-s"
+                  href={item.link}
+                  target={"_blank"}
+                >
+                  <p className="text-desc text-tertiary">{language === "en" ? "Visit website" : "Visitar sitio web"}</p>
+                </Link>
+              )}
             </div>
           ))}
         </div>

@@ -171,5 +171,33 @@
     "challengeContent": "<li><strong>Design System Implementation:</strong> Creating a unified Design System was crucial to maintain a consistent look and feel across various digital touchpoints. Figma's collaborative features enabled us to streamline this process, making it easier to ensure graphical uniformity across mobile, web, and CRM platforms.</li><li><strong>New Framework Adaptation (Next.js):</strong> Optimizing web performance required exploring and integrating Next.js, a new framework for me. This challenge allowed me to enhance my skills while implementing faster, more efficient web solutions for Million And Up's real estate platform.</li>",
     "outcomeTitle": "Final outcome",
     "outcomeContent": "<part>By leveraging these new technologies and development processes, <strong>Million And Up</strong> has expanded its reach to new users, significantly increased customer engagement, and improved agent productivity. Positive feedback from agents highlighted the app's ease of use and the real-time profiling capabilities, which have contributed to an increase in luxury property sales.</part>"
+  },
+  "monteFrio": {
+    "roleTitle": "Role",
+    "roleContent": "Graphic Designer",
+    "typeTitle": "Type",
+    "typeContent": "Branding and Packaging",
+    "title": "Refreshing a classic brand for a new generation of consumers.",
+    "intro": "<part><strong>Monte Frío,</strong> a Colombian brand with a rich tradition of leasing refrigerators to serve oatmeal drinks, wanted to modernize its image to attract a younger audience.</part><part>With this project, the goal was to give <strong>Monte Frío</strong> a fresh, relatable look while maintaining elements like the polar bear and mountains that loyal customers associate with the brand.</part><part><strong>Monte Frío</strong> is part of a larger company, and as part of this rebranding project, I also created the logo for the parent organization. This ensured a cohesive visual identity across all associated brands, maintaining consistency while modernizing the image.</part>",
+    "purposeTitle": "Purpose",
+    "purposeContent": "<part>The primary goal was to rejuvenate <strong>Monte Frío's</strong> brand identity to attract new customers, particularly young adults aged 17 to 25, while preserving key brand elements.</part><part><strong>Monte Frío</strong> wanted a versatile look that could be applied to various media, from POP materials to social networks and future digital platforms like e-commerce.</part>",
+    "targetTitle": "Target audience",
+    "targetContent": "Young adults and college students seeking a refreshing, familiar product with a modern twist.",
+    "constraintsTitle": "Constraints",
+    "constraintsContent": "The biggest challenge was finding the right balance between modernizing the brand while keeping recognizable elements (polar bear, mountains) that current users identify with. This new identity also had to be adaptable across multiple channels, from physical coolers to social media and digital ads.",
+    "designTitle": "Design and Prototyping",
+    "sketchingTitle": "Sketching and Ideation",
+    "sketchingContent": "I started with traditional sketching techniques to explore design concepts, incorporating classic elements like the polar bear and mountain motifs in fresh, modern ways.",
+    "digitalTitle": "Digital Design",
+    "digitalContent": "After refining the sketches, I transitioned to Adobe Illustrator and Photoshop to finalize the logo, color palette, and design elements. The result was a cohesive visual identity that could work across various formats, from cooler wraps to social media posts.",
+    "mariaTitle": "La María",
+    "mariaContent": "To complement the rebranding of Monte Frío, I designed the logo for its parent company, ensuring a unified identity across the entire organization.",
+    "challengeTitle": "Challenges and solutions",
+    "maintainingTitle": "Maintaining Brand Tradition",
+    "maintainingContent": "As Monte Frío is a long-standing brand, decision-makers were cautious about changing its look. Through user research and strategic design, I demonstrated that a modernized brand could attract a new market without losing its identity.",
+    "expandingTitle": "Expanding Media Presence",
+    "expandingContent": "Leaders were initially unsure about integrating the brand into digital channels, but research showed that engaging on social media would likely increase reach and appeal to a younger audience. This insight helped secure support for a brand refresh that included digital elements.",
+    "outcomeTitle": "Final outcome",
+    "outcomeContent": "The new Monte Frío branding was successfully implemented, providing a versatile and modern look that resonated with both loyal customers and new audiences. The refreshed identity increased cooler rentals near universities in Bogotá, opened doors for additional distribution channels in supermarkets and local stores, and enhanced brand perception. Long-time customers even noted that the new branding made their usual drink feel more refreshing, a testament to the power of a cohesive brand identity."
   }
 }
