@@ -9,12 +9,9 @@ import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import { CldImage } from "next-cloudinary";
 import { motion } from "motion/react";
 import Logos from "@/presentation/components/Logos/Logos";
-import Video from "@/presentation/components/Video/Video";
-import SnippetRenderer from "@/presentation/components/SnippetRenderer/SnippetRenderer";
 import { LogosType } from "@/presentation/components/Logos/interface/iLogos";
 import { EmblaOptionsType } from "embla-carousel";
 import Carousel from "@/presentation/components/Carousel/Carousel";
-import { millionSnippets } from "@/snippets/million/millionSnippets";
 
 const designLogos: LogosType[] = ["illustrator", "photoshop"];
 const OPTIONS: EmblaOptionsType = { align: "start" };
