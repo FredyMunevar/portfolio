@@ -217,5 +217,25 @@
     "devContent": "<li>Para que el desarrollo fuera rentable y llevara poco tiempo, elegí WordPress como CMS y alojé el sitio en un servidor Apache con una base de datos MySQL.</li><li>El sitio web ofrece información esencial sobre la empresa y sirve como portal de recursos donde los empleados contratados pueden acceder a documentos para trámites legales.</li><li>Sigo encargándome de la administración del servidor y del mantenimiento del sitio, garantizando el buen funcionamiento y la seguridad en los servidores con sede en el Reino Unido.</li>",
     "outcomeTitle": "Resultado final",
     "outcomeContent": "<part>El sitio web y la marca de <strong>Precision SAS</strong> han transmitido con éxito la misión social de la empresa, estableciendo una fuerte presencia en los eventos de emprendimiento y empleo de Colombia. La identidad visual de la marca y la funcionalidad del sitio web han recibido comentarios positivos, en particular por su alineación con la misión de la empresa de ayudar a las personas de bajos ingresos a encontrar un empleo estable.</part>"
+  },
+  "hola": {
+    "roleTitle": "Rol",
+    "roleContent": "UX Developer",
+    "typeTitle": "Tipo",
+    "typeContent": "Mobile app",
+    "title": "Revolucionando el alquiler de coches con búsquedas inteligentes",
+    "intro": "<part><strong>Hola Car Rentals</strong> es una aplicación móvil diseñada para simplificar el proceso de alquiler de coches mediante el uso de algoritmos avanzados para encontrar las mejores ofertas de alquiler para los usuarios, sin importar dónde se encuentren o dónde necesiten alquilar.</part><part>Mi papel como desarrollador UX fue fundamental para garantizar que la aplicación ofreciera una experiencia fluida e intuitiva, aprovechando al mismo tiempo las últimas tecnologías para un rendimiento óptimo.</part>",
+    "purposeTitle": "Propósito",
+    "purposeContent": "<part><strong>Hola Car Rentals</strong> tiene como objetivo proporcionar a los usuarios una forma sencilla de encontrar las mejores ofertas de alquiler de coches en función de sus fechas y ubicaciones específicas. Mediante la integración de potentes algoritmos, la aplicación garantiza que los usuarios obtengan las tarifas más competitivas, tanto si reservan a nivel local como internacional.</part>",
+    "targetTitle": "Público objetivo",
+    "targetContent": "Viajeros y usuarios que buscan opciones de alquiler de coches rápidas, fiables y sin complicaciones, disponibles desde cualquier lugar del mundo.",
+    "designTitle": "Diseño y Prototipado",
+    "designContent": "<li>Desempeñé un papel clave como puente entre las fases de diseño y desarrollo, aportando soluciones a los retos de interacción y arquitectura de la información. Me centré en crear un flujo de usuario fluido que hiciera la navegación intuitiva y eficiente.</li><li>Colaboré estrechamente con el equipo de diseño, aprovechando las herramientas de colaboración de Figma para mantener un sistema de diseño unificado que garantice la coherencia gráfica y experiencias de usuario fluidas.</li>",
+    "devTitle": "Desarrollo",
+    "devContent": "<li>Lideré la configuración inicial del proyecto, manejando la instalación de React Native y configurando librerías esenciales como Dripsy para styling y Reanimated para animaciones.</li><li>Responsable de la configuración de pruebas unitarias utilizando Jest y la configuración de continuous deployment pipelines, asegurando ciclos de desarrollo robustos y eficientes.</li><li>Trabajé extensamente en la adopción de la nueva arquitectura de React, optimizando el uso de componentes nativos para mejorar el rendimiento y la experiencia del usuario.</li>",
+    "challengeTitle": "Retos y soluciones",
+    "challengeContent": "<part><strong>Creación de un sistema de diseño:</strong> Desarrollar y mantener un Sistema de Diseño completo en Figma fue crucial para garantizar la coherencia de los elementos visuales en los distintos componentes y pantallas, agilizando la colaboración y reduciendo las incoherencias.</part><part><strong>Adopción de nuevas bibliotecas y tecnologías:</strong> El proyecto requirió integrar y aprender nuevas herramientas como Dripsy y Reanimated para mejorar las capacidades visuales e interactivas de la app. Además, la transición a la nueva arquitectura de React proporcionó oportunidades para explorar e implementar prácticas modernas para la gestión de componentes nativos.</part>",
+    "outcomeTitle": "Resultado final",
+    "outcomeContent": "<part><strong>Hola Car Rentals</strong> está posicionada para transformar el sector del alquiler de coches ofreciendo a los usuarios un servicio preciso, competitivo y cómodo. La integración de tecnologías de vanguardia y el diseño intuitivo de la aplicación ya están ayudando a los usuarios a encontrar las mejores ofertas de alquiler, y se esperan nuevas mejoras y un mayor alcance de los usuarios a medida que la aplicación siga evolucionando.</part>"
   }
 }

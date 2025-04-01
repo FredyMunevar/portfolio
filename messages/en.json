@@ -217,5 +217,25 @@
     "devContent": "<li>To keep development cost-effective and time-efficient, I chose WordPress as the CMS and hosted the site on an Apache server with a MySQL database.</li><li>The website provides essential information about the company and serves as a resource portal where hired employees can access documents for legal procedures.</li><li>I continue to manage server administration and site maintenance, ensuring smooth operation and security on UK-based servers.</li>",
     "outcomeTitle": "Final outcome",
     "outcomeContent": "<part>The <strong>Precision SAS</strong> website and branding have successfully conveyed the company's social mission, establishing a strong presence in Colombian entrepreneurship and employment events. The brand's visual identity and website functionality have received positive feedback, particularly for their alignment with the company's mission of supporting low-income individuals in finding stable employment.</part>"
+  },
+  "hola": {
+    "roleTitle": "Role",
+    "roleContent": "UX Developer",
+    "typeTitle": "Type",
+    "typeContent": "Mobile app",
+    "title": "Revolutionizing car rentals with intelligent search",
+    "intro": "<part><strong>Hola Car Rentals</strong> is a mobile app designed to simplify the car rental process by using advanced algorithms to find the best rental deals for users, no matter where they are or where they need to rent.</part><part>My role as a <strong>UX Developer</strong> was instrumental in ensuring the app delivers a seamless, intuitive experience while leveraging the latest technologies for optimal performance.</part>",
+    "purposeTitle": "Purpose",
+    "purposeContent": "<part><strong>Hola Car Rentals</strong> aims to provide users with a hassle-free way to find the best car rental offers based on their specific dates and locations. By integrating powerful algorithms, the app ensures users get the most competitive rates, whether booking locally or internationally.</part>",
+    "targetTitle": "Target audience",
+    "targetContent": "Travelers and users seeking quick, reliable car rental options with minimal hassle, available from anywhere in the world.",
+    "designTitle": "Design and Prototyping",
+    "designContent": "<li>I played a key role in bridging the design and development phases, contributing solutions to interaction and information architecture challenges. My focus was on creating a smooth user flow that made navigation intuitive and efficient.</li><li>Collaborated closely with the design team, leveraging Figma's collaborative tools to maintain a unified Design System that ensures graphical consistency and seamless user experiences.</li>",
+    "devTitle": "Development",
+    "devContent": "<li>I led the initial setup of the project, handling the installation of the React Native framework and configuring essential libraries such as Dripsy for styling and Reanimated for animations.</li><li>Responsible for unit testing setup using Jest and configuring continuous deployment pipelines, ensuring robust and efficient development cycles.</li><li>Worked extensively on adopting the new React architecture, optimizing the use of native components to enhance performance and user experience.</li>",
+    "challengeTitle": "Challenges and solutions",
+    "challengeContent": "<part><strong>Design System Creation:</strong> Developing and maintaining a comprehensive Design System in Figma was crucial to ensure consistent visual elements across different components and screens, streamlining collaboration and reducing inconsistencies.</part><part><strong>Adopting New Libraries and Technologies:</strong> The project required integrating and learning new tools like Dripsy and Reanimated to enhance the app's visual and interactive capabilities. Additionally, transitioning to the new React architecture provided opportunities to explore and implement modern practices for native component management.</part>",
+    "outcomeTitle": "Final outcome",
+    "outcomeContent": "<part><strong>Hola Car Rentals</strong> is positioned to transform the car rental industry by offering users an accurate, competitive, and convenient service. The app's integration of cutting-edge technologies and intuitive design is already helping users find the best rental deals, with further improvements and user reach expected as the app continues to evolve.</part>"
   }
 }

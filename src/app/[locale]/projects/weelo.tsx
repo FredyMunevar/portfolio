@@ -5,14 +5,12 @@ import "@/presentation/styles/globals.css";
 import { useTranslations } from "next-intl";
 import SectionContainer from "@/presentation/components/SectionContainer/SectionContainer";
 import ProjectInfo from "@/presentation/components/ProjectInfo/ProjectInfo";
-import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
-import { CldImage } from "next-cloudinary";
-import { motion } from "motion/react";
 import Logos from "@/presentation/components/Logos/Logos";
 import Video from "@/presentation/components/Video/Video";
 import SnippetRenderer from "@/presentation/components/SnippetRenderer/SnippetRenderer";
 import { weeloSnippets } from "@/snippets/weelo/weeloSnippets";
 import { LogosType } from "@/presentation/components/Logos/interface/iLogos";
+import AnimatedImage from "@/presentation/components/AnimatedImage/AnimatedImage";
 
 const designLogos: LogosType[] = ["xd", "illustrator", "photoshop"];
 const devLogos: LogosType[] = ["typescript", "react", "git", "webpack", "eslint", "prettier"];
@@ -52,20 +50,16 @@ const Weelo = () => {
               {t("title")}
             </h2>
           </div>
-          <motion.div
-            initial={{ opacity: 0, transform: "translateY(20px)" }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            whileInView={{ opacity: 1, transform: "translateY(0)" }}
-            className="absolute top-[67%] right-0 md:top-[5%] portrait:md:top-[20%] landscape:md:top-[10%] lg:top-0 landscape:xl:top-[20%]"
-          >
-            <CldImage
-              width="855"
-              height="714"
-              src={`${servicesUrls.cloudinary}weelo/weelo-report`}
-              className={"object-contain h-auto w-[534px] md:w-[450px] portrait:md:w-[600px] lg:w-[550px] xl:w-[730px]"}
-              alt={"weelo report"}
-            />
-          </motion.div>
+          <AnimatedImage
+            containerStyle={
+              "absolute top-[67%] right-0 md:top-[5%] portrait:md:top-[20%] landscape:md:top-[10%] lg:top-0 landscape:xl:top-[20%]"
+            }
+            imageStyle={"object-contain h-auto w-[534px] md:w-[450px] portrait:md:w-[600px] lg:w-[550px] xl:w-[730px]"}
+            image={"weelo/weelo-report"}
+            alt={"weelo report"}
+            imageWidth={855}
+            imageHeight={714}
+          />
         </div>
         {t.rich("intro", {
           part: (chunks) => (
@@ -204,23 +198,18 @@ const Weelo = () => {
               strong: (chunks) => <strong>{chunks}</strong>,
             })}
           </div>
-          <motion.div
-            initial={{ opacity: 0, transform: "translateY(20px)" }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            whileInView={{ opacity: 1, transform: "translateY(0)" }}
-            className="absolute w-full h-fit right-0 top-[70%] md:w-fit md:top-[35%] portrait:md:top-[50%] portrait:md:right-[5%] xl:top-[35%] xl:right-l 2xl:!top-[25%]"
-            // className="relative w-full h-min top-0 md:top-[50%] portrait:md:top-[20%] landscape:md:top-[10%] lg:top-0 landscape:xl:top-[20%]"
-          >
-            <CldImage
-              width="963"
-              height="769"
-              src={`${servicesUrls.cloudinary}weelo/weelo-records`}
-              className={
-                "absolute md:static h-max object-contain max-w-none right-0 w-[540px] md:w-[800px] portrait:md:w-[900px] lg:w-[800px] xl:w-[1000px]"
-              }
-              alt={"weelo report"}
-            />
-          </motion.div>
+          <AnimatedImage
+            containerStyle={
+              "absolute w-full h-fit right-0 top-[70%] md:w-fit md:top-[35%] portrait:md:top-[50%] portrait:md:right-[5%] xl:top-[35%] xl:right-l 2xl:!top-[25%]"
+            }
+            imageStyle={
+              "absolute md:static h-max object-contain max-w-none right-0 w-[540px] md:w-[800px] portrait:md:w-[900px] lg:w-[800px] xl:w-[1000px]"
+            }
+            image={"weelo/weelo-records"}
+            alt={"weelo report"}
+            imageWidth={963}
+            imageHeight={769}
+          />
         </div>
       </section>
     </SectionContainer>

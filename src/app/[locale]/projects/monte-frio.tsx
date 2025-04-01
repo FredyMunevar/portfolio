@@ -7,11 +7,11 @@ import SectionContainer from "@/presentation/components/SectionContainer/Section
 import ProjectInfo from "@/presentation/components/ProjectInfo/ProjectInfo";
 import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import { CldImage } from "next-cloudinary";
-import { motion } from "motion/react";
 import Logos from "@/presentation/components/Logos/Logos";
 import { LogosType } from "@/presentation/components/Logos/interface/iLogos";
 import { EmblaOptionsType } from "embla-carousel";
 import Carousel from "@/presentation/components/Carousel/Carousel";
+import AnimatedImage from "@/presentation/components/AnimatedImage/AnimatedImage";
 
 const designLogos: LogosType[] = ["illustrator", "photoshop"];
 const OPTIONS: EmblaOptionsType = { align: "start" };
@@ -79,11 +79,15 @@ const MonteFrio = () => {
             typeTitle={t("typeTitle")}
             typeContent={t("typeContent")}
           />
-          <motion.div
-            initial={{ opacity: 0, transform: "translateY(20px)" }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            whileInView={{ opacity: 1, transform: "translateY(0)" }}
-            className="relative mt-[10rem] w-full h-[24rem] flex justify-center items-center md:mt-0 md:h-[40rem] portrait:md:h-[45rem] lg:h-[43rem]"
+          <AnimatedImage
+            containerStyle={
+              "relative mt-[10rem] w-full h-[24rem] flex justify-center items-center md:mt-0 md:h-[40rem] portrait:md:h-[45rem] lg:h-[43rem]"
+            }
+            imageStyle={"object-cover h-full w-auto"}
+            image={"monte-frio/monte-frio-hero-short"}
+            alt={"monte frío hero"}
+            imageWidth={2000}
+            imageHeight={1119}
           >
             <div
               className="absolute w-full h-[30rem] -top-[12rem] bg-cover bg-left
@@ -98,14 +102,7 @@ const MonteFrio = () => {
             >
               {t("title")}
             </h2>
-            <CldImage
-              width="2000"
-              height="1119"
-              src={`${servicesUrls.cloudinary}monte-frio/monte-frio-hero-short`}
-              className={"object-cover h-full w-auto"}
-              alt={"monte frío hero"}
-            />
-          </motion.div>
+          </AnimatedImage>
           {t.rich("intro", {
             part: (chunks) => (
               <p
@@ -304,20 +301,14 @@ const MonteFrio = () => {
               {t("outcomeContent")}
             </p>
           </div>
-          <motion.div
-            initial={{ opacity: 0, transform: "translateY(20px)" }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            whileInView={{ opacity: 1, transform: "translateY(0)" }}
-            className="w-full"
-          >
-            <CldImage
-              width="1231"
-              height="1189"
-              src={`${servicesUrls.cloudinary}monte-frio/monte-frio-outcome`}
-              className={"h-max object-contain max-w-none w-full"}
-              alt={"monte frío outcome"}
-            />
-          </motion.div>
+          <AnimatedImage
+            containerStyle={"w-full"}
+            imageStyle={"h-max object-contain max-w-none w-full"}
+            image={"monte-frio/monte-frio-outcome"}
+            alt={"monte frío outcome"}
+            imageWidth={1231}
+            imageHeight={1189}
+          />
         </div>
       </section>
     </SectionContainer>

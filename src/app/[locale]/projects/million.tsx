@@ -6,8 +6,6 @@ import { useTranslations } from "next-intl";
 import SectionContainer from "@/presentation/components/SectionContainer/SectionContainer";
 import ProjectInfo from "@/presentation/components/ProjectInfo/ProjectInfo";
 import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
-import { CldImage } from "next-cloudinary";
-import { motion } from "motion/react";
 import Logos from "@/presentation/components/Logos/Logos";
 import Video from "@/presentation/components/Video/Video";
 import SnippetRenderer from "@/presentation/components/SnippetRenderer/SnippetRenderer";
@@ -15,6 +13,7 @@ import { LogosType } from "@/presentation/components/Logos/interface/iLogos";
 import { EmblaOptionsType } from "embla-carousel";
 import Carousel from "@/presentation/components/Carousel/Carousel";
 import { millionSnippets } from "@/snippets/million/millionSnippets";
+import AnimatedImage from "@/presentation/components/AnimatedImage/AnimatedImage";
 
 const designLogos: LogosType[] = ["figma", "illustrator", "photoshop"];
 const devLogos: LogosType[] = [
@@ -73,22 +72,19 @@ const Million = () => {
             typeContent={t("typeContent")}
           />
           <div className="relative h-fit md:flex md:justify-end md:-mt-xxl portrait:md:justify-center portrait:lg:justify-end">
-            <motion.div
-              initial={{ opacity: 0, transform: "translateY(20px)" }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              whileInView={{ opacity: 1, transform: "translateY(0)" }}
-              className="w-fit absolute top-0 -z-1 md:z-1 portrait:md:-z-1 portrait:md:top-xxl lg:top-0 portrait:lg:z-1 portrait:lg:top-0"
-            >
-              <CldImage
-                width="430"
-                height="759"
-                src={`${servicesUrls.cloudinary}million/million-poster`}
-                className={
-                  "object-contain h-auto w-[534px] md:w-[400px] portrait:md:w-[600px] lg:w-[430px] portrait:lg:!w-[500px] xl:w-[540px]"
-                }
-                alt={"million poster"}
-              />
-            </motion.div>
+            {/* <AnimatedImage containerStyle={""} imageStyle={""} image={""} alt={""} imageWidth={0} imageHeight={0} /> */}
+            <AnimatedImage
+              containerStyle={
+                "w-fit absolute top-0 -z-1 md:z-1 portrait:md:-z-1 portrait:md:top-xxl lg:top-0 portrait:lg:z-1 portrait:lg:top-0"
+              }
+              imageStyle={
+                "object-contain h-auto w-[534px] md:w-[400px] portrait:md:w-[600px] lg:w-[430px] portrait:lg:!w-[500px] xl:w-[540px]"
+              }
+              image={"million/million-poster"}
+              alt={"million poster"}
+              imageWidth={430}
+              imageHeight={759}
+            />
             <div className="bg-million-primary px-m py-l mt-[24rem] mb-xl md:mt-xxl md:mb-l portrait:md:mt-[16rem] portrait:md:mb-[36rem] portrait:lg:mt-xxl portrait:lg:mb-l xl:p-l">
               <h2
                 className={
@@ -270,20 +266,16 @@ const Million = () => {
               strong: (chunks) => <strong>{chunks}</strong>,
             })}
           </div>
-          <motion.div
-            initial={{ opacity: 0, transform: "translateY(20px)" }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            whileInView={{ opacity: 1, transform: "translateY(0)" }}
-            className="flex justify-center w-full absolute md:justify-end md:top-[38%] portrait:md:top-[53%] portrait:lg:top-[33%] lg:top-[20%] xl:top-[17%]"
-          >
-            <CldImage
-              width="968"
-              height="610"
-              src={`${servicesUrls.cloudinary}million/million-devices`}
-              className={"absolute h-max object-contain max-w-none w-[640px] -left-[35%] md:static lg:w-[800px]"}
-              alt={"million devices"}
-            />
-          </motion.div>
+          <AnimatedImage
+            containerStyle={
+              "flex justify-center w-full absolute md:justify-end md:top-[38%] portrait:md:top-[53%] portrait:lg:top-[33%] lg:top-[20%] xl:top-[17%]"
+            }
+            imageStyle={"absolute h-max object-contain max-w-none w-[640px] -left-[35%] md:static lg:w-[800px]"}
+            image={"million/million-devices"}
+            alt={"million devices"}
+            imageWidth={968}
+            imageHeight={610}
+          />
         </div>
       </section>
     </SectionContainer>
