@@ -1479,6 +1479,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv@npm:^16.4.7":
+  version: 16.4.7
+  resolution: "dotenv@npm:16.4.7"
+  checksum: 10c0/be9f597e36a8daf834452daa1f4cc30e5375a5968f98f46d89b16b983c567398a330580c88395069a77473943c06b877d1ca25b4afafcdd6d4adb549e8293462
+  languageName: node
+  linkType: hard
+
 "dunder-proto@npm:^1.0.0, dunder-proto@npm:^1.0.1":
   version: 1.0.1
   resolution: "dunder-proto@npm:1.0.1"
@@ -3407,6 +3414,7 @@ __metadata:
     "@types/react-dom": "npm:^19"
     "@types/react-syntax-highlighter": "npm:^15.5.13"
     autoprefixer: "npm:^10.4.20"
+    dotenv: "npm:^16.4.7"
     embla-carousel: "npm:8.5.2"
     embla-carousel-autoplay: "npm:8.5.2"
     embla-carousel-react: "npm:8.5.2"

@@ -6,47 +6,47 @@ export const servicesUrls = {
    * URL for the Spline design service.
    * @type {string}
    */
-  spline: "https://prod.spline.design/",
+  spline: process.env.SPLINE_URL || "",
 
   /**
    * URL for the Cloudinary image service.
    * @type {string}
    */
-  cloudinary: "https://res.cloudinary.com/disbunv6l/image/upload/v1737508491/",
+  cloudinary: process.env.CLOUDINARY_URL || "",
 
   /**
    * URL for the Cloudinary video service.
    * @type {string}
    */
-  cloudinaryVideo: "https://res.cloudinary.com/disbunv6l/video/upload/f_auto:video,q_auto/v1/",
+  cloudinaryVideo: process.env.CLOUDINARY_VIDEO_URL || "",
 
   /**
    * URL for the GitHub repository.
    * @type {string}
    */
-  github: "https://github.com/FredyMunevar/portfolio",
+  github: process.env.GITHUB_URL || "",
 
   /**
    * URL for the LinkedIn profile.
    * @type {string}
    */
-  linkedin: "https://www.linkedin.com/in/fredy-munevar/",
+  linkedin: process.env.LINKEDIN_URL || "",
 
   /**
    * URL for the Instagram profile.
    * @type {string}
    */
-  instagram: "https://www.instagram.com/fredy_munevar/",
+  instagram: process.env.INSTAGRAM_URL || "",
 
   /**
    * URL for the Behance profile.
    * @type {string}
    */
-  behance: "https://www.behance.net/fredy_munevar",
+  behance: process.env.BEHANCE_URL || "",
 
   /**
    * URL for downloading the CV.
    * @type {string}
    */
-  cvDownload: "https://drive.google.com/uc?export=download&id=1AOc2E8sNYuHxtD45ntdG0RQHB3Kim_X2",
+  cvDownload: process.env.CV_DOWNLOAD_URL || "",
 };
