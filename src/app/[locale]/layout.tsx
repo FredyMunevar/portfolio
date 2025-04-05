@@ -5,10 +5,11 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import Header from "@/presentation/components/Header/Header";
 import Footer from "@/presentation/components/Footer/Footer";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { getMessagesFromAPI } from "@/infrastructure/services/fetchMessagesFromAPI";
 import SplashCursor from "@/presentation/components/SplashCursor/SplashCursor";
+import Loading from "@/presentation/components/Loading/Loading";
 
 /**
  * Metadata for the application.
@@ -85,33 +86,27 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: { locale: string };
 }) {
-  try {
-    // Await the locale parameter
-    const locale = await Promise.resolve(params).then((p) => p.locale);
+  const locale = params.locale;
 
-    // Get messages
-    const messages = await getMessages();
+  if (!routing.locales.includes(locale as "en" | "es")) return notFound();
 
-    // Validate locale
-    if (!routing.locales.includes(locale as "en" | "es")) {
-      return notFound();
-    }
+  const messages = await getMessagesFromAPI(locale);
 
-    return (
-      <html lang={locale}>
-        <body className={"antialiased p-[1px]"}>
-          <SplashCursor />
-          <ThemeProvider>
-            <NextIntlClientProvider messages={messages}>
+  return (
+    <html lang={locale}>
+      <body className="antialiased p-[1px]">
+        <SplashCursor />
+        <ThemeProvider>
+          <NextIntlClientProvider messages={messages}>
+            {/* 👇 Wrap with Suspense and fallback */}
+            <Loading>
               <Header />
               {children}
               <Footer />
-            </NextIntlClientProvider>
-          </ThemeProvider>
-        </body>
-      </html>
-    );
-  } catch {
-    return notFound();
-  }
+            </Loading>
+          </NextIntlClientProvider>
+        </ThemeProvider>
+      </body>
+    </html>
+  );
 }

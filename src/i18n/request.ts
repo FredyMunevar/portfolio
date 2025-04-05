@@ -1,14 +1,29 @@
-import { getRequestConfig } from "next-intl/server";
-import { routing } from "./routing";
-export default getRequestConfig(async ({ requestLocale }) => {
-  // Determine the correct locale from the request
-  let locale = await requestLocale;
-  // Fallback to default locale if needed
-  if (!locale || !routing.locales.includes(locale as "en" | "es")) {
-    locale = routing.defaultLocale;
+import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
+import { cache } from "react";
+
+const getMessages = cache(async (locale: string | { locale?: string }) => {
+  const normalizedLocale = typeof locale === "string" ? locale : locale?.locale;
+
+  if (!normalizedLocale) {
+    throw new Error("❌ Locale is missing or invalid");
   }
+
+  const url = `${servicesUrls.messages}/${normalizedLocale}`;
+
+  const res = await fetch(url, {
+    next: { revalidate: 60 },
+  });
+
+  if (!res.ok) {
+    throw new Error(`❌ Failed to fetch messages for locale: ${normalizedLocale}`);
+  }
+
+  const messages = await res.json();
+
   return {
-    locale,
-    messages: (await import(`../../messages/${locale}.json`)).default,
+    locale: normalizedLocale,
+    messages,
   };
 });
+
+export default getMessages;
