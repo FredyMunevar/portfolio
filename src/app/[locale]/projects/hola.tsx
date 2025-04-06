@@ -8,12 +8,40 @@ import ProjectInfo from "@/presentation/components/ProjectInfo/ProjectInfo";
 import Logos from "@/presentation/components/Logos/Logos";
 import Video from "@/presentation/components/Video/Video";
 import SnippetRenderer from "@/presentation/components/SnippetRenderer/SnippetRenderer";
-import { LogosType } from "@/presentation/components/Logos/interface/iLogos";
 import { holaSnippets } from "@/snippets/hola/holaSnippets";
 import AnimatedImage from "@/presentation/components/AnimatedImage/AnimatedImage";
+import { useProjectAssets } from "@/hooks/useProjectAssets";
 
-const designLogos: LogosType[] = ["figma", "illustrator", "photoshop"];
-const devLogos: LogosType[] = ["typescript", "react", "git", "webpack", "eslint", "prettier"];
+/**
+ * Hola project page component that displays detailed information about the Hola project.
+ * Features multiple sections including project info, design process, development stack, challenges, and outcomes.
+ *
+ * @component
+ * @example
+ * ```tsx
+ * <Hola />
+ * ```
+ *
+ * @description
+ * Layout sections:
+ * - Project information (role and type)
+ * - Introduction with animated poster
+ * - Project purpose and target audience
+ * - Research and design process
+ * - Design tools and wireframes
+ * - Development stack and code snippets
+ * - Challenges faced
+ * - Project outcomes
+ *
+ * Features:
+ * - Responsive layout
+ * - Theme-aware styling
+ * - Localized content
+ * - Interactive elements
+ * - Animated components
+ * - Image galleries
+ * - Tool showcases
+ */
 const Hola = () => {
   /** Theme context for dark/light mode */
   const { theme } = useTheme();
@@ -24,11 +52,14 @@ const Hola = () => {
   /** Translation function for localized content */
   const t = useTranslations("hola");
 
+  /** Fetch project assets such as logos and slides */
+  const { designLogos, devLogos } = useProjectAssets("hola");
+
   return (
     <SectionContainer paddingLess>
       <section className="flex flex-col gap-xl">
-        {/* intro section */}
-        <div className={"flex flex-col gap-l"}>
+        {/* Intro section */}
+        <div className="flex flex-col gap-l">
           <ProjectInfo
             isDarkTheme={isDarkTheme}
             roleTitle={t("roleTitle")}
@@ -45,7 +76,7 @@ const Hola = () => {
                 "object-contain h-auto w-[534px] md:w-[340px] portrait:md:w-[500px] lg:w-[430px] portrait:lg:!w-[500px] xl:w-[450px]"
               }
               image={"hola/hola-poster"}
-              alt={"million poster"}
+              alt={"hola poster"}
               imageWidth={430}
               imageHeight={759}
             />
@@ -72,12 +103,11 @@ const Hola = () => {
             strong: (chunks) => <strong>{chunks}</strong>,
           })}
         </div>
-        {/* description section */}
-        <div
-          className={`p-m flex flex-col justify-start portrait:md:flex-col md:flex-row md:mt-xl portrait:lg:flex-row xl:p-l xl:mt-xxl`}
-        >
+
+        {/* Description section */}
+        <div className="p-m flex flex-col justify-start portrait:md:flex-col md:flex-row md:mt-xl portrait:lg:flex-row xl:p-l xl:mt-xxl">
           <Video
-            style={"w-[140%] -ml-[25%] h-auto md:w-3/5 portrait:md:w-full md:mx-auto lg:w-2/5 xl:w-3/6 "}
+            style={"w-[140%] -ml-[25%] h-auto md:w-3/5 portrait:md:w-full md:mx-auto lg:w-2/5 xl:w-3/6"}
             video={"hola/hola-mockup"}
           />
           <div className="w-full flex flex-col gap-l px-m py-l bg-hola-primary rounded-lg md:p-l portrait:md:w-full md:w-3/5 lg:max-w-7/12">
@@ -88,14 +118,14 @@ const Hola = () => {
               part: (chunks) => <p className={"text-body leading-loose text-tertiary"}>{chunks}</p>,
               strong: (chunks) => <strong>{chunks}</strong>,
             })}
-
             <h2 className={"text-h2 font-semibold leading-none text-center text-hola-secondary"}>{t("targetTitle")}</h2>
             <p className={"text-body leading-loose text-tertiary"}>{t("targetContent")}</p>
           </div>
         </div>
-        {/* design section */}
+
+        {/* Design section */}
         <div className="flex flex-col gap-l px-m py-l overflow-hidden md:flex-row portrait:md:flex-col md:items-center portrait:lg:flex-row lg:px-l lg:py-0 lg:flex-row">
-          <div className="flex flex-col gap-l md:w-1/2 portrait:md:w-full lg:w-1/2 portrait:lg:w-1/2 xl:w-1/2 ">
+          <div className="flex flex-col gap-l md:w-1/2 portrait:md:w-full lg:w-1/2 portrait:lg:w-1/2 xl:w-1/2">
             <h2
               className={`text-h2 font-semibold leading-tight text-center md:text-left portrait:md:text-center portrait:lg:text-left ${
                 isDarkTheme ? "text-hola-secondary" : "text-hola-primary"
@@ -127,7 +157,8 @@ const Hola = () => {
             ></iframe>
           </div>
         </div>
-        {/* development section */}
+
+        {/* Development section */}
         <div className="flex flex-col gap-l w-full px-m pb-xl portrait:md:flex-col md:flex-row portrait:lg:flex-row lg:px-l">
           <div className="w-full overflow-hidden order-2 portrait:md:order-2 md:order-1 portrait:md:w-full md:w-1/2 portrait:lg:order-1 portrait:lg:w-1/2">
             <SnippetRenderer
@@ -157,9 +188,10 @@ const Hola = () => {
             <Logos logos={devLogos} />
           </div>
         </div>
-        {/* challenges section */}
+
+        {/* Challenges section */}
         <div className="flex flex-col gap-l px-m py-l overflow-hidden md:flex-row portrait:md:flex-col md:items-center portrait:lg:flex-row lg:px-l lg:py-0 lg:flex-row">
-          <div className="flex flex-col gap-l md:w-1/2 portrait:md:w-full lg:w-1/2 portrait:lg:w-1/2 xl:w-1/2 ">
+          <div className="flex flex-col gap-l md:w-1/2 portrait:md:w-full lg:w-1/2 portrait:lg:w-1/2 xl:w-1/2">
             <h2
               className={`text-h2 font-semibold leading-tight text-center md:text-left portrait:md:text-center portrait:lg:text-left ${
                 isDarkTheme ? "text-hola-secondary" : "text-hola-primary"
@@ -188,7 +220,8 @@ const Hola = () => {
             ></iframe>
           </div>
         </div>
-        {/* outcome section */}
+
+        {/* Outcome section */}
         <div className={`flex flex-col gap-l px-m py-l mx-m bg-hola-secondary rounded-lg md:p-l`}>
           <h2 className={"text-h2 font-semibold leading-tight text-center text-tertiary"}>{t("outcomeTitle")}</h2>
           {t.rich("outcomeContent", {

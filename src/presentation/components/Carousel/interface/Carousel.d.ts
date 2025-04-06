@@ -1,4 +1,4 @@
-interface CarouselProps {
+export interface CarouselProps {
   id: number;
   src: string;
   logo?: string;

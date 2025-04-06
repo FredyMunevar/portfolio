@@ -6,11 +6,39 @@ import { useTranslations } from "next-intl";
 import SectionContainer from "@/presentation/components/SectionContainer/SectionContainer";
 import ProjectInfo from "@/presentation/components/ProjectInfo/ProjectInfo";
 import Logos from "@/presentation/components/Logos/Logos";
-import { LogosType } from "@/presentation/components/Logos/interface/iLogos";
 import AnimatedImage from "@/presentation/components/AnimatedImage/AnimatedImage";
+import { useProjectAssets } from "@/hooks/useProjectAssets";
 
-const designLogos: LogosType[] = ["illustrator", "xd", "photoshop"];
-const devLogos: LogosType[] = ["css", "html", "wordpress"];
+/**
+ * Precision project page component that displays detailed information about the Precision project.
+ * Features multiple sections including project info, design process, development stack, challenges, and outcomes.
+ *
+ * @component
+ * @example
+ * ```tsx
+ * <Precision />
+ * ```
+ *
+ * @description
+ * Layout sections:
+ * - Project information (role and type)
+ * - Introduction with animated poster
+ * - Project purpose and target audience
+ * - Research and design process
+ * - Design tools and wireframes
+ * - Development stack
+ * - Challenges faced
+ * - Project outcomes
+ *
+ * Features:
+ * - Responsive layout
+ * - Theme-aware styling
+ * - Localized content
+ * - Interactive elements
+ * - Animated components
+ * - Image galleries
+ * - Tool showcases
+ */
 const Precision = () => {
   /** Theme context for dark/light mode */
   const { theme } = useTheme();
@@ -21,10 +49,13 @@ const Precision = () => {
   /** Translation function for localized content */
   const t = useTranslations("precision");
 
+  /** Fetch project assets such as logos and slides */
+  const { designLogos, devLogos } = useProjectAssets("precision");
+
   return (
     <SectionContainer paddingLess>
       <section className="flex flex-col gap-l">
-        {/* intro section */}
+        {/* Intro section */}
         <ProjectInfo
           isDarkTheme={isDarkTheme}
           roleTitle={t("roleTitle")}
@@ -60,7 +91,8 @@ const Precision = () => {
           ),
           strong: (chunks) => <strong>{chunks}</strong>,
         })}
-        {/* description section */}
+
+        {/* Description section */}
         <div className={"flex flex-col px-m py-l gap-l md:flex-row"}>
           <AnimatedImage
             containerStyle={"w-full flex justify-center items-center md:w-3/6"}
@@ -110,7 +142,8 @@ const Precision = () => {
           imageWidth={2458}
           imageHeight={1538}
         />
-        {/* design section */}
+
+        {/* Design section */}
         <div className={"flex flex-col px-m py-l gap-l md:flex-row"}>
           <div className={"flex flex-col gap-l w-full md:w-3/6"}>
             <h2
@@ -161,7 +194,8 @@ const Precision = () => {
             imageHeight={571}
           />
         </div>
-        {/* development section */}
+
+        {/* Development section */}
         <div className={"flex flex-col px-m py-l gap-l md:flex-row mt-l"}>
           <AnimatedImage
             containerStyle={"w-full flex justify-center items-center md:w-3/6"}
@@ -194,7 +228,8 @@ const Precision = () => {
             <Logos logos={devLogos} />
           </div>
         </div>
-        {/* outcome section */}
+
+        {/* Outcome section */}
         <div
           className={`relative pt-[12rem] pb-xxl -mb-xxl -mt-l bg-cover bg-center px-m flex flex-col gap-l md:-mb-xl xl:-mt-xl
             bg-[url('https://res.cloudinary.com/disbunv6l/image/upload/v1741568494/precision/precision-outcome-svg.svg')]`}

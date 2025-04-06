@@ -1,7 +1,7 @@
 import { servicesUrls } from "../constants/servicesUrls";
 
 // const BASE_URL = ["https://portfolio-api-two-theta.vercel.app"];
-const BASE_URL = [servicesUrls.messages];
+const BASE_URL = [servicesUrls.api];
 
 /**
  * Fetches localized messages from the API for the given locale.

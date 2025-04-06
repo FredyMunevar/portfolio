@@ -5,50 +5,44 @@ import "@/presentation/styles/globals.css";
 import { useTranslations } from "next-intl";
 import SectionContainer from "@/presentation/components/SectionContainer/SectionContainer";
 import ProjectInfo from "@/presentation/components/ProjectInfo/ProjectInfo";
-import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import Logos from "@/presentation/components/Logos/Logos";
 import Video from "@/presentation/components/Video/Video";
 import SnippetRenderer from "@/presentation/components/SnippetRenderer/SnippetRenderer";
-import { LogosType } from "@/presentation/components/Logos/interface/iLogos";
-import { EmblaOptionsType } from "embla-carousel";
 import Carousel from "@/presentation/components/Carousel/Carousel";
 import { millionSnippets } from "@/snippets/million/millionSnippets";
 import AnimatedImage from "@/presentation/components/AnimatedImage/AnimatedImage";
+import { useProjectAssets } from "@/hooks/useProjectAssets";
 
-const designLogos: LogosType[] = ["figma", "illustrator", "photoshop"];
-const devLogos: LogosType[] = [
-  "typescript",
-  "react",
-  "git",
-  "webpack",
-  "eslint",
-  "prettier",
-  "css",
-  "html",
-  "sass",
-  "next",
-];
-const OPTIONS: EmblaOptionsType = { align: "start" };
-const SLIDES = [
-  {
-    id: 1,
-    src: `${servicesUrls.cloudinary}million/million-website`,
-    logo: `${servicesUrls.cloudinary}million/million-white.svg`,
-    link: "https://www.millionluxury.com/?ui-culture=en",
-  },
-  {
-    id: 2,
-    src: `${servicesUrls.cloudinary}million/million-rivage`,
-    logo: `${servicesUrls.cloudinary}million/rivage.svg`,
-    link: "https://www.rivageinbalharbour.com/",
-  },
-  {
-    id: 3,
-    src: `${servicesUrls.cloudinary}million/million-57ocean`,
-    logo: `${servicesUrls.cloudinary}million/57ocean.svg`,
-    link: "https://www.57oceancondomiami.com/",
-  },
-];
+/**
+ * Million project page component that displays detailed information about the Million project.
+ * Features multiple sections including project info, design process, development stack, challenges, and outcomes.
+ *
+ * @component
+ * @example
+ * ```tsx
+ * <Million />
+ * ```
+ *
+ * @description
+ * Layout sections:
+ * - Project information (role and type)
+ * - Introduction with animated poster
+ * - Project purpose and target audience
+ * - Research and design process
+ * - Design tools and wireframes
+ * - Development stack and code snippets
+ * - Challenges faced
+ * - Project outcomes
+ *
+ * Features:
+ * - Responsive layout
+ * - Theme-aware styling
+ * - Localized content
+ * - Interactive elements
+ * - Animated components
+ * - Image galleries
+ * - Tool showcases
+ */
 const Million = () => {
   /** Theme context for dark/light mode */
   const { theme } = useTheme();
@@ -58,6 +52,9 @@ const Million = () => {
 
   /** Translation function for localized content */
   const t = useTranslations("million");
+
+  /** Fetch project assets such as logos and slides */
+  const { designLogos, devLogos, slideGroups, slideOptions } = useProjectAssets("million");
 
   return (
     <SectionContainer paddingLess>
@@ -72,7 +69,6 @@ const Million = () => {
             typeContent={t("typeContent")}
           />
           <div className="relative h-fit md:flex md:justify-end md:-mt-xxl portrait:md:justify-center portrait:lg:justify-end">
-            {/* <AnimatedImage containerStyle={""} imageStyle={""} image={""} alt={""} imageWidth={0} imageHeight={0} /> */}
             <AnimatedImage
               containerStyle={
                 "w-fit absolute top-0 -z-1 md:z-1 portrait:md:-z-1 portrait:md:top-xxl lg:top-0 portrait:lg:z-1 portrait:lg:top-0"
@@ -192,7 +188,7 @@ const Million = () => {
           >
             {t("websites")}
           </h2>
-          <Carousel slides={SLIDES} options={OPTIONS} />
+          {slideGroups.group1 && <Carousel slides={slideGroups.group1} options={slideOptions} />}
         </div>
         {/* development section */}
         <div className="flex flex-col gap-l w-full px-m pb-xl mt-xl lg:px-l xl:flex-row">

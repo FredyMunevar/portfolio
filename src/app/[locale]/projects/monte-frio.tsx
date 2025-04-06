@@ -8,55 +8,40 @@ import ProjectInfo from "@/presentation/components/ProjectInfo/ProjectInfo";
 import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import { CldImage } from "next-cloudinary";
 import Logos from "@/presentation/components/Logos/Logos";
-import { LogosType } from "@/presentation/components/Logos/interface/iLogos";
-import { EmblaOptionsType } from "embla-carousel";
 import Carousel from "@/presentation/components/Carousel/Carousel";
 import AnimatedImage from "@/presentation/components/AnimatedImage/AnimatedImage";
+import { useProjectAssets } from "@/hooks/useProjectAssets";
 
-const designLogos: LogosType[] = ["illustrator", "photoshop"];
-const OPTIONS: EmblaOptionsType = { align: "start" };
-const SKETCH_SLIDES = [
-  {
-    id: 1,
-    src: `${servicesUrls.cloudinary}monte-frio/monte-frio-sketch-1`,
-  },
-  {
-    id: 2,
-    src: `${servicesUrls.cloudinary}monte-frio/monte-frio-sketch-2`,
-  },
-  {
-    id: 3,
-    src: `${servicesUrls.cloudinary}monte-frio/monte-frio-sketch-3`,
-  },
-];
-const MARIA_SLIDES = [
-  {
-    id: 1,
-    src: `${servicesUrls.cloudinary}monte-frio/monte-frio-maria-1`,
-  },
-  {
-    id: 2,
-    src: `${servicesUrls.cloudinary}monte-frio/monte-frio-maria-2`,
-  },
-  {
-    id: 3,
-    src: `${servicesUrls.cloudinary}monte-frio/monte-frio-maria-3`,
-  },
-];
-const SOCIAL_SLIDES = [
-  {
-    id: 1,
-    src: `${servicesUrls.cloudinary}monte-frio/monte-frio-instagram`,
-  },
-  {
-    id: 2,
-    src: `${servicesUrls.cloudinary}monte-frio/monte-frio-pop-external`,
-  },
-  {
-    id: 3,
-    src: `${servicesUrls.cloudinary}monte-frio/monte-frio-car`,
-  },
-];
+/**
+ * Monte Frio project page component that displays detailed information about the MonteFrio project.
+ * Features multiple sections including project info, design process, development stack, challenges, and outcomes.
+ *
+ * @component
+ * @example
+ * ```tsx
+ * <MonteFrio />
+ * ```
+ *
+ * @description
+ * Layout sections:
+ * - Project information (role and type)
+ * - Introduction with animated poster
+ * - Project purpose and target audience
+ * - Research and design process
+ * - Design tools and wireframes
+ * - Development stack and code snippets
+ * - Challenges faced
+ * - Project outcomes
+ *
+ * Features:
+ * - Responsive layout
+ * - Theme-aware styling
+ * - Localized content
+ * - Interactive elements
+ * - Animated components
+ * - Image galleries
+ * - Tool showcases
+ */
 const MonteFrio = () => {
   /** Theme context for dark/light mode */
   const { theme } = useTheme();
@@ -67,11 +52,14 @@ const MonteFrio = () => {
   /** Translation function for localized content */
   const t = useTranslations("monteFrio");
 
+  /** Fetch project assets such as logos and slides */
+  const { designLogos, slideGroups, slideOptions } = useProjectAssets("monteFrio");
+
   return (
     <SectionContainer paddingLess>
       <section className="flex flex-col gap-l">
-        {/* intro section */}
-        <div className={"flex flex-col gap-l"}>
+        {/* Intro section */}
+        <div className="flex flex-col gap-l">
           <ProjectInfo
             isDarkTheme={isDarkTheme}
             roleTitle={t("roleTitle")}
@@ -116,8 +104,9 @@ const MonteFrio = () => {
             strong: (chunks) => <strong>{chunks}</strong>,
           })}
         </div>
-        {/* description section */}
-        <div className={"flex flex-col gap-l py-l md:flex-row"}>
+
+        {/* Description section */}
+        <div className="flex flex-col gap-l py-l md:flex-row">
           <div className="w-full md:w-2/6">
             <CldImage
               width="1140"
@@ -177,7 +166,8 @@ const MonteFrio = () => {
             </p>
           </div>
         </div>
-        {/* design section */}
+
+        {/* Design section */}
         <div className="flex flex-col items-center gap-l px-m py-l">
           <h2
             className={`text-h2 font-semibold leading-tight text-center ${
@@ -201,7 +191,7 @@ const MonteFrio = () => {
           >
             {t("targetContent")}
           </p>
-          <Carousel slides={SKETCH_SLIDES} options={OPTIONS} />
+          {slideGroups.group1 && <Carousel slides={slideGroups.group1} options={slideOptions} />}
           <div className="flex flex-col gap-l w-full my-l md:flex-row">
             <div className="flex flex-col gap-l md:w-1/2">
               <h3
@@ -236,9 +226,10 @@ const MonteFrio = () => {
               </p>
             </div>
           </div>
-          <Carousel slides={MARIA_SLIDES} options={OPTIONS} />
+          {slideGroups.group2 && <Carousel slides={slideGroups.group2} options={slideOptions} />}
         </div>
-        {/* challenges section */}
+
+        {/* Challenges section */}
         <div className="flex flex-col items-center gap-l px-m py-l">
           <h2
             className={`text-h2 font-semibold leading-tight text-center ${
@@ -281,7 +272,7 @@ const MonteFrio = () => {
               </p>
             </div>
           </div>
-          <Carousel slides={SOCIAL_SLIDES} options={OPTIONS} />
+          {slideGroups.group3 && <Carousel slides={slideGroups.group3} options={slideOptions} />}
         </div>
         {/* outcome section */}
         <div className={"flex flex-col gap-l -mb-[8.5rem]"}>

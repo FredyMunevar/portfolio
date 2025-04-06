@@ -53,5 +53,5 @@ export const servicesUrls = {
    * URL for the messages service.
    * @type {string}
    */
-  messages: process.env.NEXT_PUBLIC_MESSAGES || "",
+  api: process.env.NEXT_PUBLIC_API || "",
 };

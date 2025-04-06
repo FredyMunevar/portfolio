@@ -6,6 +6,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import { CldImage } from "next-cloudinary";
 import { Link } from "@/i18n/routing";
 import { useLocale } from "next-intl";
+import { CarouselType } from "./interface/Carousel";
 
 /**
  * Carousel component that displays a collection of slides with images and links.
@@ -82,7 +83,7 @@ const Carousel = ({ slides, options }: CarouselType) => {
 
       <div className="w-full flex mt-m">
         <div className="w-full flex justify-between items-center gap-m">
-          {scrollSnaps.map((_, index) => (
+          {scrollSnaps.map((_: number, index: number) => (
             <CarouselButton
               key={index}
               onClick={() => onDotButtonClick(index)}

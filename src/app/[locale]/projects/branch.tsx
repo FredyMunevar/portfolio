@@ -10,10 +10,7 @@ import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import CharactersDesktop from "@/presentation/components/Branch/CharactersDesktop";
 import Logos from "@/presentation/components/Logos/Logos";
 import Video from "@/presentation/components/Video/Video";
-import { LogosType } from "@/presentation/components/Logos/interface/iLogos";
-
-const designLogos: LogosType[] = ["xd", "illustrator", "photoshop", "affinity", "marvel"];
-const devLogos: LogosType[] = ["typescript", "html", "react", "wordpress", "vue", "sass"];
+import { useProjectAssets } from "@/hooks/useProjectAssets";
 
 /**
  * Branch project page component that displays detailed information about the Branch project.
@@ -47,6 +44,9 @@ const Branch = () => {
 
   /** Translation function for localized content */
   const t = useTranslations("branch");
+
+  /** Fetch project assets such as logos and slides */
+  const { designLogos, devLogos } = useProjectAssets("branch");
 
   return (
     <SectionContainer paddingLess>

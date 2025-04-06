@@ -9,12 +9,39 @@ import Logos from "@/presentation/components/Logos/Logos";
 import Video from "@/presentation/components/Video/Video";
 import SnippetRenderer from "@/presentation/components/SnippetRenderer/SnippetRenderer";
 import { weeloSnippets } from "@/snippets/weelo/weeloSnippets";
-import { LogosType } from "@/presentation/components/Logos/interface/iLogos";
 import AnimatedImage from "@/presentation/components/AnimatedImage/AnimatedImage";
+import { useProjectAssets } from "@/hooks/useProjectAssets";
 
-const designLogos: LogosType[] = ["xd", "illustrator", "photoshop"];
-const devLogos: LogosType[] = ["typescript", "react", "git", "webpack", "eslint", "prettier"];
-
+/**
+ * Weelo project page component that displays detailed information about the Weelo project.
+ * Features multiple sections including project info, design process, development stack, challenges, and outcomes.
+ *
+ * @component
+ * @example
+ * ```tsx
+ * <Weelo />
+ * ```
+ *
+ * @description
+ * Layout sections:
+ * - Project information (role and type)
+ * - Introduction with animated poster
+ * - Project purpose and target audience
+ * - Research and design process
+ * - Design tools and wireframes
+ * - Development stack and code snippets
+ * - Challenges faced
+ * - Project outcomes
+ *
+ * Features:
+ * - Responsive layout
+ * - Theme-aware styling
+ * - Localized content
+ * - Interactive elements
+ * - Animated components
+ * - Image galleries
+ * - Tool showcases
+ */
 const Weelo = () => {
   /** Theme context for dark/light mode */
   const { theme } = useTheme();
@@ -25,10 +52,13 @@ const Weelo = () => {
   /** Translation function for localized content */
   const t = useTranslations("weelo");
 
+  /** Fetch project assets such as logos and slides */
+  const { designLogos, devLogos } = useProjectAssets("weelo");
+
   return (
     <SectionContainer paddingLess>
       <section className="flex flex-col gap-l">
-        {/* intro section */}
+        {/* Intro section */}
         <div
           className={`relative pt-xl pb-[17rem] mb-[12rem] px-m bg-top bg-no-repeat bg-cover
             md:pb-[5rem] lg:px-l lg:mb-xxl xl:pb-[8rem] xl:mb-l xl:bg-cover
@@ -73,7 +103,8 @@ const Weelo = () => {
           ),
           strong: (chunks) => <strong>{chunks}</strong>,
         })}
-        {/* description section */}
+
+        {/* Description section */}
         <div
           className={`bg-cover relative py-xxl px-m bg-no-repeat lg:px-l lg:my-l bg-[url('https://res.cloudinary.com/disbunv6l/image/upload/v1741568494/weelo/bg-secondary.png')]`}
         >
@@ -100,7 +131,8 @@ const Weelo = () => {
             </div>
           </div>
         </div>
-        {/* design section */}
+
+        {/* Design section */}
         <div className="flex flex-col gap-l px-m py-l overflow-hidden md:flex-row portrait:md:flex-col md:items-center portrait:lg:flex-row lg:px-l lg:py-0 lg:flex-row">
           <div className="flex flex-col gap-l md:w-1/2 portrait:md:w-full lg:w-3/5 xl:w-3/6 ">
             <h2
@@ -127,7 +159,8 @@ const Weelo = () => {
             video={"weelo/weelo-flow"}
           />
         </div>
-        {/* development section */}
+
+        {/* Development section */}
         <div className="flex flex-col gap-l w-full px-m pb-xl xl:flex-row">
           <div className="flex flex-col gap-l xl:w-1/2">
             <h2
@@ -157,7 +190,8 @@ const Weelo = () => {
             />
           </div>
         </div>
-        {/* challenges section */}
+
+        {/* Challenges section */}
         <div className="flex flex-col gap-l w-full px-m pb-xl">
           <h2
             className={`text-h2 font-semibold leading-tight text-center ${
@@ -177,7 +211,8 @@ const Weelo = () => {
             })}
           </ul>
         </div>
-        {/* outcome section */}
+
+        {/* Outcome section */}
         <div
           className={`relative bg-cover pt-xl pb-[15rem] px-m bg-top bg-no-repeat max-w-screen
             md:pt-[7rem] md:pb-[10rem] portrait:md:pb-[20rem] portrait:md:mb-[10rem] lg:px-l xl:pb-[15rem] xl:mb-[8rem] 2xl:!pb-[17rem] 2xl:!mb-[5rem]

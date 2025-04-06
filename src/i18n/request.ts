@@ -8,7 +8,7 @@ const getMessages = cache(async (locale: string | { locale?: string }) => {
     throw new Error("❌ Locale is missing or invalid");
   }
 
-  const url = `${servicesUrls.messages}/${normalizedLocale}`;
+  const url = `${servicesUrls.api}/${normalizedLocale}`;
 
   const res = await fetch(url, {
     next: { revalidate: 60 },

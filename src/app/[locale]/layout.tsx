@@ -9,7 +9,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getMessagesFromAPI } from "@/infrastructure/services/fetchMessagesFromAPI";
 import SplashCursor from "@/presentation/components/SplashCursor/SplashCursor";
-import Loading from "@/presentation/components/Loading/Loading";
+import { LoadingProvider } from "@/context/LoadingContext";
 
 /**
  * Metadata for the application.
@@ -98,12 +98,11 @@ export default async function LocaleLayout({
         <SplashCursor />
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
-            {/* 👇 Wrap with Suspense and fallback */}
-            <Loading>
+            <LoadingProvider>
               <Header />
               {children}
               <Footer />
-            </Loading>
+            </LoadingProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
