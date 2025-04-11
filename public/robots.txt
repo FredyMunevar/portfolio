@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /en/projects/million
+Disallow: /es/projects/million
+Disallow: /en/projects/weelo
+Disallow: /es/projects/weelo
+Disallow: /en/projects/hola
+Disallow: /es/projects/hola

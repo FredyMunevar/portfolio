@@ -72,6 +72,7 @@ const Carousel = ({ slides, options }: CarouselType) => {
                   className="absolute right-m bottom-m bg-secondary border-1 border-tertiary px-m py-s"
                   href={item.link}
                   target={"_blank"}
+                  rel="noopener noreferrer nofollow"
                 >
                   <p className="text-desc text-tertiary">{language === "en" ? "Visit website" : "Visitar sitio web"}</p>
                 </Link>
