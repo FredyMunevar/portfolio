@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { EmblaCarouselType } from "embla-carousel";
+import { CarouselButtonType, UseCarouselButtonType } from "./interface/Carousel";
 
 /**
  * Custom hook to manage carousel button functionality.

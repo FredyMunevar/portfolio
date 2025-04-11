@@ -11,6 +11,9 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
+  {
+    ignores: ["src/snippets/hola/**", "src/snippets/million/**", "src/snippets/weelo/**"],
+  },
 ];
 
 export default eslintConfig;
