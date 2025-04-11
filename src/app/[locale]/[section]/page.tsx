@@ -4,9 +4,15 @@ import Contact from "../sections/contact";
 import Projects from "../sections/projects";
 import { notFound } from "next/navigation";
 
-export default async function SectionPage({ params }: { params: { section: string } }) {
-  // Await the section parameter
-  const section = await Promise.resolve(params).then((p) => p.section);
+type Props = {
+  params: Promise<{
+    section: string;
+  }>;
+};
+
+export default async function SectionPage({ params }: Props) {
+  // Await the params if it's a Promise
+  const { section } = await params;
 
   // Map routes to their corresponding components
   const sectionComponents: { [key: string]: React.ComponentType } = {
