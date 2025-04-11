@@ -8,7 +8,7 @@ import ProjectInfo from "@/presentation/components/ProjectInfo/ProjectInfo";
 import Logos from "@/presentation/components/Logos/Logos";
 import Video from "@/presentation/components/Video/Video";
 import SnippetRenderer from "@/presentation/components/SnippetRenderer/SnippetRenderer";
-import { holaSnippets } from "@/snippets/hola/holaSnippets";
+import { holaSnippets } from "@/snippets/holaSnippets";
 import AnimatedImage from "@/presentation/components/AnimatedImage/AnimatedImage";
 import { useProjectAssets } from "@/hooks/useProjectAssets";
 

@@ -9,7 +9,7 @@ import Logos from "@/presentation/components/Logos/Logos";
 import Video from "@/presentation/components/Video/Video";
 import SnippetRenderer from "@/presentation/components/SnippetRenderer/SnippetRenderer";
 import Carousel from "@/presentation/components/Carousel/Carousel";
-import { millionSnippets } from "@/snippets/million/millionSnippets";
+import { millionSnippets } from "@/snippets/millionSnippets";
 import AnimatedImage from "@/presentation/components/AnimatedImage/AnimatedImage";
 import { useProjectAssets } from "@/hooks/useProjectAssets";
 
