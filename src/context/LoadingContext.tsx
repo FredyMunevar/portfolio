@@ -1,5 +1,5 @@
 "use client";
-
+import Loading from "@/presentation/components/Loading/Loading";
 import React, { createContext, useContext, useEffect, useState } from "react";
 
 /**
@@ -40,7 +40,7 @@ export const LoadingProvider = ({ children }: { children: React.ReactNode }) => 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 5000);
 
     return () => clearTimeout(timeout);
   }, []);
@@ -53,14 +53,7 @@ export const LoadingProvider = ({ children }: { children: React.ReactNode }) => 
 
   return (
     <LoadingContext.Provider value={{ isLoading, setLoading: setIsLoading }}>
-      {!hasRendered ? (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-primary">
-          <div className="animate-spin rounded-full h-l w-l border-b-4 border-tertiary" />
-          <p className="ml-4 text-tertiary">Loading portfolio...</p>
-        </div>
-      ) : (
-        <>{children}</>
-      )}
+      {!hasRendered ? <Loading /> : <>{children}</>}
     </LoadingContext.Provider>
   );
 };

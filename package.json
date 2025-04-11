@@ -18,6 +18,7 @@
     "embla-carousel-autoplay": "8.5.2",
     "embla-carousel-react": "8.5.2",
     "icomoon-react": "^3.0.0",
+    "lottie-react": "^2.4.1",
     "motion": "^12.0.5",
     "next": "15.1.5",
     "next-cloudinary": "^6.16.0",
