@@ -1,6 +1,8 @@
-# My UX/UI Design Portfolio 🎨💻
+# Fredy Munevar's UX/UI Design Portfolio 🎨💻
 
 Welcome to my **UX/UI Design and Development Portfolio**! This repository showcases my work in **UX design**, **UI development**, and **front-end engineering**, featuring a variety of projects that highlight my skills and experience.
+
+My UX/UI Design and Development Portfolio - Showcasing my work in design and development, including projects like Hola Car Rentals, built with Next.js, Strapi, and more. This portfolio demonstrates my skills in creating seamless user experiences, modern interfaces, and scalable web applications.
 
 ## 🌟 Portfolio Overview
 
