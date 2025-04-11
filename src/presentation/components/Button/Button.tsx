@@ -44,7 +44,7 @@ const Button = ({ onClick, link, buttonType = "primary", children, className, la
     </Link>
   ) : (
     <button
-      className={`${largeButton ? styles.buttonLarge : styles.button}  ${isPrimary && primaryStyles} ${
+      className={`${largeButton ? styles.buttonLarge : styles.button} ${isPrimary && primaryStyles} ${
         isSecondary && secondaryStyles
       } ${defaultStyles} ${className}`}
       onClick={onClick}

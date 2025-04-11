@@ -32,7 +32,10 @@ const AccordionItem = ({ title, toolDescription }: IAccordionItem) => {
 
   return (
     <motion.div layout>
-      <div className="cursor-pointer h-xl flex items-center justify-between gap-l relative" onClick={() => togglediv()}>
+      <div
+        className="cursor-pointer h-fit flex items-center justify-between gap-l relative"
+        onClick={() => togglediv()}
+      >
         <motion.h3 layout className={`text-h2 font-semibold ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>
           {title}
         </motion.h3>
@@ -41,7 +44,7 @@ const AccordionItem = ({ title, toolDescription }: IAccordionItem) => {
             name={"icon-down"}
             size={24}
             color={isDarkTheme ? "var(--tertiary)" : "var(--secondary)"}
-            className={`transition-transform ease-in-out duration-5000 transform ${isOpen ? " rotate-180" : ""}`}
+            className={`transition-transform ease-in-out duration-1000 transform ${isOpen ? " rotate-180" : ""}`}
           />
         </motion.div>
       </div>

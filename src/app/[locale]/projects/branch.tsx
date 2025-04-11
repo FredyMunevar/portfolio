@@ -11,6 +11,7 @@ import CharactersDesktop from "@/presentation/components/Branch/CharactersDeskto
 import Logos from "@/presentation/components/Logos/Logos";
 import Video from "@/presentation/components/Video/Video";
 import { useProjectAssets } from "@/hooks/useProjectAssets";
+import ProjectInfo from "@/presentation/components/ProjectInfo/ProjectInfo";
 
 /**
  * Branch project page component that displays detailed information about the Branch project.
@@ -51,24 +52,13 @@ const Branch = () => {
   return (
     <SectionContainer paddingLess>
       <section className="flex flex-col">
-        <div className="flex flex-col gap-l md:flex-row md:gap-[1.5rem] mb-xl px-m">
-          <div className="flex flex-col gap-xs md:text-center md:w-1/2 xl:text-left xl:w-1/3">
-            <h4 className={`text-type font-semibold ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>
-              {t("roleTitle")}
-            </h4>
-            <h5 className={`text-desc font-light ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>
-              {t("roleContent")}
-            </h5>
-          </div>
-          <div className="flex flex-col gap-xs md:text-center md:w-1/2 xl:text-left xl:w-1/3">
-            <h4 className={`text-type font-semibold ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>
-              {t("typeTitle")}
-            </h4>
-            <h5 className={`text-desc font-light ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>
-              {t("typeContent")}
-            </h5>
-          </div>
-        </div>
+        <ProjectInfo
+          isDarkTheme={isDarkTheme}
+          roleTitle={t("roleTitle")}
+          roleContent={t("roleContent")}
+          typeTitle={t("typeTitle")}
+          typeContent={t("typeContent")}
+        />
         {/* intro section */}
         <div className="relative overflow-hidden pb-xl px-m mt-l">
           <div className="flex flex-col gap-l">

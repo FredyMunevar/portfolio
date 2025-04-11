@@ -1,5 +1,5 @@
 .button {
-  padding: calc(var(--spacing-xs) + var(--spacing-xxs));
+  padding: calc(var(--spacing-xs) + var(--spacing-xxs)) calc(var(--spacing-s) + var(--spacing-xs));
 }
 .buttonLarge {
   padding: calc(var(--spacing-s) + var(--spacing-xs));

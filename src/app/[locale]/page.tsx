@@ -50,7 +50,7 @@ const Home = () => {
             {t("title")}{" "}
           </h1>
           <h2
-            className={`text-h4 font-light leading-relaxed landscape:hidden lg:landscape:block xl:text-center ${themeTextColor}`}
+            className={`text-h4 font-light leading-relaxed [@media(max-width:375px)]:hidden landscape:hidden lg:landscape:block xl:text-center ${themeTextColor}`}
           >
             {t("description")}
           </h2>

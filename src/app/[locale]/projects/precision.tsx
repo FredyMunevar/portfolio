@@ -70,15 +70,21 @@ const Precision = () => {
           <div className="relative h-fit w-full flex justify-end">
             <AnimatedImage
               containerStyle={
-                "w-fit absolute top-[18%] -left-[10rem] md:top-0 md:-left-xxl portrait:md:-top-xl portrait:md:-left-[16rem] portrait:lg:-left-xxl xl:-left-xl xl:-top-l"
+                "w-fit absolute top-[18%] -left-[10rem] sm:-left-[5rem] md:top-0 md:-left-xxl portrait:md:-top-xl portrait:md:-left-[16rem] portrait:lg:-left-xxl xl:-left-xl xl:-top-l [@media(max-width:414px)]:hidden"
               }
-              imageStyle={"object-contain h-auto w-[350px] md:w-[700px]"}
+              imageStyle={"object-contain h-auto w-[350px] sm:w-[450px] md:w-[700px]"}
               image={"precision/precision-poster"}
               alt={"precision poster"}
               imageWidth={923}
               imageHeight={564}
             />
-            <h2 className={"text-h1 font-semibold leading-tight text-tertiary text-right md:w-4/6"}>{t("title")}</h2>
+            <h2
+              className={
+                "text-h1 font-semibold leading-tight text-tertiary text-right portrait:w-full w-4/6 portrait:md:w-4/6 md:w-4/6"
+              }
+            >
+              {t("title")}
+            </h2>
           </div>
         </div>
         {t.rich("intro", {
