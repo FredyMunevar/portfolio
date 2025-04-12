@@ -3,6 +3,7 @@ import { Link } from "@/i18n/routing";
 import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import { CldImage } from "next-cloudinary";
 import { motion, useMotionTemplate, useMotionValue, useSpring } from "motion/react";
+import { sendGAEvent } from "@next/third-parties/google";
 
 const ROTATION_RANGE = 32.5;
 const HALF_ROTATION_RANGE = 32.5 / 2;
@@ -58,6 +59,7 @@ const Project = ({ title, link, img, bg }: { title: string; link: string; img: s
         }}
         className={`flex justify-center items-center h-[16rem] ${bg}`}
         href={link}
+        onClick={() => sendGAEvent("event", "projectClicked", { value: `project ${title}` })}
       >
         <CldImage
           width="158"

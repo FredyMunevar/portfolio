@@ -2,6 +2,7 @@ import { Link } from "@/i18n/routing";
 import MuneIcon from "../MuneIcon/MuneIcon";
 import { useTranslations } from "next-intl";
 import { useTheme } from "@/context/ThemeContext";
+import { sendGAEvent } from "@next/third-parties/google";
 
 /**
  * MenuItem component that renders a navigation menu item with icon and text.
@@ -73,7 +74,17 @@ const MenuItem = ({
 
   return (
     <li className="xl:text-center">
-      <Link className={`${buttonStyles}`} href={path} onClick={onClick}>
+      <Link
+        className={`${buttonStyles}`}
+        href={path}
+        onClick={() => {
+          if (onClick) {
+            onClick();
+          }
+          sendGAEvent("event", "buttonClicked", { value: `main menu ${text}` });
+        }}
+        //  onClick={onClick}
+      >
         <MuneIcon
           className={`[&_path]:!fill-secondary ${
             isDarkTheme ? "xl:[&_path]:fill-tertiary!" : "xl:[&_path]:fill-secondary!"

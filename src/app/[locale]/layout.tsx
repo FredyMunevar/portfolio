@@ -97,7 +97,6 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className="antialiased p-[1px]">
-        <GoogleAnalytics gaId={`${servicesUrls.analytics}`} />
         <SplashCursor />
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
@@ -109,6 +108,7 @@ export default async function LocaleLayout({
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId={`${servicesUrls.analytics}`} />
     </html>
   );
 }

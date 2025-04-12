@@ -3,6 +3,7 @@ import styles from "./Button.module.css";
 import { IButton } from "./interface/iButton";
 import { Link } from "@/i18n/routing";
 import { useTheme } from "@/context/ThemeContext";
+import { sendGAEvent } from "@next/third-parties/google";
 
 /**
  * Button component that renders either a link or a button element based on the presence of the `link` prop.
@@ -38,6 +39,7 @@ const Button = ({ onClick, link, buttonType = "primary", children, className, la
         isSecondary && secondaryStyles
       } ${defaultStyles} ${className}`}
       href={link}
+      onClick={() => sendGAEvent("event", "linkClicked", { value: children })}
       target={target}
     >
       {children}
@@ -47,7 +49,12 @@ const Button = ({ onClick, link, buttonType = "primary", children, className, la
       className={`${largeButton ? styles.buttonLarge : styles.button} ${isPrimary && primaryStyles} ${
         isSecondary && secondaryStyles
       } ${defaultStyles} ${className}`}
-      onClick={onClick}
+      onClick={() => {
+        if (onClick) {
+          onClick();
+        }
+        sendGAEvent("event", "buttonClicked", { value: children });
+      }}
     >
       {children}
     </button>

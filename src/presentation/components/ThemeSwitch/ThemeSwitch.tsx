@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./ThemeSwitch.module.css";
 import MuneIcon from "../MuneIcon/MuneIcon";
 import { useTheme } from "@/context/ThemeContext";
+import { sendGAEvent } from "@next/third-parties/google";
 
 /**
  * ThemeSwitch component that allows users to toggle between light and dark themes.
@@ -11,7 +12,12 @@ const ThemeSwitch = () => {
   const isDark = theme === "dark";
 
   return (
-    <button onClick={toggleTheme}>
+    <button
+      onClick={() => {
+        toggleTheme();
+        sendGAEvent("event", "switchClicked", { value: `theme switchet to ${isDark ? "dark" : "light"}` });
+      }}
+    >
       <div className="border-2 border-tertiary bg-secondary relative p-xxs">
         <div className="flex justify-between items-center gap-s relative z-10">
           <div className={`${styles.switchSize}`}>

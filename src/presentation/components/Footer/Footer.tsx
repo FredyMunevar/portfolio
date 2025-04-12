@@ -5,6 +5,7 @@ import { Link } from "@/i18n/routing";
 import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import MuneIcon from "../MuneIcon/MuneIcon";
 import { useTranslations } from "next-intl";
+import { sendGAEvent } from "@next/third-parties/google";
 
 const currentYear = new Date().getFullYear();
 
@@ -26,27 +27,47 @@ const Footer = () => {
         <nav className="w-full flex flex-col gap-l md:w-auto">
           <ul className="flex flex-row justify-center gap-l flex-wrap items-center">
             <li>
-              <Link className="font-light text-footer text-primary" href="/">
+              <Link
+                className="font-light text-footer text-primary"
+                href="/"
+                onClick={() => sendGAEvent("event", "linkClicked", { value: "footer menu home" })}
+              >
                 {t("home")}
               </Link>
             </li>
             <li>
-              <Link className="font-light text-footer text-primary" href="/about">
+              <Link
+                className="font-light text-footer text-primary"
+                href="/about"
+                onClick={() => sendGAEvent("event", "linkClicked", { value: "footer menu about" })}
+              >
                 {t("about")}
               </Link>
             </li>
             <li>
-              <Link className="font-light text-footer text-primary" href="/projects">
+              <Link
+                className="font-light text-footer text-primary"
+                href="/projects"
+                onClick={() => sendGAEvent("event", "linkClicked", { value: "footer menu projects" })}
+              >
                 {t("projects")}
               </Link>
             </li>
             <li>
-              <Link className="font-light text-footer text-primary" href="/toolbox">
+              <Link
+                className="font-light text-footer text-primary"
+                href="/toolbox"
+                onClick={() => sendGAEvent("event", "linkClicked", { value: "footer menu toolbox" })}
+              >
                 {t("toolbox")}
               </Link>
             </li>
             <li>
-              <Link className="font-light text-footer text-primary" href="/contact">
+              <Link
+                className="font-light text-footer text-primary"
+                href="/contact"
+                onClick={() => sendGAEvent("event", "linkClicked", { value: "footer menu contact" })}
+              >
                 {t("contact")}
               </Link>
             </li>
@@ -56,22 +77,39 @@ const Footer = () => {
       <div className="w-full flex flex-col items-center gap-l md:flex-row md:justify-between">
         <ul className="flex flex-row justify-center gap-m">
           <li>
-            <Link href={servicesUrls.linkedin} target="_blank">
+            <Link
+              href={servicesUrls.linkedin}
+              target="_blank"
+              onClick={() => sendGAEvent("event", "linkClicked", { value: "footer menu linkedin" })}
+            >
               <MuneIcon name={"icon-linkedin-thin"} size={28} color="var(--primary)" />
             </Link>
           </li>
           <li>
-            <Link href={servicesUrls.instagram} target="_blank">
+            <Link
+              href={servicesUrls.instagram}
+              target="_blank"
+              onClick={() => sendGAEvent("event", "linkClicked", { value: "footer menu instagram" })}
+            >
               <MuneIcon name={"icon-instagram-thin"} size={28} color="var(--primary)" />
             </Link>
           </li>
           <li>
-            <Link href={servicesUrls.github} target="_blank">
+            <Link
+              href={servicesUrls.github}
+              target="_blank"
+              onClick={() => sendGAEvent("event", "linkClicked", { value: "footer menu github" })}
+            >
               <MuneIcon name={"icon-github-thin"} size={28} color="var(--primary)" />
             </Link>
           </li>
         </ul>
-        <Link className="text-primary text-footer text-center" href={servicesUrls.cvDownload} target="_blank">
+        <Link
+          className="text-primary text-footer text-center"
+          href={servicesUrls.cvDownload}
+          target="_blank"
+          onClick={() => sendGAEvent("event", "linkClicked", { value: "footer download cv" })}
+        >
           {t("download")}
         </Link>
         <p className="text-primary text-footer text-center">
