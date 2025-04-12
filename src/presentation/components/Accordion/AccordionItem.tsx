@@ -3,6 +3,7 @@ import { IAccordionItem } from "./interface/iAccordion";
 import { useTheme } from "@/context/ThemeContext";
 import { AnimatePresence, motion } from "motion/react";
 import MuneIcon from "../MuneIcon/MuneIcon";
+import { sendGAEvent } from "@next/third-parties/google";
 
 /**
  * AccordionItem component that renders a single expandable/collapsible item.
@@ -34,7 +35,10 @@ const AccordionItem = ({ title, toolDescription }: IAccordionItem) => {
     <motion.div layout>
       <div
         className="cursor-pointer h-fit flex items-center justify-between gap-l relative"
-        onClick={() => togglediv()}
+        onClick={() => {
+          togglediv();
+          sendGAEvent("event", "toolboxClicked", { value: `toolbox ${title}` });
+        }}
       >
         <motion.h3 layout className={`text-h2 font-semibold ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}>
           {title}
