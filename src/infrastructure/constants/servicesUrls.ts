@@ -54,4 +54,9 @@ export const servicesUrls = {
    * @type {string}
    */
   api: process.env.NEXT_PUBLIC_API || "",
+  /**
+   * TAG for the analytics service.
+   * @type {string}
+   */
+  analytics: process.env.NEXT_PUBLIC_ANALYTICS || "",
 };

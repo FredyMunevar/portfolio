@@ -10,6 +10,8 @@ import { routing } from "@/i18n/routing";
 import { getMessagesFromAPI } from "@/infrastructure/services/fetchMessagesFromAPI";
 import SplashCursor from "@/presentation/components/SplashCursor/SplashCursor";
 import { LoadingProvider } from "@/context/LoadingContext";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 
 /**
  * Metadata for the application.
@@ -95,6 +97,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className="antialiased p-[1px]">
+        <GoogleAnalytics gaId={`${servicesUrls.analytics}`} />
         <SplashCursor />
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
