@@ -12,6 +12,7 @@ import ThemeTransition from "@/presentation/components/ThemeTransition/ThemeTran
 import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
 import { useLocale } from "next-intl";
 import MenuItem from "./MenuItem";
+import { sendGAEvent } from "@next/third-parties/google";
 
 const darkLogo = `${servicesUrls.cloudinary}common/mune-logo-white.svg`;
 const lightLogo = `${servicesUrls.cloudinary}common/mune-logo-black.svg`;
@@ -128,7 +129,7 @@ const Header = () => {
                     key={item.text}
                     path={item.path}
                     text={item.text}
-                    pathname={pathname}
+                    pathname={pathname ?? "/"}
                     onClick={() => setOpenMenu(false)}
                   />
                 ))}
@@ -136,17 +137,29 @@ const Header = () => {
             </ThemeTransition>
             <ul className="flex flex-row gap-m xl:hidden">
               <li>
-                <Link href={servicesUrls.linkedin} target="_blank">
+                <Link
+                  href={servicesUrls.linkedin}
+                  target="_blank"
+                  onClick={() => sendGAEvent("event", "linkClicked", { value: "main menu linkedin" })}
+                >
                   <MuneIcon name={"icon-linkedin-thin"} size={28} />
                 </Link>
               </li>
               <li>
-                <Link href={servicesUrls.instagram} target="_blank">
+                <Link
+                  href={servicesUrls.instagram}
+                  target="_blank"
+                  onClick={() => sendGAEvent("event", "linkClicked", { value: "main menu instagram" })}
+                >
                   <MuneIcon name={"icon-instagram-thin"} size={28} />
                 </Link>
               </li>
               <li>
-                <Link href={servicesUrls.github} target="_blank">
+                <Link
+                  href={servicesUrls.github}
+                  target="_blank"
+                  onClick={() => sendGAEvent("event", "linkClicked", { value: "main menu github" })}
+                >
                   <MuneIcon name={"icon-github-thin"} size={28} />
                 </Link>
               </li>
