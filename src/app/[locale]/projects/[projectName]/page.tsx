@@ -13,14 +13,16 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; projectName: string }>;
 }): Promise<Metadata> {
-  const { projectName } = await params;
+  const { locale, projectName } = await params;
   const capFirstLetter = projectName[0].toUpperCase();
   const restOfProject = projectName.slice(1);
   const projectCapitalized = capFirstLetter + restOfProject;
 
   return {
-    title: `Fredy Munevar | ${projectCapitalized}`,
-    description: `Fredy Munevar | Project: ${projectCapitalized}`,
+    title: `Fredy Munevar - ${locale === "en" ? "Portfolio" : "Portafolio"} | ${projectCapitalized}`,
+    description: `Fredy Munevar - ${
+      locale === "en" ? "Portfolio | Project:" : "Portafolio | Proyecto:"
+    } ${projectCapitalized}`,
   };
 }
 

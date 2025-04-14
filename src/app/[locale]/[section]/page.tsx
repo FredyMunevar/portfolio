@@ -16,14 +16,16 @@ export async function generateMetadata({
 }: {
   params: Promise<{ locale: string; section: string }>;
 }): Promise<Metadata> {
-  const { section } = await params;
+  const { locale, section } = await params;
   const capFirstLetter = section[0].toUpperCase();
   const restOfSection = section.slice(1);
   const sectionCapitalized = capFirstLetter + restOfSection;
 
   return {
-    title: `Fredy Munevar | ${sectionCapitalized}`,
-    description: `Fredy Munevar | Project: ${sectionCapitalized}`,
+    title: `Fredy Munevar - ${locale === "en" ? "Portfolio" : "Portafolio"} | ${sectionCapitalized}`,
+    description: `Fredy Munevar - ${
+      locale === "en" ? "Portfolio | Project:" : "Portafolio | Proyecto:"
+    } ${sectionCapitalized}`,
   };
 }
 

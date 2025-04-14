@@ -16,56 +16,58 @@ import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 /**
  * Metadata for the application.
  */
-export const metadata: Metadata = {
-  title: "Fredy Munevar - Portfolio",
-  description: "Fredy Munevar - Portfolio",
-  icons: {
-    icon: [
-      {
-        url: "/favicon/icon-light.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/favicon/icon-dark.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-    ],
-    apple: [
-      {
-        url: "/favicon/apple-icon-light.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/favicon/apple-icon-dark.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/favicon/apple-icon-x3-light.png",
-        sizes: "180x180",
-        type: "image/png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/favicon/apple-icon-x3-dark.png",
-        sizes: "180x180",
-        type: "image/png",
-        media: "(prefers-color-scheme: dark)",
-      },
-    ],
-    other: [
-      {
-        rel: "apple-touch-icon-precomposed",
-        url: "/favicon/apple-touch-icon-precomposed-light.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        rel: "apple-touch-icon-precomposed",
-        url: "/favicon/apple-touch-icon-precomposed-dark.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-    ],
-  },
-};
+export async function generateMetadata({ params }: { params: { locale: string; section: string } }): Promise<Metadata> {
+  return {
+    title: `Fredy Munevar - ${params.locale === "en" ? "Portfolio" : "Portafolio"} | ${params.section}`,
+    description: `Fredy Munevar - ${params.locale === "en" ? "Portfolio" : "Portafolio"} | ${params.section}`,
+    icons: {
+      icon: [
+        {
+          url: "/favicon/icon-light.png",
+          media: "(prefers-color-scheme: light)",
+        },
+        {
+          url: "/favicon/icon-dark.png",
+          media: "(prefers-color-scheme: dark)",
+        },
+      ],
+      apple: [
+        {
+          url: "/favicon/apple-icon-light.png",
+          media: "(prefers-color-scheme: light)",
+        },
+        {
+          url: "/favicon/apple-icon-dark.png",
+          media: "(prefers-color-scheme: dark)",
+        },
+        {
+          url: "/favicon/apple-icon-x3-light.png",
+          sizes: "180x180",
+          type: "image/png",
+          media: "(prefers-color-scheme: light)",
+        },
+        {
+          url: "/favicon/apple-icon-x3-dark.png",
+          sizes: "180x180",
+          type: "image/png",
+          media: "(prefers-color-scheme: dark)",
+        },
+      ],
+      other: [
+        {
+          rel: "apple-touch-icon-precomposed",
+          url: "/favicon/apple-touch-icon-precomposed-light.png",
+          media: "(prefers-color-scheme: light)",
+        },
+        {
+          rel: "apple-touch-icon-precomposed",
+          url: "/favicon/apple-touch-icon-precomposed-dark.png",
+          media: "(prefers-color-scheme: dark)",
+        },
+      ],
+    },
+  };
+}
 
 /**
  * Metadata viewport for the application.
