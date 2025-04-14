@@ -11,10 +11,19 @@ type Props = {
   }>;
 };
 
-export async function generateMetadata({ params }: { params: { locale: string; section: string } }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string; section: string }>;
+}): Promise<Metadata> {
+  const { section } = await params;
+  const capFirstLetter = section[0].toUpperCase();
+  const restOfSection = section.slice(1);
+  const sectionCapitalized = capFirstLetter + restOfSection;
+
   return {
-    title: `Fredy Munevar | ${params.section}`,
-    description: `Fredy Munevar | ${params.section}`,
+    title: `Fredy Munevar | ${sectionCapitalized}`,
+    description: `Fredy Munevar | Project: ${sectionCapitalized}`,
   };
 }
 

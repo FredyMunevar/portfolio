@@ -11,11 +11,16 @@ type Props = {
 export async function generateMetadata({
   params,
 }: {
-  params: { locale: string; projectName: string };
+  params: Promise<{ locale: string; projectName: string }>;
 }): Promise<Metadata> {
+  const { projectName } = await params;
+  const capFirstLetter = projectName[0].toUpperCase();
+  const restOfProject = projectName.slice(1);
+  const projectCapitalized = capFirstLetter + restOfProject;
+
   return {
-    title: `Fredy Munevar | ${params.projectName}`,
-    description: `Fredy Munevar | ${params.projectName}`,
+    title: `Fredy Munevar | ${projectCapitalized}`,
+    description: `Fredy Munevar | Project: ${projectCapitalized}`,
   };
 }
 
