@@ -66,6 +66,31 @@ export async function generateMetadata({ params }: { params: { locale: string; s
         },
       ],
     },
+    openGraph: {
+      title: "Fredy Munevar - Portfolio",
+      description: "Explore Fredy Munevar's portfolio showcasing projects, skills, and achievements.",
+      url: "https://fredymunevar.com/",
+      type: "website",
+      images: [
+        {
+          url: "/favicon/icon-light.png",
+          width: 1200,
+          height: 630,
+          alt: "Fredy Munevar Portfolio Thumbnail",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Fredy Munevar - Portfolio",
+      description: "Explore Fredy Munevar's portfolio showcasing projects, skills, and achievements.",
+      images: [
+        {
+          url: "/favicon/icon-light.png",
+          alt: "Fredy Munevar Portfolio Thumbnail",
+        },
+      ],
+    },
   };
 }
 
