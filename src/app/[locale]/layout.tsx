@@ -12,6 +12,8 @@ import SplashCursor from "@/presentation/components/SplashCursor/SplashCursor";
 import { LoadingProvider } from "@/context/LoadingContext";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 /**
  * Metadata for the application.
@@ -134,6 +136,8 @@ export default async function LocaleLayout({
             </LoadingProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
       <GoogleAnalytics gaId={`${servicesUrls.analytics}`} />
     </html>
