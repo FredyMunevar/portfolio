@@ -48,7 +48,13 @@ export const servicesUrls = {
    * URL for downloading the CV.
    * @type {string}
    */
-  cvDownload: process.env.NEXT_PUBLIC_CV_DOWNLOAD_URL || "",
+  cvDownloadES: process.env.NEXT_PUBLIC_CV_DOWNLOAD_URL_ES || "",
+
+  /**
+   * URL for downloading the CV.
+   * @type {string}
+   */
+  cvDownloadEN: process.env.NEXT_PUBLIC_CV_DOWNLOAD_URL_EN || "",
   /**
    * URL for the messages service.
    * @type {string}

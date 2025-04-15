@@ -6,7 +6,7 @@ import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import { useTheme } from "@/context/ThemeContext";
 import "@/presentation/styles/globals.css";
 import Spline from "@splinetool/react-spline";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 /**
  * Home page component that displays the main landing page of the website.
@@ -34,6 +34,9 @@ const Home = () => {
    */
   const t = useTranslations("home");
 
+  const locale = useLocale();
+  const cvDownloadUrl = locale === "es" ? servicesUrls.cvDownloadES : servicesUrls.cvDownloadEN;
+
   /**
    * 3D background scene URLs for different themes
    */
@@ -56,7 +59,7 @@ const Home = () => {
           </h2>
         </ThemeTransition>
         <div className="w-full flex gap-l justify-start landscape:justify-center landscape:lg:justify-center">
-          <Button link={servicesUrls.cvDownload} buttonType="secondary" largeButton>
+          <Button link={cvDownloadUrl} buttonType="secondary" largeButton>
             {t("downloadButton")}
           </Button>
           <Button link={"/projects"} largeButton>

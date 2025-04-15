@@ -4,7 +4,7 @@ import { CldImage } from "next-cloudinary";
 import { Link } from "@/i18n/routing";
 import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import MuneIcon from "../MuneIcon/MuneIcon";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { sendGAEvent } from "@next/third-parties/google";
 
 const currentYear = new Date().getFullYear();
@@ -14,6 +14,9 @@ const currentYear = new Date().getFullYear();
  */
 const Footer = () => {
   const t = useTranslations("nav");
+  const locale = useLocale();
+  const cvDownloadUrl = locale === "es" ? servicesUrls.cvDownloadES : servicesUrls.cvDownloadEN;
+
   return (
     <footer className="px-m py-xl bg-secondary flex flex-col items-center gap-l lg:px-xl">
       <div className="w-full flex flex-col items-center gap-l md:flex-row md:justify-between md:gap-[unset]">
@@ -106,7 +109,7 @@ const Footer = () => {
         </ul>
         <Link
           className="text-primary text-footer text-center"
-          href={servicesUrls.cvDownload}
+          href={cvDownloadUrl}
           target="_blank"
           onClick={() => sendGAEvent("event", "linkClicked", { value: "footer download cv" })}
         >
