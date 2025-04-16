@@ -114,6 +114,8 @@ const MonteFrio = () => {
               src={`${servicesUrls.cloudinary}monte-frio/monte-frio-cards`}
               className={"object-cover h-full w-auto"}
               alt={"monte frío hero"}
+              format="webp"
+              loading="lazy"
             />
           </div>
           <div className="w-full flex flex-col gap-l px-m md:w-4/6">

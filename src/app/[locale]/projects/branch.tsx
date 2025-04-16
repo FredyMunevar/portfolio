@@ -134,6 +134,8 @@ const Branch = () => {
               src={`${servicesUrls.cloudinary}branch/canvas`}
               alt={"canvas"}
               className="w-full order-2"
+              format="webp"
+              loading="lazy"
             />
             <CldImage
               width="605"
@@ -141,6 +143,8 @@ const Branch = () => {
               src={`${servicesUrls.cloudinary}branch/logo-board`}
               alt={"branch logo board"}
               className="w-full order-4 lg:order-3"
+              format="webp"
+              loading="lazy"
             />
           </div>
         </div>
@@ -152,6 +156,8 @@ const Branch = () => {
             src={`${servicesUrls.cloudinary}branch/branch-brochure`}
             alt={"branch brochure"}
             className="w-full"
+            format="webp"
+            loading="lazy"
           />
         </div>
         {/* design section */}
@@ -242,6 +248,8 @@ const Branch = () => {
                 "object-contain w-[534px] h-auto md:absolute top-[50%] -right-[5%] md:-right-[10%] lg:-right-[5%] lg:w-[734px] lg:top-0"
               }
               alt={"branch crm"}
+              format="webp"
+              loading="lazy"
             />
           </div>
         </div>

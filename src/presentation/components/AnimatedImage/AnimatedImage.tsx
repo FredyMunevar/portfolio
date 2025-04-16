@@ -57,7 +57,8 @@ const AnimatedImage = ({
         src={`${servicesUrls.cloudinary}${image}`}
         className={imageStyle}
         alt={alt}
-        format={svg ? "svg" : "auto"}
+        format={svg ? "svg" : "webp"}
+        loading="lazy"
       />
     </motion.div>
   );

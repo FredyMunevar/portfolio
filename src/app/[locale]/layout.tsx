@@ -8,12 +8,14 @@ import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { getMessagesFromAPI } from "@/infrastructure/services/fetchMessagesFromAPI";
-import SplashCursor from "@/presentation/components/SplashCursor/SplashCursor";
+import dynamic from "next/dynamic";
 import { LoadingProvider } from "@/context/LoadingContext";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+
+const SplashCursor = dynamic(() => import("@/presentation/components/SplashCursor/SplashCursor"));
 
 /**
  * Metadata for the application.

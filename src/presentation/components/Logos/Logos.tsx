@@ -35,6 +35,7 @@ const Logos = ({ logos }: ILogos) => {
           }`}
           alt={logo}
           format="svg"
+          loading="lazy"
         />
       ))}
     </div>

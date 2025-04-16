@@ -26,6 +26,7 @@ const Footer = () => {
           src={`${servicesUrls.cloudinary}common/fredy-munevar-full.svg`}
           alt="Fredy Munevar UX/UI Engineer and Designer"
           format="svg"
+          loading="lazy"
         />
         <nav className="w-full flex flex-col gap-l md:w-auto">
           <ul className="flex flex-row justify-center gap-l flex-wrap items-center">
