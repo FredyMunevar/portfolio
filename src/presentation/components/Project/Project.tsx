@@ -4,6 +4,7 @@ import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import { CldImage } from "next-cloudinary";
 import { motion, useMotionTemplate, useMotionValue, useSpring } from "motion/react";
 import { sendGAEvent } from "@next/third-parties/google";
+import { throttle } from "lodash";
 
 const ROTATION_RANGE = 32.5;
 const HALF_ROTATION_RANGE = 32.5 / 2;
@@ -19,11 +20,10 @@ const Project = ({ title, link, img, bg }: { title: string; link: string; img: s
 
   const transform = useMotionTemplate`rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
 
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  const handleMouseMove = throttle((e: React.MouseEvent<HTMLDivElement>) => {
     if (!ref.current) return;
 
     const rect = ref.current.getBoundingClientRect();
-
     const width = rect.width;
     const height = rect.height;
 
@@ -35,7 +35,7 @@ const Project = ({ title, link, img, bg }: { title: string; link: string; img: s
 
     x.set(rX);
     y.set(rY);
-  };
+  }, 16); // Throttle to 60 FPS (16ms)
 
   const handleMouseLeave = () => {
     x.set(0);
@@ -71,6 +71,7 @@ const Project = ({ title, link, img, bg }: { title: string; link: string; img: s
           }}
           alt={title}
           format="svg"
+          loading="lazy"
         />
       </Link>
     </motion.div>

@@ -64,9 +64,18 @@ const Carousel = ({ slides, options }: CarouselType) => {
                   className={"absolute h-max object-contain max-w-none w-[140px] left-m top-m"}
                   alt={"million"}
                   format="svg"
+                  loading="lazy"
                 />
               )}
-              <CldImage className="w-full h-auto" width="968" height="610" src={`${item.src}`} alt={"million"} />
+              <CldImage
+                className="w-full h-auto"
+                width="968"
+                height="610"
+                src={`${item.src}`}
+                alt={"million"}
+                format="webp"
+                loading="lazy"
+              />
               {item.link && (
                 <Link
                   className="absolute right-m bottom-m bg-secondary border-1 border-tertiary px-m py-s"

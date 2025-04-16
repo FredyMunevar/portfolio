@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-
 export default {
   content: ["./src/presentation/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
@@ -55,15 +54,6 @@ export default {
       h2: "clamp(2.250rem, 6vw, 2.438rem)",
       h3: "clamp(1.875rem, 4vw, 2.063rem)",
       h4: "clamp(1.5rem, 3vw, 1.625rem)",
-      // menu: "1.250rem",
-      // footer: "1rem",
-      // desc: "0.750rem",
-      // type: "1rem",
-      // p: "clamp(1rem, 3vw, 1.125rem)",
-      // hero: "clamp(4.188rem, 10.5vw, 8.750rem)",
-      // h1: "clamp(2.063rem, 7.5vw, 2.938rem)",
-      // h2: "clamp(1.625rem, 6vw, 1.813rem)",
-      // h3: "clamp(1.250rem, 4vw, 1.438rem)",
     },
   },
   plugins: [

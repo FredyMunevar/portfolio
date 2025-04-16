@@ -63,6 +63,8 @@ const About = () => {
               src={`${servicesUrls.cloudinary}common/profile-picture`}
               className={"w-[16rem]"}
               alt={t("title")}
+              format="webp"
+              loading="lazy"
             />
           </div>
           <div

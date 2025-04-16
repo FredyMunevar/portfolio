@@ -101,6 +101,8 @@ const Toolbox = () => {
             src={`${servicesUrls.cloudinary}common/bg-toolbox`}
             className={"w-full h-fit object-contain"}
             alt={t("title")}
+            format="webp"
+            loading="lazy"
           />
         </div>
       </div>

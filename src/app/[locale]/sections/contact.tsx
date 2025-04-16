@@ -77,6 +77,8 @@ const Contact = () => {
               "max-w-none w-[596px] md:w-[645px] lg:w-[590px] xl:w-[700px] absolute bottom-0 right-[50%] translate-x-1/2"
             }
             alt={t("title")}
+            format="webp"
+            loading="lazy"
           />
         </ThemeTransition>
         <section className="flex flex-col gap-l relative z-1 lg:pb-xxl">

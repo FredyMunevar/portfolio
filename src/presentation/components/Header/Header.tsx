@@ -101,6 +101,7 @@ const Header = () => {
                   src={theme === "dark" ? darkLogo : lightLogo}
                   alt="Fredy Munevar Logo"
                   format="svg"
+                  loading="lazy"
                 />
               </ThemeTransition>
             </Link>
