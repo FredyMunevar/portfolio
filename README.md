@@ -1,4 +1,4 @@
-# Fredy Munevar's UX/UI Design Portfolio 🎨💻
+# Fredy Munevar's UX/UI Design 🎨, Frontend and UX Development 💻 Portfolio.
 
 Welcome to my **UX/UI Design and Development Portfolio**! This repository showcases my work in **UX design**, **UI development**, and **front-end engineering**, featuring a variety of projects that highlight my skills and experience.
 
