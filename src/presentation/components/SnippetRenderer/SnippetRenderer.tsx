@@ -4,7 +4,6 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import "@/presentation/styles/globals.css";
 import { useTheme } from "@/context/ThemeContext";
 import { ISnippetRenderer } from "./interface/iSnippetRenderer";
-import Loading from "../Loading/Loading";
 
 /**
  * SnippetRenderer component that displays code snippets with syntax highlighting.
@@ -29,7 +28,6 @@ import Loading from "../Loading/Loading";
 const SnippetRenderer = ({ snippets, project, style }: ISnippetRenderer) => {
   const [activeTab, setActiveTab] = useState(0);
   const [snippetContent, setSnippetContent] = useState<string>("");
-  const [isLoading, setIsLoading] = useState(true);
 
   /** Theme context for dark/light mode */
   const { theme } = useTheme();
@@ -39,15 +37,12 @@ const SnippetRenderer = ({ snippets, project, style }: ISnippetRenderer) => {
 
   useEffect(() => {
     const fetchSnippet = async () => {
-      setIsLoading(true);
       try {
         const response = await fetch(`/api/snippets?project=${project}&filename=${snippets[activeTab].filename}`);
         const data = await response.json();
         setSnippetContent(data.code);
       } catch (error) {
         console.error("Error fetching snippet:", error);
-      } finally {
-        setIsLoading(false);
       }
     };
 
@@ -76,34 +71,28 @@ const SnippetRenderer = ({ snippets, project, style }: ISnippetRenderer) => {
           </button>
         ))}
       </div>
-      <div className={`w-full ${style}`}>
-        {isLoading ? (
-          <div className={`w-full h-full relative ${isDarkTheme ? "bg-secondary" : "bg-tertiary"}`}>
-            <Loading />
-          </div>
-        ) : (
-          <SyntaxHighlighter
-            language={snippets[activeTab].language}
-            style={isDarkTheme ? dracula : tomorrow}
-            showLineNumbers={true}
-            wrapLines={true}
-            showInlineLineNumbers={true}
-            customStyle={{
-              height: "100%",
-              width: "100%",
-              margin: 0,
-              overflow: "auto",
-              padding: "0.5rem",
-            }}
-            CodeTag={({ children, ...props }) => (
-              <code {...props} style={{ whiteSpace: "pre-wrap", wordBreak: "break-word" }}>
-                {children}
-              </code>
-            )}
-          >
-            {snippetContent}
-          </SyntaxHighlighter>
-        )}
+      <div className={`w-full !relative ${style}`}>
+        <SyntaxHighlighter
+          language={snippets[activeTab].language}
+          style={isDarkTheme ? dracula : tomorrow}
+          showLineNumbers={true}
+          wrapLines={true}
+          showInlineLineNumbers={true}
+          customStyle={{
+            height: "100%",
+            width: "100%",
+            margin: 0,
+            overflow: "auto",
+            padding: "0.5rem",
+          }}
+          CodeTag={({ children, ...props }) => (
+            <code {...props} style={{ whiteSpace: "pre-wrap", wordBreak: "break-word" }}>
+              {children}
+            </code>
+          )}
+        >
+          {snippetContent}
+        </SyntaxHighlighter>
       </div>
     </div>
   );
