@@ -4,6 +4,7 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import "@/presentation/styles/globals.css";
 import { useTheme } from "@/context/ThemeContext";
 import { ISnippetRenderer } from "./interface/iSnippetRenderer";
+import Loading from "../Loading/Loading";
 
 /**
  * SnippetRenderer component that displays code snippets with syntax highlighting.
@@ -77,8 +78,8 @@ const SnippetRenderer = ({ snippets, project, style }: ISnippetRenderer) => {
       </div>
       <div className={`w-full ${style}`}>
         {isLoading ? (
-          <div className="w-full h-full bg-primary relative">
-            <div className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-xl h-xl animate-pulse h-32 bg-secondary rounded-[50%]" />
+          <div className={`w-full h-full relative ${isDarkTheme ? "bg-secondary" : "bg-tertiary"}`}>
+            <Loading />
           </div>
         ) : (
           <SyntaxHighlighter

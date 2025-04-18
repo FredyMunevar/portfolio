@@ -93,7 +93,7 @@ const Toolbox = () => {
           </p>
         </section>
         <div
-          className={`portrait:hidden portrait:lg:flex portrait:lg:h-fit lg:w-1/2 landscape:lg:h-fit lg:sticky md:top-xl`}
+          className={`portrait:hidden portrait:lg:flex portrait:lg:h-min lg:w-1/2 landscape:lg:h-fit lg:top-xl lg:sticky`}
         >
           <CldImage
             width="2118"
