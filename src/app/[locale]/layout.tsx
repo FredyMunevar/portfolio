@@ -127,7 +127,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className="antialiased p-[1px]">
+      <body className="antialiased p-[1px] overflow-x-hidden lg:overflow-x-visible">
         <SplashCursor />
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
