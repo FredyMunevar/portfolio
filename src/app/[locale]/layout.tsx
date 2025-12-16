@@ -5,9 +5,9 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import Header from "@/presentation/components/Header/Header";
 import Footer from "@/presentation/components/Footer/Footer";
 import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { getMessagesFromAPI } from "@/infrastructure/services/fetchMessagesFromAPI";
 import dynamic from "next/dynamic";
 import { LoadingProvider } from "@/context/LoadingContext";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -20,10 +20,11 @@ const SplashCursor = dynamic(() => import("@/presentation/components/SplashCurso
 /**
  * Metadata for the application.
  */
-export async function generateMetadata({ params }: { params: { locale: string; section: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string; section?: string }> }): Promise<Metadata> {
+  const { locale, section } = await params;
   return {
-    title: `Fredy Munevar - ${params.locale === "en" ? "Portfolio" : "Portafolio"} | ${params.section}`,
-    description: `Fredy Munevar - ${params.locale === "en" ? "Portfolio" : "Portafolio"} | ${params.section}`,
+    title: `Fredy Munevar - ${locale === "en" ? "Portfolio" : "Portafolio"}${section ? ` | ${section}` : ""}`,
+    description: `Fredy Munevar - ${locale === "en" ? "Portfolio" : "Portafolio"}${section ? ` | ${section}` : ""}`,
     icons: {
       icon: [
         {
@@ -117,17 +118,17 @@ export default async function LocaleLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const locale = params.locale;
+  const { locale } = await params;
 
   if (!routing.locales.includes(locale as "en" | "es")) return notFound();
 
-  const messages = await getMessagesFromAPI(locale);
+  const messages = await getMessages();
 
   return (
-    <html lang={locale}>
-      <body className="antialiased p-[1px] overflow-x-hidden lg:overflow-x-visible">
+    <html lang={locale} suppressHydrationWarning>
+      <body className="antialiased p-[1px] overflow-x-hidden lg:overflow-x-visible" suppressHydrationWarning>
         <SplashCursor />
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
