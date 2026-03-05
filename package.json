@@ -6,7 +6,9 @@
     "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "yarn test:smoke",
+    "test:smoke": "node tests/smoke.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^15.3.6",

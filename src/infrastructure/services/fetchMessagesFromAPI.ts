@@ -1,7 +1,7 @@
 import { servicesUrls } from "../constants/servicesUrls";
 
-// const BASE_URL = ["https://portfolio-api-two-theta.vercel.app"];
-const BASE_URL = [servicesUrls.api];
+// const BASE_URL = "https://portfolio-api-two-theta.vercel.app";
+const BASE_URL = servicesUrls.api;
 
 /**
  * Fetches localized messages from the API for the given locale.
@@ -20,7 +20,13 @@ const BASE_URL = [servicesUrls.api];
  * ```
  */
 export const getMessagesFromAPI = async (locale: string) => {
-  const res = await fetch(`${BASE_URL}/${locale}`, {
+  if (!BASE_URL) {
+    throw new Error("NEXT_PUBLIC_API is not configured");
+  }
+
+  const normalizedLocale = locale.trim().toLowerCase();
+  const normalizedBaseUrl = BASE_URL.replace(/\/+$/, "");
+  const res = await fetch(`${normalizedBaseUrl}/${normalizedLocale}`, {
     next: { revalidate: 3600 }, // optional: cache for 1 hour
   });
   if (!res.ok) throw new Error("Failed to fetch translations");
