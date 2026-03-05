@@ -1,6 +1,8 @@
 "use client";
-import Loading from "@/presentation/components/Loading/Loading";
 import React, { createContext, useContext, useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+
+const Loading = dynamic(() => import("@/presentation/components/Loading/Loading"), { ssr: false });
 
 /**
  * Type definition for the LoadingContext.

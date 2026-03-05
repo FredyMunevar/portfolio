@@ -189,7 +189,7 @@ const Branch = () => {
         {/* wireframes section */}
         <div className="w-full h-[900px] overflow-hidden px-m mb-xl">
           <iframe
-            src="https://marvelapp.com/j178ga9?emb=1&iosapp=true&frameless=false\"
+            src="https://marvelapp.com/j178ga9?emb=1&iosapp=true&frameless=false"
             width="452"
             height="881"
             className="w-full h-full"
