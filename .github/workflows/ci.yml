@@ -35,3 +35,6 @@ jobs:
 
       - name: Smoke tests
         run: yarn test:smoke
+        env:
+          # Public messages API; without it every page throws "NEXT_PUBLIC_API is not configured".
+          NEXT_PUBLIC_API: https://portfolio-api-two-theta.vercel.app
