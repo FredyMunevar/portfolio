@@ -28,6 +28,7 @@ const About = () => {
 
   /** Array of experience translation keys */
   const experiences = [
+    "experiences.castcrew",
     "experiences.million",
     "experiences.branch",
     "experiences.netbangers",
