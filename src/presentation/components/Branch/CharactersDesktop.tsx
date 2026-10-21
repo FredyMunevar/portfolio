@@ -20,7 +20,7 @@ import AnimatedImage from "../AnimatedImage/AnimatedImage";
  */
 const CharactersDesktop = () => {
   return (
-    <div className="absolute -right-xl -bottom-[40%] h-[608px] w-[608px] rounded-full bg-branchSecondary hidden xl:flex">
+    <div className="absolute -right-xl -bottom-[40%] h-[608px] w-[608px] rounded-full bg-branch-secondary hidden xl:flex">
       <AnimatedImage
         containerStyle={"absolute bottom-0 left-0 z-10"}
         image={"branch/client-desktop"}
