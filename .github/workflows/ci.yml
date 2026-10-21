@@ -15,17 +15,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # Corepack must be enabled before setup-node: its yarn cache step runs
+      # `yarn`, which otherwise resolves to the runner's global Yarn 1 and
+      # fails against the "packageManager": "yarn@4.6.0" field.
+      - name: Enable Corepack
+        run: corepack enable
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "yarn"
 
-      - name: Enable Corepack
-        run: corepack enable
-
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable
 
       - name: Lint
         run: yarn lint
