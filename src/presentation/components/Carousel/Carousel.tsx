@@ -7,6 +7,7 @@ import { CldImage } from "next-cloudinary";
 import { Link } from "@/i18n/routing";
 import { useLocale } from "next-intl";
 import { CarouselType } from "./interface/Carousel";
+import { trackEvent } from "@/infrastructure/analytics/track";
 
 /**
  * Carousel component that displays a collection of slides with images and links.
@@ -82,6 +83,9 @@ const Carousel = ({ slides, options }: CarouselType) => {
                   href={item.link}
                   target={"_blank"}
                   rel="noopener noreferrer nofollow"
+                  onClick={() =>
+                    trackEvent({ name: "outbound_click", params: { link_url: item.link ?? "", location: "project_carousel" } })
+                  }
                 >
                   <p className="text-desc text-tertiary">{language === "en" ? "Visit website" : "Visitar sitio web"}</p>
                 </Link>

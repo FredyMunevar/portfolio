@@ -82,7 +82,11 @@ const Projects = () => {
         ))}
       </section>
       <div className="w-full flex items-start gap-m">
-        <Button link={servicesUrls.behance} target="_blank">
+        <Button
+          link={servicesUrls.behance}
+          target="_blank"
+          analyticsEvent={{ name: "contact_click", params: { method: "behance", location: "projects" } }}
+        >
           {t("button")}
         </Button>
         <MuneIcon name={"icon-behance"} size={30} color="var(--primary)" />

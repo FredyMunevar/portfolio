@@ -9,6 +9,7 @@ import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import MuneIcon from "@/presentation/components/MuneIcon/MuneIcon";
 import Link from "next/link";
 import ThemeTransition from "@/presentation/components/ThemeTransition/ThemeTransition";
+import { contactMethodFromIcon, trackEvent } from "@/infrastructure/analytics/track";
 
 /**
  * Toolbox section component that displays technical skills and tools.
@@ -56,6 +57,12 @@ const Contact = () => {
         rel="noopener noreferrer"
         className={`text-body ${isDarkTheme ? "text-tertiary" : "text-secondary"}`}
         href={`${isExternal ? `https://${content}` : icon.includes("phone") ? `tel:${content}` : `mailto:${content}`}`}
+        onClick={() => {
+          const method = contactMethodFromIcon(icon);
+          if (method) {
+            trackEvent({ name: "contact_click", params: { method, location: "contact" } });
+          }
+        }}
       >
         {content}
       </Link>

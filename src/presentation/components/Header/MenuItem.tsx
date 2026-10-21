@@ -2,7 +2,7 @@ import { Link } from "@/i18n/routing";
 import MuneIcon from "../MuneIcon/MuneIcon";
 import { useTranslations } from "next-intl";
 import { useTheme } from "@/context/ThemeContext";
-import { sendGAEvent } from "@next/third-parties/google";
+import { trackEvent } from "@/infrastructure/analytics/track";
 
 /**
  * MenuItem component that renders a navigation menu item with icon and text.
@@ -81,7 +81,7 @@ const MenuItem = ({
           if (onClick) {
             onClick();
           }
-          sendGAEvent("event", "buttonClicked", { value: `main menu ${text}` });
+          trackEvent({ name: "navigation_click", params: { section: text, location: "main_menu" } });
         }}
         //  onClick={onClick}
       >
