@@ -46,6 +46,13 @@ const Toolbox = () => {
   /** Array of tool categories with their descriptions */
   const tools: IAccordionItem[] = [
     {
+      title: t("tools.ai.title"),
+      toolDescription: t.rich("tools.ai.toolDescription", {
+        subtitle: (chunks) => <ToolSubtitle isDark={isDarkTheme}>{chunks}</ToolSubtitle>,
+        content: (chunks) => <ToolContent>{chunks}</ToolContent>,
+      }),
+    },
+    {
       title: t("tools.design.title"),
       toolDescription: t.rich("tools.design.toolDescription", {
         subtitle: (chunks) => <ToolSubtitle isDark={isDarkTheme}>{chunks}</ToolSubtitle>,

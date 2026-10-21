@@ -73,7 +73,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     },
     openGraph: {
       title: "Fredy Munevar - Portfolio",
-      description: "Explore Fredy Munevar's portfolio showcasing projects, skills, and achievements.",
+      description: "Fredy Munevar, Design Engineer building AI tools for design and engineering teams: MCP servers, Claude Code plugins and AI agents.",
       url: "https://fredymunevar.com/",
       type: "website",
       images: [
@@ -88,7 +88,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     twitter: {
       card: "summary_large_image",
       title: "Fredy Munevar - Portfolio",
-      description: "Explore Fredy Munevar's portfolio showcasing projects, skills, and achievements.",
+      description: "Fredy Munevar, Design Engineer building AI tools for design and engineering teams: MCP servers, Claude Code plugins and AI agents.",
       images: [
         {
           url: "/favicon/icon-light.png",
