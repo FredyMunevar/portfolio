@@ -59,10 +59,20 @@ const Home = () => {
           </h2>
         </ThemeTransition>
         <div className="w-full flex gap-l justify-start landscape:justify-center landscape:lg:justify-center">
-          <Button link={cvDownloadUrl} buttonType="secondary" largeButton>
+          <Button
+            link={cvDownloadUrl}
+            buttonType="secondary"
+            largeButton
+            target="_blank"
+            analyticsEvent={{ name: "cv_download", params: { language: locale, location: "home" } }}
+          >
             {t("downloadButton")}
           </Button>
-          <Button link={"/projects"} largeButton>
+          <Button
+            link={"/projects"}
+            largeButton
+            analyticsEvent={{ name: "navigation_click", params: { section: "projects", location: "home" } }}
+          >
             {t("projectsButton")}
           </Button>
         </div>

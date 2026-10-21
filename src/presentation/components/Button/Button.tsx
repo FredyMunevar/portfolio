@@ -3,7 +3,7 @@ import styles from "./Button.module.css";
 import { IButton } from "./interface/iButton";
 import { Link } from "@/i18n/routing";
 import { useTheme } from "@/context/ThemeContext";
-import { sendGAEvent } from "@next/third-parties/google";
+import { trackEvent } from "@/infrastructure/analytics/track";
 
 /**
  * Button component that renders either a link or a button element based on the presence of the `link` prop.
@@ -16,8 +16,18 @@ import { sendGAEvent } from "@next/third-parties/google";
  * @param {string} [props.className] - Additional CSS classes to apply to the button.
  * @param {boolean} [props.largeButton] - Flag to determine if the button should be rendered in a larger size.
  * @param {Object} [props.props] - Additional properties to be passed to the button or link element.
+ * @param {AnalyticsEvent} [props.analyticsEvent] - Analytics event sent when the button or link is clicked.
  */
-const Button = ({ onClick, link, buttonType = "primary", children, className, largeButton, target }: IButton) => {
+const Button = ({
+  onClick,
+  link,
+  buttonType = "primary",
+  children,
+  className,
+  largeButton,
+  target,
+  analyticsEvent,
+}: IButton) => {
   const { theme } = useTheme();
   const isDarkTheme = theme === "dark";
   const isPrimary = buttonType === "primary";
@@ -39,7 +49,7 @@ const Button = ({ onClick, link, buttonType = "primary", children, className, la
         isSecondary && secondaryStyles
       } ${defaultStyles} ${className}`}
       href={link}
-      onClick={() => sendGAEvent("event", "linkClicked", { value: children })}
+      onClick={() => analyticsEvent && trackEvent(analyticsEvent)}
       target={target}
     >
       {children}
@@ -53,7 +63,9 @@ const Button = ({ onClick, link, buttonType = "primary", children, className, la
         if (onClick) {
           onClick();
         }
-        sendGAEvent("event", "buttonClicked", { value: children });
+        if (analyticsEvent) {
+          trackEvent(analyticsEvent);
+        }
       }}
     >
       {children}

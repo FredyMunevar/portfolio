@@ -41,4 +41,9 @@ export interface IButton {
    * The target attribute for the link element.
    */
   target?: string;
+
+  /**
+   * Analytics event sent when the button or link is clicked.
+   */
+  analyticsEvent?: import("@/infrastructure/analytics/track").AnalyticsEvent;
 }

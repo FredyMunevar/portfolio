@@ -12,7 +12,7 @@ import ThemeTransition from "@/presentation/components/ThemeTransition/ThemeTran
 import LanguageSwitch from "../LanguageSwitch/LanguageSwitch";
 import { useLocale } from "next-intl";
 import MenuItem from "./MenuItem";
-import { sendGAEvent } from "@next/third-parties/google";
+import { trackEvent } from "@/infrastructure/analytics/track";
 
 const darkLogo = `${servicesUrls.cloudinary}common/mune-logo-white.svg`;
 const lightLogo = `${servicesUrls.cloudinary}common/mune-logo-black.svg`;
@@ -141,7 +141,7 @@ const Header = () => {
                 <Link
                   href={servicesUrls.linkedin}
                   target="_blank"
-                  onClick={() => sendGAEvent("event", "linkClicked", { value: "main menu linkedin" })}
+                  onClick={() => trackEvent({ name: "contact_click", params: { method: "linkedin", location: "header" } })}
                 >
                   <MuneIcon name={"icon-linkedin-thin"} size={28} />
                 </Link>
@@ -150,7 +150,7 @@ const Header = () => {
                 <Link
                   href={servicesUrls.instagram}
                   target="_blank"
-                  onClick={() => sendGAEvent("event", "linkClicked", { value: "main menu instagram" })}
+                  onClick={() => trackEvent({ name: "contact_click", params: { method: "instagram", location: "header" } })}
                 >
                   <MuneIcon name={"icon-instagram-thin"} size={28} />
                 </Link>
@@ -159,7 +159,7 @@ const Header = () => {
                 <Link
                   href={servicesUrls.github}
                   target="_blank"
-                  onClick={() => sendGAEvent("event", "linkClicked", { value: "main menu github" })}
+                  onClick={() => trackEvent({ name: "contact_click", params: { method: "github", location: "header" } })}
                 >
                   <MuneIcon name={"icon-github-thin"} size={28} />
                 </Link>

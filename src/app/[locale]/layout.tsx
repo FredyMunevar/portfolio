@@ -14,6 +14,9 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
+import { consentDefaultScript } from "@/infrastructure/analytics/consent";
+import ConsentBanner from "@/presentation/components/ConsentBanner/ConsentBanner";
 
 const SplashCursor = dynamic(() => import("@/presentation/components/SplashCursor/SplashCursor"));
 
@@ -136,12 +139,16 @@ export default async function LocaleLayout({
               <Header />
               {children}
               <Footer />
+              <ConsentBanner />
             </LoadingProvider>
           </NextIntlClientProvider>
         </ThemeProvider>
         <Analytics />
         <SpeedInsights />
       </body>
+      <Script id="ga-consent-default" strategy="beforeInteractive">
+        {consentDefaultScript}
+      </Script>
       <GoogleAnalytics gaId={`${servicesUrls.analytics}`} />
     </html>
   );

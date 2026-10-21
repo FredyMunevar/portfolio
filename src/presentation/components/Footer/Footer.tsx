@@ -5,7 +5,7 @@ import { Link } from "@/i18n/routing";
 import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import MuneIcon from "../MuneIcon/MuneIcon";
 import { useLocale, useTranslations } from "next-intl";
-import { sendGAEvent } from "@next/third-parties/google";
+import { trackEvent } from "@/infrastructure/analytics/track";
 
 const currentYear = new Date().getFullYear();
 
@@ -34,7 +34,7 @@ const Footer = () => {
               <Link
                 className="font-light text-footer text-primary"
                 href="/"
-                onClick={() => sendGAEvent("event", "linkClicked", { value: "footer menu home" })}
+                onClick={() => trackEvent({ name: "navigation_click", params: { section: "home", location: "footer" } })}
               >
                 {t("home")}
               </Link>
@@ -43,7 +43,7 @@ const Footer = () => {
               <Link
                 className="font-light text-footer text-primary"
                 href="/about"
-                onClick={() => sendGAEvent("event", "linkClicked", { value: "footer menu about" })}
+                onClick={() => trackEvent({ name: "navigation_click", params: { section: "about", location: "footer" } })}
               >
                 {t("about")}
               </Link>
@@ -52,7 +52,7 @@ const Footer = () => {
               <Link
                 className="font-light text-footer text-primary"
                 href="/projects"
-                onClick={() => sendGAEvent("event", "linkClicked", { value: "footer menu projects" })}
+                onClick={() => trackEvent({ name: "navigation_click", params: { section: "projects", location: "footer" } })}
               >
                 {t("projects")}
               </Link>
@@ -61,7 +61,7 @@ const Footer = () => {
               <Link
                 className="font-light text-footer text-primary"
                 href="/toolbox"
-                onClick={() => sendGAEvent("event", "linkClicked", { value: "footer menu toolbox" })}
+                onClick={() => trackEvent({ name: "navigation_click", params: { section: "toolbox", location: "footer" } })}
               >
                 {t("toolbox")}
               </Link>
@@ -70,7 +70,7 @@ const Footer = () => {
               <Link
                 className="font-light text-footer text-primary"
                 href="/contact"
-                onClick={() => sendGAEvent("event", "linkClicked", { value: "footer menu contact" })}
+                onClick={() => trackEvent({ name: "navigation_click", params: { section: "contact", location: "footer" } })}
               >
                 {t("contact")}
               </Link>
@@ -84,7 +84,7 @@ const Footer = () => {
             <Link
               href={servicesUrls.linkedin}
               target="_blank"
-              onClick={() => sendGAEvent("event", "linkClicked", { value: "footer menu linkedin" })}
+              onClick={() => trackEvent({ name: "contact_click", params: { method: "linkedin", location: "footer" } })}
             >
               <MuneIcon name={"icon-linkedin-thin"} size={28} color="var(--primary)" />
             </Link>
@@ -93,7 +93,7 @@ const Footer = () => {
             <Link
               href={servicesUrls.instagram}
               target="_blank"
-              onClick={() => sendGAEvent("event", "linkClicked", { value: "footer menu instagram" })}
+              onClick={() => trackEvent({ name: "contact_click", params: { method: "instagram", location: "footer" } })}
             >
               <MuneIcon name={"icon-instagram-thin"} size={28} color="var(--primary)" />
             </Link>
@@ -102,7 +102,7 @@ const Footer = () => {
             <Link
               href={servicesUrls.github}
               target="_blank"
-              onClick={() => sendGAEvent("event", "linkClicked", { value: "footer menu github" })}
+              onClick={() => trackEvent({ name: "contact_click", params: { method: "github", location: "footer" } })}
             >
               <MuneIcon name={"icon-github-thin"} size={28} color="var(--primary)" />
             </Link>
@@ -112,7 +112,7 @@ const Footer = () => {
           className="text-primary text-footer text-center"
           href={cvDownloadUrl}
           target="_blank"
-          onClick={() => sendGAEvent("event", "linkClicked", { value: "footer download cv" })}
+          onClick={() => trackEvent({ name: "cv_download", params: { language: locale, location: "footer" } })}
         >
           {t("download")}
         </Link>

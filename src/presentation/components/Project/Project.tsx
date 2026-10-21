@@ -3,7 +3,7 @@ import { Link } from "@/i18n/routing";
 import { servicesUrls } from "@/infrastructure/constants/servicesUrls";
 import { CldImage } from "next-cloudinary";
 import { motion, useMotionTemplate, useMotionValue, useSpring } from "motion/react";
-import { sendGAEvent } from "@next/third-parties/google";
+import { trackEvent } from "@/infrastructure/analytics/track";
 import { throttle } from "lodash";
 
 const ROTATION_RANGE = 32.5;
@@ -59,7 +59,12 @@ const Project = ({ title, link, img, bg }: { title: string; link: string; img: s
         }}
         className={`flex justify-center items-center h-[16rem] ${bg}`}
         href={link}
-        onClick={() => sendGAEvent("event", "projectClicked", { value: `project ${title}` })}
+        onClick={() =>
+          trackEvent({
+            name: "select_project",
+            params: { project_id: String(link).split("/").filter(Boolean).pop() ?? title, location: "projects" },
+          })
+        }
       >
         <CldImage
           width="158"

@@ -1,7 +1,7 @@
 "use client";
 import { usePathname, useRouter, locales } from "@/i18n/routing";
 import Button from "../Button/Button";
-import { sendGAEvent } from "@next/third-parties/google";
+import { trackEvent } from "@/infrastructure/analytics/track";
 
 const LanguageSwitch = ({ locale }: { locale: string }) => {
   const pathname = usePathname();
@@ -18,7 +18,7 @@ const LanguageSwitch = ({ locale }: { locale: string }) => {
           key={loc}
           onClick={() => {
             changeLocale(loc);
-            sendGAEvent("event", "languageClicked", { value: `language switched to ${loc}` });
+            trackEvent({ name: "language_switch", params: { language: loc } });
           }}
         >
           <span className="font-normal lg:hidden">{loc}</span>
